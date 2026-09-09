@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefMedicationTwinact"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication ExampleERefMedicationTwinact</b></p><a name="ExampleERefMedicationTwinact"> </a><a name="hcExampleERefMedicationTwinact"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-medication.html">PH Core Medication</a></p></div><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 105590001}">Twinact (Telmisartan 80mg + Amlodipine 5mg) - antihypertensive</span></p><p><b>status</b>: Active</p></div>
+  </text>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="105590001"/>
+      <display value="Substance"/>
+    </coding>
+    <text value="Twinact (Telmisartan 80mg + Amlodipine 5mg) - antihypertensive"/>
+  </code>
+  <status value="active"/>
+</Medication>

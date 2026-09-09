@@ -1,0 +1,103 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/CodeSystem/PSOC> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "PSOC"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSOC</b></p><a name=\"PSOC\"> </a><a name=\"hcPSOC\"> </a><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">2211<a name=\"PSOC-2211\"> </a></td><td>Generalist medical practitioners</td><td>Generalist medical practitioners</td></tr><tr><td style=\"white-space:nowrap\">2212<a name=\"PSOC-2212\"> </a></td><td>Specialist medical practitioners</td><td>Specialist medical practitioners</td></tr><tr><td style=\"white-space:nowrap\">2221<a name=\"PSOC-2221\"> </a></td><td>Nursing professionals</td><td>Nursing professionals</td></tr><tr><td style=\"white-space:nowrap\">2222<a name=\"PSOC-2222\"> </a></td><td>Midwifery professionals</td><td>Midwifery professionals</td></tr><tr><td style=\"white-space:nowrap\">2261<a name=\"PSOC-2261\"> </a></td><td>Dentists</td><td>Dentists</td></tr><tr><td style=\"white-space:nowrap\">2262<a name=\"PSOC-2262\"> </a></td><td>Pharmacists</td><td>Pharmacists</td></tr><tr><td style=\"white-space:nowrap\">2267<a name=\"PSOC-2267\"> </a></td><td>Optometrists and ophthalmic opticians</td><td>Optometrists and ophthalmic opticians</td></tr><tr><td style=\"white-space:nowrap\">1342<a name=\"PSOC-1342\"> </a></td><td>Health services managers</td><td>Health services managers</td></tr><tr><td style=\"white-space:nowrap\">3253<a name=\"PSOC-3253\"> </a></td><td>Community health workers</td><td>Community health workers</td></tr><tr><td style=\"white-space:nowrap\">5321<a name=\"PSOC-5321\"> </a></td><td>Healthcare assistants</td><td>Healthcare assistants</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC"] ;
+  fhir:CodeSystem.version [ fhir:value "0.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "PHCorePSOC"] ;
+  fhir:CodeSystem.title [ fhir:value "PSOC"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-09-09T03:53:23+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "SILab CoP IG Accelerator (eReferral)"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "SILab CoP IG Accelerator (eReferral)" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-Manila-SILab" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Philippine Standard Occupational Classification (fragment — healthcare-relevant codes)"] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "fragment"] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2211" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Generalist medical practitioners" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Generalist medical practitioners" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2212" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Specialist medical practitioners" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Specialist medical practitioners" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2221" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Nursing professionals" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Nursing professionals" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2222" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Midwifery professionals" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Midwifery professionals" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2261" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Dentists" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Dentists" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2262" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Pharmacists" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Pharmacists" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "2267" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Optometrists and ophthalmic opticians" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Optometrists and ophthalmic opticians" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "1342" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Health services managers" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Health services managers" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "3253" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Community health workers" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Community health workers" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "5321" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Healthcare assistants" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Healthcare assistants" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/CodeSystem/PSOC.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

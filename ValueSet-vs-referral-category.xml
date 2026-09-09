@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-referral-category"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet vs-referral-category</b></p><a name="vs-referral-category"> </a><a name="hcvs-referral-category"> </a><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/73770003">73770003</a></td><td>Emergency</td></tr><tr><td><a href="http://snomed.info/id/440655000">440655000</a></td><td>Outpatient</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.fhir.doh.gov.ph/pheref/ValueSet/referral-category"/>
+  <version value="0.1.0"/>
+  <name value="EReferralServiceCategory"/>
+  <title value="Referral Category VS"/>
+  <status value="active"/>
+  <date value="2026-09-09T03:53:23+00:00"/>
+  <publisher value="SILab CoP IG Accelerator (eReferral)"/>
+  <contact>
+    <name value="SILab CoP IG Accelerator (eReferral)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-Manila-SILab"/>
+    </telecom>
+  </contact>
+  <description value="Referral category (Emergency or Outpatient)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="73770003"/>
+        <display value="Emergency"/>
+      </concept>
+      <concept>
+        <code value="440655000"/>
+        <display value="Outpatient"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

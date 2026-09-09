@@ -1,0 +1,70 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "ereferral-workflow",
+  "language" : "en",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ereferral-workflow</b></p><a name=\"ereferral-workflow\"> </a><a name=\"hcereferral-workflow\"> </a><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">received<a name=\"ereferral-workflow-received\"> </a></td><td>Received</td><td>The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case.</td></tr><tr><td style=\"white-space:nowrap\">accepted<a name=\"ereferral-workflow-accepted\"> </a></td><td>Accepted</td><td>The receiving facility can take the case and has given a positive transfer or service response.</td></tr><tr><td style=\"white-space:nowrap\">rejected<a name=\"ereferral-workflow-rejected\"> </a></td><td>Rejected</td><td>The receiving facility cannot take the case and no onward receiving facility is identified in the same response.</td></tr><tr><td style=\"white-space:nowrap\">referred-onward<a name=\"ereferral-workflow-referred-onward\"> </a></td><td>Referred onward</td><td>The receiving facility cannot take the case and directs the patient or referral to another specified facility.</td></tr><tr><td style=\"white-space:nowrap\">capacity-full<a name=\"ereferral-workflow-capacity-full\"> </a></td><td>Capacity full</td><td>The receiving facility reports that capacity is full.</td></tr><tr><td style=\"white-space:nowrap\">onward-referral-request<a name=\"ereferral-workflow-onward-referral-request\"> </a></td><td>Onward referral request</td><td>A ServiceRequest created or identified as the next referral request after the initial receiving facility refers the case onward.</td></tr><tr><td style=\"white-space:nowrap\">consultation-summary<a name=\"ereferral-workflow-consultation-summary\"> </a></td><td>Consultation summary</td><td>A summary of the referral service outcome.</td></tr></table></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+  "version" : "0.1.0",
+  "name" : "EReferralWorkflowCS",
+  "title" : "eReferral Workflow Code System",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-09-09T03:53:23+00:00",
+  "publisher" : "SILab CoP IG Accelerator (eReferral)",
+  "contact" : [{
+    "name" : "SILab CoP IG Accelerator (eReferral)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-Manila-SILab"
+    }]
+  }],
+  "description" : "Local workflow codes for Philippine eReferral receiving-facility responses and related referral coordination events.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "received",
+    "display" : "Received",
+    "definition" : "The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case."
+  },
+  {
+    "code" : "accepted",
+    "display" : "Accepted",
+    "definition" : "The receiving facility can take the case and has given a positive transfer or service response."
+  },
+  {
+    "code" : "rejected",
+    "display" : "Rejected",
+    "definition" : "The receiving facility cannot take the case and no onward receiving facility is identified in the same response."
+  },
+  {
+    "code" : "referred-onward",
+    "display" : "Referred onward",
+    "definition" : "The receiving facility cannot take the case and directs the patient or referral to another specified facility."
+  },
+  {
+    "code" : "capacity-full",
+    "display" : "Capacity full",
+    "definition" : "The receiving facility reports that capacity is full."
+  },
+  {
+    "code" : "onward-referral-request",
+    "display" : "Onward referral request",
+    "definition" : "A ServiceRequest created or identified as the next referral request after the initial receiving facility refers the case onward."
+  },
+  {
+    "code" : "consultation-summary",
+    "display" : "Consultation summary",
+    "definition" : "A summary of the referral service outcome."
+  }]
+}

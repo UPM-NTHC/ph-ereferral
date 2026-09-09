@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Who Smart L 1 - PH eReferral Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style>
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.ph-table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+}
+
+.ph-table table {
+  width: 100%;
+  }
+
+.ph-table thead {
+  display: table-header-group;
+}
+
+.ph-table th {
+  background-color: #555555;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #444444;
+}
+
+.ph-table td {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.ph-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ph-table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.ph-table tbody tr:hover {
+  background-color: #ebf8ff;
+  transition: background-color 0.2s ease;
+}
+
+.ph-table td code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="logical-information-model.html">Logical Information Model</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Sample Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="sample-case-ana-reyes.html">Ana Reyes Referral</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Who Smart L 1</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Who Smart L 1</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#who-smart-guidelines-l1-basis-for-the-ph-ereferral-ig" id="markdown-toc-who-smart-guidelines-l1-basis-for-the-ph-ereferral-ig">WHO SMART Guidelines L1 Basis for the PH eReferral IG</a>    <ul>
+      <li><a href="#purpose" id="markdown-toc-purpose">Purpose</a></li>
+      <li><a href="#why-l1-matters-in-this-ig" id="markdown-toc-why-l1-matters-in-this-ig">Why L1 Matters in This IG</a></li>
+      <li><a href="#intended-use-of-this-page" id="markdown-toc-intended-use-of-this-page">Intended Use of This Page</a></li>
+      <li><a href="#ph-ereferral-l1-basis" id="markdown-toc-ph-ereferral-l1-basis">PH eReferral L1 Basis</a></li>
+      <li><a href="#key-narrative-basis-from-the-referenced-sources" id="markdown-toc-key-narrative-basis-from-the-referenced-sources">Key Narrative Basis from the Referenced Sources</a></li>
+      <li><a href="#what-this-means-for-the-ph-ereferral-ig" id="markdown-toc-what-this-means-for-the-ph-ereferral-ig">What This Means for the PH eReferral IG</a></li>
+      <li><a href="#boundaries-of-this-page" id="markdown-toc-boundaries-of-this-page">Boundaries of This Page</a></li>
+      <li><a href="#relationship-to-who-smart-l2-and-l3-work" id="markdown-toc-relationship-to-who-smart-l2-and-l3-work">Relationship to WHO SMART L2 and L3 Work</a></li>
+      <li><a href="#traceability-expectations" id="markdown-toc-traceability-expectations">Traceability Expectations</a></li>
+      <li><a href="#ph-specific-interpretation-notes" id="markdown-toc-ph-specific-interpretation-notes">PH-Specific Interpretation Notes</a></li>
+      <li><a href="#authoritative-references" id="markdown-toc-authoritative-references">Authoritative References</a>        <ul>
+          <li><a href="#who-smart-references" id="markdown-toc-who-smart-references">WHO SMART references</a></li>
+          <li><a href="#philippine-references-currently-used-by-this-project" id="markdown-toc-philippine-references-currently-used-by-this-project">Philippine references currently used by this project</a></li>
+          <li><a href="#additional-project-references-to-confirm" id="markdown-toc-additional-project-references-to-confirm">Additional project references to confirm</a></li>
+        </ul>
+      </li>
+      <li><a href="#maintenance-notes" id="markdown-toc-maintenance-notes">Maintenance Notes</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="who-smart-guidelines-l1-basis-for-the-ph-ereferral-ig">WHO SMART Guidelines L1 Basis for the PH eReferral IG</h1>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>This page explains the <strong>WHO SMART Guidelines Level 1 (L1)</strong> basis used for the Philippine eReferral Implementation Guide (PH eReferral IG).</p>
+
+<p>In this implementation guide, L1 is the <strong>narrative and policy foundation</strong> for the eReferral use case. It provides the high-level basis for why referral interoperability matters, what policy and service-delivery context applies, and which source references should anchor later design work.</p>
+
+<p>This page is intentionally <strong>foundational rather than exhaustive</strong>. It is not a reproduction of WHO source material or a complete policy compendium. Its role is to provide a concise, traceable starting point for contributors, reviewers, and implementers.</p>
+
+<h2 id="why-l1-matters-in-this-ig">Why L1 Matters in This IG</h2>
+
+<p>WHO SMART Guidelines start from narrative guidance and then move toward increasingly structured and implementation-ready artefacts. For the PH eReferral IG, that means the work should not begin from FHIR profiles alone. It should begin from the policy, workflow, and service-delivery basis that explains:</p>
+
+<ul>
+  <li>why referral and back-referral matter in the Philippine context;</li>
+  <li>how Health Care Provider Networks (HCPNs) frame coordination of care;</li>
+  <li>how primary care acts as the navigator, coordinator, and initial and continuing point of contact within the health system;</li>
+  <li>which national references establish the direction for interoperable referral processes; and</li>
+  <li>how later structured requirements should remain traceable to those narrative sources.</li>
+</ul>
+
+<p>Using an L1 foundation helps keep the PH eReferral IG aligned to real program and system needs instead of treating the IG as a purely technical exercise.</p>
+
+<h2 id="intended-use-of-this-page">Intended Use of This Page</h2>
+
+<p>This page should be used as a <strong>reference and orientation page</strong> for the PH eReferral IG. It is meant to:</p>
+
+<ul>
+  <li>summarize the narrative basis and guiding references used by this repository;</li>
+  <li>clarify the role and boundaries of L1 in the PH eReferral context;</li>
+  <li>support traceability from narrative guidance to later structured artefacts; and</li>
+  <li>provide a stable entry point for contributors who are new to WHO SMART work.</li>
+</ul>
+
+<p>This page should <strong>summarize and point to authoritative references</strong>, not replace them.</p>
+
+<h2 id="ph-ereferral-l1-basis">PH eReferral L1 Basis</h2>
+
+<p>The PH eReferral IG is being developed in a context shaped by Philippine universal health care policy and HCPN service-delivery design.</p>
+
+<p>At a minimum, the current L1 basis for this IG includes:</p>
+
+<ol>
+  <li><a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/86448"><strong>Republic Act No. 11223</strong> (Universal Health Care Act)</a>, which establishes the national universal health care policy direction and frames integrated and comprehensive health-system delivery.</li>
+  <li><a href="https://drive.google.com/file/d/1Uri9Iov3YPw3rc3AidV6dXjv8y_W7ydr/view"><strong>DOH Administrative Order No. 2020-0019</strong></a>, <em>Guidelines on the Service Delivery Design of Health Care Provider Networks</em>, which describes the HCPN context in which referral coordination and service delivery operate.</li>
+  <li><a href="https://law.upd.edu.ph/wp-content/uploads/2020/06/DOH-AO-No-2020-0024.pdf"><strong>DOH Administrative Order No. 2020-0024</strong></a>, <em>Primary Care Policy Framework and Sectoral Strategies</em>, which clarifies the primary care role as navigator, coordinator, and continuing point of contact, and emphasizes continuity and coordination of care.</li>
+  <li><a href="https://law.upd.edu.ph/wp-content/uploads/2020/05/DOH-AO-No_2020-0021.pdf"><strong>DOH Administrative Order No. 2020-0021</strong></a>, <em>Guidelines on Integration of the Local Health Systems into Province-wide and City-wide Health Systems (P/CWHS)</em>, which situates HCPNs and PCPNs within integrated local health-system delivery and explicitly includes two-way referrals, patient navigation, records access, and digital technologies for health.</li>
+</ol>
+
+<p>Together, these sources provide the narrative basis for treating eReferral as part of coordinated, standards-aligned, network-based care delivery rather than as a standalone messaging feature.</p>
+
+<h2 id="key-narrative-basis-from-the-referenced-sources">Key Narrative Basis from the Referenced Sources</h2>
+
+<p>The current source set indicates the following narrative basis for PH eReferral:</p>
+
+<ul>
+  <li><a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/86448"><strong>RA 11223 / UHC policy direction</strong></a>: health-system design should support integrated, comprehensive, and coordinated care rather than fragmented service delivery.</li>
+  <li><a href="https://drive.google.com/file/d/1Uri9Iov3YPw3rc3AidV6dXjv8y_W7ydr/view"><strong>AO 2020-0019 / HCPN design</strong></a>: HCPNs are expected to deliver continuous health care from primary to tertiary levels through safe, efficient, and coordinated mechanisms.</li>
+  <li><a href="https://drive.google.com/file/d/1Uri9Iov3YPw3rc3AidV6dXjv8y_W7ydr/view"><strong>AO 2020-0019 / referrals</strong></a>: the order explicitly calls for a functional referral system, localized referral protocols, patient navigation and coordination, standardized communication processes, a uniform referral form, and a back-referral form with follow-up and home instructions.</li>
+  <li><a href="https://drive.google.com/file/d/1Uri9Iov3YPw3rc3AidV6dXjv8y_W7ydr/view"><strong>AO 2020-0019 / interoperability</strong></a>: HCPNs are expected to have a patient record management system with interoperable electronic medical records capable of real-time information sharing across member facilities.</li>
+  <li><a href="https://law.upd.edu.ph/wp-content/uploads/2020/06/DOH-AO-No-2020-0024.pdf"><strong>AO 2020-0024 / primary care policy</strong></a>: primary care is positioned as the navigator, coordinator, and initial and continuing point of contact, with continuity of care across health conditions and levels of care.</li>
+  <li><a href="https://law.upd.edu.ph/wp-content/uploads/2020/05/DOH-AO-No_2020-0021.pdf"><strong>AO 2020-0021 / integrated local systems</strong></a>: PCPNs are described as the foundation of HCPNs and are responsible for serving as initial contact and navigator, coordinating patients to facilitate two-way referrals, and supporting access across levels of care, including the use of digital technologies for health.</li>
+</ul>
+
+<p>These points are the main reason this implementation guide needs a dedicated L1 basis page. They establish that referral interoperability in this project is rooted in coordinated service delivery, networked care, patient navigation, and continuity of care, not only in technical message exchange.</p>
+
+<h2 id="what-this-means-for-the-ph-ereferral-ig">What This Means for the PH eReferral IG</h2>
+
+<p>For this implementation guide, the L1 basis should be understood as establishing the following project direction:</p>
+
+<ul>
+  <li>the PH eReferral IG supports referral and back-referral as part of coordinated care across HCPNs;</li>
+  <li>the IG should treat primary care and PCPN functions as central to referral coordination and continuity of care;</li>
+  <li>the IG should reflect the service-delivery and interoperability needs implied by national policy and HCPN design guidance;</li>
+  <li>the IG should support standardized referral communication, patient navigation, and records exchange across participating facilities;</li>
+  <li>the narrative basis should remain visible and traceable as the project moves into more structured requirements and technical implementation artefacts; and</li>
+  <li>policy and workflow intent should be distinguished from FHIR-specific design decisions.</li>
+</ul>
+
+<h2 id="boundaries-of-this-page">Boundaries of This Page</h2>
+
+<p>This page does <strong>not</strong>:</p>
+
+<ul>
+  <li>reproduce the full text of WHO SMART materials;</li>
+  <li>restate the full text of Philippine laws, administrative orders, or manuals;</li>
+  <li>define all L2 Digital Adaptation Kit (DAK) content;</li>
+  <li>define full workflow logic, data elements, decision-support logic, or indicators; or</li>
+  <li>act as the final source of technical conformance requirements.</li>
+</ul>
+
+<p>Instead, this page provides the narrative basis that later work can refine into structured requirements and implementation artefacts.</p>
+
+<h2 id="relationship-to-who-smart-l2-and-l3-work">Relationship to WHO SMART L2 and L3 Work</h2>
+
+<p>The PH eReferral IG should treat this L1 page as the narrative foundation for downstream work.</p>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>SMART level</th>
+        <th>Role in this project</th>
+        <th>Expected output in PH eReferral work</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>L1 Narrative guidance</strong></td>
+        <td>Describes the policy, service-delivery, and guideline basis for the use case</td>
+        <td>This page and linked source references</td>
+      </tr>
+      <tr>
+        <td><strong>L2 DAK / structured requirements</strong></td>
+        <td>Converts narrative guidance into operational and structured requirements</td>
+        <td>Business processes, actors, data needs, rules, and other structured artefacts</td>
+      </tr>
+      <tr>
+        <td><strong>L3 FHIR IG / technical implementation</strong></td>
+        <td>Expresses computable and testable implementation content</td>
+        <td>FHIR profiles, examples, terminology bindings, interactions, and validation-ready guidance</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<p>This separation matters. The PH eReferral IG should not collapse L1, L2, and L3 into one page or one type of artefact. Each layer serves a different purpose and should remain traceable to the layer above it.</p>
+
+<h2 id="traceability-expectations">Traceability Expectations</h2>
+
+<p>To support future alignment with L2 DAK and L3 IG work, narrative statements on this page should be traceable to authoritative references.</p>
+
+<p>Where later project artefacts introduce a workflow rule, actor responsibility, business requirement, or technical constraint, those artefacts should identify whether the basis comes from:</p>
+
+<ul>
+  <li>a WHO SMART narrative reference;</li>
+  <li>a Philippine policy or administrative source;</li>
+  <li>a project-level interpretation needed for the PH eReferral use case; or</li>
+  <li>a later design decision introduced during L2 or L3 work.</li>
+</ul>
+
+<h2 id="ph-specific-interpretation-notes">PH-Specific Interpretation Notes</h2>
+
+<p>The following interpretation points apply to this page:</p>
+
+<ul>
+  <li>This page is a <strong>project-oriented summary</strong> of the L1 basis for the PH eReferral IG.</li>
+  <li>Philippine policy and HCPN references are used here as the immediate narrative basis for the local implementation context.</li>
+  <li>If the repository later adopts additional WHO SMART source references, those should be added explicitly rather than assumed.</li>
+  <li>Any PH-specific interpretation or adaptation beyond the cited source materials should be labeled clearly in future revisions.</li>
+</ul>
+
+<h2 id="authoritative-references">Authoritative References</h2>
+
+<h3 id="who-smart-references">WHO SMART references</h3>
+
+<ul>
+  <li><a href="https://www.who.int/teams/digital-health-and-innovation/smart-guidelines/">WHO SMART Guidelines overview</a></li>
+  <li><a href="https://www.who.int/publications/m/item/who-digital-accelerator-kits">WHO SMART Guidelines: Digital Adaptation Kits overview</a></li>
+</ul>
+
+<h3 id="philippine-references-currently-used-by-this-project">Philippine references currently used by this project</h3>
+
+<ul>
+  <li><a href="https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/86448">Republic Act No. 11223, Universal Health Care Act</a></li>
+  <li><a href="https://drive.google.com/file/d/1Uri9Iov3YPw3rc3AidV6dXjv8y_W7ydr/view">DOH Administrative Order No. 2020-0019, Guidelines on the Service Delivery Design of Health Care Provider Networks</a></li>
+  <li><a href="https://drive.google.com/file/d/1bkQLF3YU15UZuRHJKlMGBgcJLIMl9ESp/view">DOH Administrative Order No. 2020-0019-A, Amendment to Administrative Order No. 2020-0019 dated May 14, 2020 Entitled "Guidelines on the Service Delivery Design of Health Care Provider Networks"</a></li>
+  <li><a href="https://law.upd.edu.ph/wp-content/uploads/2020/06/DOH-AO-No-2020-0024.pdf">DOH Administrative Order No. 2020-0024, Primary Care Policy Framework and Sectoral Strategies</a></li>
+  <li><a href="https://law.upd.edu.ph/wp-content/uploads/2020/05/DOH-AO-No_2020-0021.pdf">DOH Administrative Order No. 2020-0021, Guidelines on Integration of the Local Health Systems into Province-wide and City-wide Health Systems (P/CWHS)</a></li>
+  <li><a href="https://drive.usercontent.google.com/download?id=18TW6zePVfbH6Ich2XuyS6Jqq3rPWChjG&amp;authuser=0&amp;acrobatPromotionSource=gdrive_chrome-list">Public Health Unit Manual of Operations</a></li>
+</ul>
+
+<h3 id="additional-project-references-to-confirm">Additional project references to confirm</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">[Placeholder]</code> Additional WHO SMART source reference(s) adopted by the project</li>
+  <li><code class="language-plaintext highlighter-rouge">[Placeholder]</code> Additional DOH / operational guidance reference(s) used to refine the PH eReferral narrative basis</li>
+  <li><code class="language-plaintext highlighter-rouge">[Placeholder]</code> Repository location for linked L2 DAK artefacts</li>
+  <li><code class="language-plaintext highlighter-rouge">[Placeholder]</code> Repository location for linked L3 FHIR IG artefacts</li>
+</ul>
+
+<h2 id="maintenance-notes">Maintenance Notes</h2>
+
+<p>This page should be updated when:</p>
+
+<ul>
+  <li>the project confirms additional WHO SMART references as normative inputs;</li>
+  <li>the repository establishes linked L2 artefacts that should be referenced here;</li>
+  <li>the repository establishes linked L3 artefacts that should be referenced here; or</li>
+  <li>the project agrees on PH-specific interpretation notes that should be documented for traceability.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-09-09 03:53:00 +0000">
+    2026-09-09
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

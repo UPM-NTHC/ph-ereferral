@@ -1,0 +1,36 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "pwd-disability-type-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet pwd-disability-type-vs</b></p><a name=\"pwd-disability-type-vs\"> </a><a name=\"hcpwd-disability-type-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-pwd-disability-type-cs.html\"><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs",
+  "version" : "0.1.0",
+  "name" : "PWDDisabilityTypeVS",
+  "title" : "PWD Disability Type Value Set",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2026-09-09T03:53:23+00:00",
+  "publisher" : "SILab CoP IG Accelerator (eReferral)",
+  "contact" : [{
+    "name" : "SILab CoP IG Accelerator (eReferral)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-Manila-SILab"
+    }]
+  }],
+  "description" : "Value set for types of disability as defined by the Philippine government for PWD registration.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs"
+    }]
+  }
+}

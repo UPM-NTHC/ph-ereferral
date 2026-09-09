@@ -1,0 +1,96 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/contact-point-system",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointSystem",
+    "title" : "ContactPointSystem",
+    "description" : "Telecommunications form for contact point.",
+    "oids" : ["2.16.840.1.113883.4.642.4.72"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-contact-point-system.html" : "ContactPointSystem"
+  },
+  {
+    "url" : "http://hl7.org/fhir/contact-point-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointUse",
+    "title" : "ContactPointUse",
+    "description" : "Use of contact point.",
+    "oids" : ["2.16.840.1.113883.4.642.4.74"],
+    "uses" : {
+    },
+    "http://hl7.org/fhir/R4/valueset-contact-point-use.html" : "ContactPointUse"
+  },
+  {
+    "url" : "http://snomed.info/sct",
+    "version" : null,
+    "status" : "active",
+    "name" : "SNOMED_CT",
+    "title" : "SNOMED CT (all versions)",
+    "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+    "oids" : ["2.16.840.1.113883.6.96"],
+    "uses" : {
+    },
+    "ValueSet-vs-reason-for-referral-service-type.html" : "Reason for Referral (Service Type) VS",
+    "ValueSet-vs-practitioner-role.html" : "Practitioner Role VS",
+    "ValueSet-vs-referral-category.html" : "Referral Category VS"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "RoleCode",
+    "title" : "RoleCode",
+    "description" : "A set of codes further specifying the kind of Role; specific classification codes for further qualifying RoleClass codes.",
+    "oids" : ["2.16.840.1.113883.5.111"],
+    "uses" : {
+    },
+    "ValueSet-ereferral-relationship-type.html" : "eReferral Relationship Type"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "PHCorePHCW",
+    "title" : "PHCW",
+    "description" : "Philippines Healthcare Workers Code System",
+    "uses" : {
+    },
+    "ValueSet-vs-practitioner-role.html" : "Practitioner Role VS"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "PHCorePSOC",
+    "title" : "PSOC",
+    "description" : "Philippine Standard Occupational Classification (fragment — healthcare-relevant codes)",
+    "uses" : {
+    },
+    "ValueSet-vs-practitioner-role.html" : "Practitioner Role VS"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "EReferralWorkflowCS",
+    "title" : "eReferral Workflow Code System",
+    "description" : "Local workflow codes for Philippine eReferral receiving-facility responses and related referral coordination events.",
+    "uses" : {
+    },
+    "ValueSet-ereferral-receiving-response.html" : "eReferral Receiving Facility Response"
+  },
+  {
+    "url" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "PWDDisabilityTypeCS",
+    "title" : "PWD Disability Type Code System",
+    "description" : "Code system for types of disability as defined by the Philippine government for PWD registration.",
+    "uses" : {
+    },
+    "ValueSet-pwd-disability-type-vs.html" : "PWD Disability Type Value Set"
+  }]
+}

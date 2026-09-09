@@ -1,0 +1,26 @@
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "ExampleERefDiagnosticReport",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport ExampleERefDiagnosticReport</b></p><a name=\"ExampleERefDiagnosticReport\"> </a><a name=\"hcExampleERefDiagnosticReport\"> </a><h2><span title=\"Codes:{http://loinc.org 24356-8}\">Urinalysis complete panel - Urine</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</td></tr><tr><td>Presented Form</td><td> </td></tr></table><p><b>Report Details</b></p><p>Proteinuria 3+. Findings consistent with severe pre-eclampsia.</p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "24356-8",
+      "display" : "Urinalysis complete panel - Urine"
+    }]
+  },
+  "subject" : {
+    "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+  },
+  "encounter" : {
+    "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+  },
+  "conclusion" : "Proteinuria 3+. Findings consistent with severe pre-eclampsia.",
+  "presentedForm" : [{
+    "title" : "Urinalysis Results — Kalibo Health Center"
+  }]
+}

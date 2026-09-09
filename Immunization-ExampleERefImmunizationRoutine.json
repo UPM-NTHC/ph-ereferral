@@ -1,0 +1,113 @@
+{
+  "resourceType" : "Immunization",
+  "id" : "ExampleERefImmunizationRoutine",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-immunization"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization ExampleERefImmunizationRoutine</b></p><a name=\"ExampleERefImmunizationRoutine\"> </a><a name=\"hcExampleERefImmunizationRoutine\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-immunization.html\">ERefImmunization</a></p></div><p><b>identifier</b>: <code>http://example.ph/immunization-records</code>/IMM-2025-00123</p><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{http://snomed.info/sct 871831003}\">MMR (measles and mumps and rubella) vaccine</span></p><p><b>patient</b>: <a href=\"Patient-ExampleERefPatient.html\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>occurrence</b>: 2025-03-15</p><p><b>recorded</b>: 2025-03-15 09:30:00+0800</p><p><b>primarySource</b>: true</p><p><b>location</b>: Quezon City Health Center No. 1</p><p><b>manufacturer</b>: Serum Institute of India</p><p><b>lotNumber</b>: LOT-2025-MMR-0045</p><p><b>expirationDate</b>: 2026-12-31</p><p><b>site</b>: <span title=\"Codes:{http://snomed.info/sct 61396006}\">Structure of left thigh</span></p><p><b>route</b>: <span title=\"Codes:{http://snomed.info/sct 34206005}\">Subcutaneous route</span></p><p><b>doseQuantity</b>: 0.5 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemL = 'mL')</span></p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0443 AP}\">Administering Provider</span></td><td>Nurse Maria Santos, RN</td></tr></table><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 33879002}\">Administration of vaccine to produce active immunity (procedure)</span></p><p><b>isSubpotent</b>: false</p><p><b>programEligibility</b>: <span title=\"Codes:\">Eligible - DOH Expanded Program on Immunization (EPI)</span></p><p><b>fundingSource</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/immunization-funding-source public}\">Public</span></p><blockquote><p><b>protocolApplied</b></p><p><b>series</b>: MMR 2-Dose Series</p><p><b>targetDisease</b>: <span title=\"Codes:{http://snomed.info/sct 14189004}\">Measles (disorder)</span>, <span title=\"Codes:{http://snomed.info/sct 36989005}\">Mumps (disorder)</span>, <span title=\"Codes:{http://snomed.info/sct 36653000}\">Rubella (disorder)</span></p><p><b>doseNumber</b>: 1</p><p><b>seriesDoses</b>: 2</p></blockquote></div>"
+  },
+  "identifier" : [{
+    "system" : "http://example.ph/immunization-records",
+    "value" : "IMM-2025-00123"
+  }],
+  "status" : "completed",
+  "vaccineCode" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "871831003",
+      "display" : "MMR (measles and mumps and rubella) vaccine"
+    }]
+  },
+  "patient" : {
+    "reference" : "Patient/ExampleERefPatient"
+  },
+  "occurrenceDateTime" : "2025-03-15",
+  "recorded" : "2025-03-15T09:30:00+08:00",
+  "primarySource" : true,
+  "location" : {
+    "display" : "Quezon City Health Center No. 1"
+  },
+  "manufacturer" : {
+    "display" : "Serum Institute of India"
+  },
+  "lotNumber" : "LOT-2025-MMR-0045",
+  "expirationDate" : "2026-12-31",
+  "site" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "61396006",
+      "display" : "Structure of left thigh"
+    }]
+  },
+  "route" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "34206005",
+      "display" : "Subcutaneous route"
+    }]
+  },
+  "doseQuantity" : {
+    "value" : 0.5,
+    "unit" : "mL",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "mL"
+  },
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0443",
+        "code" : "AP",
+        "display" : "Administering Provider"
+      }]
+    },
+    "actor" : {
+      "display" : "Nurse Maria Santos, RN"
+    }
+  }],
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "33879002",
+      "display" : "Administration of vaccine to produce active immunity (procedure)"
+    }]
+  }],
+  "isSubpotent" : false,
+  "programEligibility" : [{
+    "text" : "Eligible - DOH Expanded Program on Immunization (EPI)"
+  }],
+  "fundingSource" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/immunization-funding-source",
+      "code" : "public",
+      "display" : "Public"
+    }]
+  },
+  "protocolApplied" : [{
+    "series" : "MMR 2-Dose Series",
+    "targetDisease" : [{
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "14189004",
+        "display" : "Measles (disorder)"
+      }]
+    },
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "36989005",
+        "display" : "Mumps (disorder)"
+      }]
+    },
+    {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "36653000",
+        "display" : "Rubella (disorder)"
+      }]
+    }],
+    "doseNumberPositiveInt" : 1,
+    "seriesDosesPositiveInt" : 2
+  }]
+}

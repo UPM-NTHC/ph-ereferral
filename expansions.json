@@ -1,0 +1,1066 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "4b89ac2d-ffb4-4e92-8290-478412d846ba",
+  "meta" : {
+    "lastUpdated" : "2026-09-09T03:53:23.113+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-ereferral-workflow.html\">codesystem eReferral Workflow Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-received\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-received\">received</a></td><td>Received</td><td>The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;received&quot;, &quot;display&quot;: &quot;Received&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;received&quot;&gt;&lt;display value=&quot;Received&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-accepted\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-accepted\">accepted</a></td><td>Accepted</td><td>The receiving facility can take the case and has given a positive transfer or service response.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;accepted&quot;, &quot;display&quot;: &quot;Accepted&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;accepted&quot;&gt;&lt;display value=&quot;Accepted&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-rejected\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-rejected\">rejected</a></td><td>Rejected</td><td>The receiving facility cannot take the case and no onward receiving facility is identified in the same response.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;rejected&quot;, &quot;display&quot;: &quot;Rejected&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;rejected&quot;&gt;&lt;display value=&quot;Rejected&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-referred-onward\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-referred-onward\">referred-onward</a></td><td>Referred onward</td><td>The receiving facility cannot take the case and directs the patient or referral to another specified facility.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;referred-onward&quot;, &quot;display&quot;: &quot;Referred onward&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;referred-onward&quot;&gt;&lt;display value=&quot;Referred onward&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response",
+      "version" : "0.1.0",
+      "name" : "EReferralReceivingResponse",
+      "title" : "eReferral Receiving Facility Response",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:8012dddb-58ef-41a1-8eb0-3f5fdedb5300",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+          "code" : "received",
+          "display" : "Received"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+          "code" : "accepted",
+          "display" : "Accepted"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+          "code" : "rejected",
+          "display" : "Rejected"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+          "code" : "referred-onward",
+          "display" : "Referred onward"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-ereferral-workflow.html\">codesystem eReferral Workflow Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-received\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-received\">received</a></td><td>Received</td><td>The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;received&quot;, &quot;display&quot;: &quot;Received&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;received&quot;&gt;&lt;display value=&quot;Received&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-accepted\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-accepted\">accepted</a></td><td>Accepted</td><td>The receiving facility can take the case and has given a positive transfer or service response.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;accepted&quot;, &quot;display&quot;: &quot;Accepted&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;accepted&quot;&gt;&lt;display value=&quot;Accepted&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-rejected\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-rejected\">rejected</a></td><td>Rejected</td><td>The receiving facility cannot take the case and no onward receiving facility is identified in the same response.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;rejected&quot;, &quot;display&quot;: &quot;Rejected&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;rejected&quot;&gt;&lt;display value=&quot;Rejected&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow-referred-onward\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-referred-onward\">referred-onward</a></td><td>Referred onward</td><td>The receiving facility cannot take the case and directs the patient or referral to another specified facility.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;referred-onward&quot;, &quot;display&quot;: &quot;Referred onward&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;referred-onward&quot;&gt;&lt;display value=&quot;Referred onward&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response",
+      "version" : "0.1.0",
+      "name" : "EReferralReceivingResponse",
+      "title" : "eReferral Receiving Facility Response",
+      "status" : "draft",
+      "experimental" : false,
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:439e4eec-8e97-4549-8104-8af1386b0c2e",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+          "code" : "received",
+          "display" : "Received"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+          "code" : "accepted",
+          "display" : "Accepted"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+          "code" : "rejected",
+          "display" : "Rejected"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+          "code" : "referred-onward",
+          "display" : "Referred onward"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html\">codesystem RoleCode v4.0.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://terminology.hl7.org/CodeSystem/v3-RoleCode|4.0.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 10 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-NOK\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-NOK\">NOK</a></td><td>next of kin</td><td><div><p>Played by an individual who is designated as the next of kin for another individual which scopes the role.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;NOK&quot;, &quot;display&quot;: &quot;next of kin&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;NOK&quot;&gt;&lt;display value=&quot;next of kin&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-ECON\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-ECON\">ECON</a></td><td>emergency contact</td><td><div><p>A contact designated for contact in emergent situations.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;ECON&quot;, &quot;display&quot;: &quot;emergency contact&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;ECON&quot;&gt;&lt;display value=&quot;emergency contact&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-GUARD\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-GUARD\">GUARD</a></td><td>guardian</td><td><div><p>The role played by a person or institution legally empowered with responsibility for the care of a ward.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;GUARD&quot;, &quot;display&quot;: &quot;guardian&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;GUARD&quot;&gt;&lt;display value=&quot;guardian&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FAMMEMB\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FAMMEMB\">FAMMEMB</a></td><td>family member</td><td><div><p>A relationship between two people characterizing their &quot;familial&quot; relationship</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FAMMEMB&quot;, &quot;display&quot;: &quot;family member&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FAMMEMB&quot;&gt;&lt;display value=&quot;family member&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-PRN\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-PRN\">PRN</a></td><td>parent</td><td><div><p>The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;PRN&quot;, &quot;display&quot;: &quot;parent&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;PRN&quot;&gt;&lt;display value=&quot;parent&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FTH\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FTH\">FTH</a></td><td>father</td><td><div><p>The player of the role is a male who begets or raises or nurtures the scoping entity (child).</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FTH&quot;, &quot;display&quot;: &quot;father&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FTH&quot;&gt;&lt;display value=&quot;father&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-MTH\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-MTH\">MTH</a></td><td>mother</td><td><div><p>The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;MTH&quot;, &quot;display&quot;: &quot;mother&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;MTH&quot;&gt;&lt;display value=&quot;mother&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-SPS\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-SPS\">SPS</a></td><td>spouse</td><td><div><p>The player of the role is a marriage partner of the scoping person.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;SPS&quot;, &quot;display&quot;: &quot;spouse&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;SPS&quot;&gt;&lt;display value=&quot;spouse&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-CHILD\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-CHILD\">CHILD</a></td><td>child</td><td><div><p>The player of the role is a child of the scoping entity.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;CHILD&quot;, &quot;display&quot;: &quot;child&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;CHILD&quot;&gt;&lt;display value=&quot;child&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FRND\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FRND\">FRND</a></td><td>unrelated friend</td><td><div><p>The player of the role is a person who is known, liked, and trusted by the scoping person.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FRND&quot;, &quot;display&quot;: &quot;unrelated friend&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FRND&quot;&gt;&lt;display value=&quot;unrelated friend&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type",
+      "version" : "0.1.0",
+      "name" : "EReferralRelationshipType",
+      "title" : "eReferral Relationship Type",
+      "status" : "draft",
+      "experimental" : true,
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:48ae4508-66b2-4e60-a791-81ccda2116de",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 10,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode|4.0.0"
+        }],
+        "contains" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "NOK",
+          "display" : "next of kin"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "ECON",
+          "display" : "emergency contact"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "GUARD",
+          "display" : "guardian"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "FAMMEMB",
+          "display" : "family member"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "PRN",
+          "display" : "parent"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "FTH",
+          "display" : "father"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "MTH",
+          "display" : "mother"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "SPS",
+          "display" : "spouse"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "CHILD",
+          "display" : "child"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "FRND",
+          "display" : "unrelated friend"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html\">codesystem RoleCode v4.0.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"http://terminology.hl7.org/CodeSystem/v3-RoleCode|4.0.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 10 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-NOK\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-NOK\">NOK</a></td><td>next of kin</td><td><div><p>Played by an individual who is designated as the next of kin for another individual which scopes the role.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;NOK&quot;, &quot;display&quot;: &quot;next of kin&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;NOK&quot;&gt;&lt;display value=&quot;next of kin&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-ECON\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-ECON\">ECON</a></td><td>emergency contact</td><td><div><p>A contact designated for contact in emergent situations.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;ECON&quot;, &quot;display&quot;: &quot;emergency contact&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;ECON&quot;&gt;&lt;display value=&quot;emergency contact&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-GUARD\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-GUARD\">GUARD</a></td><td>guardian</td><td><div><p>The role played by a person or institution legally empowered with responsibility for the care of a ward.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;GUARD&quot;, &quot;display&quot;: &quot;guardian&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;GUARD&quot;&gt;&lt;display value=&quot;guardian&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FAMMEMB\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FAMMEMB\">FAMMEMB</a></td><td>family member</td><td><div><p>A relationship between two people characterizing their &quot;familial&quot; relationship</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FAMMEMB&quot;, &quot;display&quot;: &quot;family member&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FAMMEMB&quot;&gt;&lt;display value=&quot;family member&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-PRN\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-PRN\">PRN</a></td><td>parent</td><td><div><p>The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;PRN&quot;, &quot;display&quot;: &quot;parent&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;PRN&quot;&gt;&lt;display value=&quot;parent&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FTH\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FTH\">FTH</a></td><td>father</td><td><div><p>The player of the role is a male who begets or raises or nurtures the scoping entity (child).</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FTH&quot;, &quot;display&quot;: &quot;father&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FTH&quot;&gt;&lt;display value=&quot;father&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-MTH\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-MTH\">MTH</a></td><td>mother</td><td><div><p>The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;MTH&quot;, &quot;display&quot;: &quot;mother&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;MTH&quot;&gt;&lt;display value=&quot;mother&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-SPS\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-SPS\">SPS</a></td><td>spouse</td><td><div><p>The player of the role is a marriage partner of the scoping person.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;SPS&quot;, &quot;display&quot;: &quot;spouse&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;SPS&quot;&gt;&lt;display value=&quot;spouse&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-CHILD\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-CHILD\">CHILD</a></td><td>child</td><td><div><p>The player of the role is a child of the scoping entity.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;CHILD&quot;, &quot;display&quot;: &quot;child&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;CHILD&quot;&gt;&lt;display value=&quot;child&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-RoleCode-FRND\"> </a><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-FRND\">FRND</a></td><td>unrelated friend</td><td><div><p>The player of the role is a person who is known, liked, and trusted by the scoping person.</p>\n</div></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;, &quot;version&quot;: &quot;4.0.0&quot;, &quot;code&quot;: &quot;FRND&quot;, &quot;display&quot;: &quot;unrelated friend&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://terminology.hl7.org/CodeSystem/v3-RoleCode&quot;&gt;&lt;version value=&quot;4.0.0&quot;&gt;&lt;code value=&quot;FRND&quot;&gt;&lt;display value=&quot;unrelated friend&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type",
+      "version" : "0.1.0",
+      "name" : "EReferralRelationshipType",
+      "title" : "eReferral Relationship Type",
+      "status" : "draft",
+      "experimental" : true,
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:6c8c3564-98fa-4b5f-825c-a5808f652da6",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 10,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode|4.0.0"
+        }],
+        "contains" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "NOK",
+          "display" : "next of kin"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "ECON",
+          "display" : "emergency contact"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "GUARD",
+          "display" : "guardian"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "FAMMEMB",
+          "display" : "family member"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "PRN",
+          "display" : "parent"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "FTH",
+          "display" : "father"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "MTH",
+          "display" : "mother"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "SPS",
+          "display" : "spouse"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "CHILD",
+          "display" : "child"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code" : "FRND",
+          "display" : "unrelated friend"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-pwd-disability-type-cs.html\">codesystem PWD Disability Type Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 9 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual\">visual</a></td><td>Visual Disability</td><td>Complete or partial loss of sight/visual function.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual&quot;, &quot;display&quot;: &quot;Visual Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual&quot;&gt;&lt;display value=&quot;Visual Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-hearing\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-hearing\">hearing</a></td><td>Hearing Disability</td><td>Complete or partial loss of hearing/hearing function.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;hearing&quot;, &quot;display&quot;: &quot;Hearing Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;hearing&quot;&gt;&lt;display value=&quot;Hearing Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-speech\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-speech\">speech</a></td><td>Speech Impairment</td><td>Complete or partial loss of speech or communication function.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;speech&quot;, &quot;display&quot;: &quot;Speech Impairment&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;speech&quot;&gt;&lt;display value=&quot;Speech Impairment&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-physical\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-physical\">physical</a></td><td>Physical/Orthopedic Disability</td><td>Impairment in physical/orthopedic function including locomotor disabilities.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;physical&quot;, &quot;display&quot;: &quot;Physical/Orthopedic Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;physical&quot;&gt;&lt;display value=&quot;Physical/Orthopedic Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-intellectual\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-intellectual\">intellectual</a></td><td>Intellectual Disability</td><td>Significant limitations in intellectual functioning and adaptive behavior.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;intellectual&quot;, &quot;display&quot;: &quot;Intellectual Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;intellectual&quot;&gt;&lt;display value=&quot;Intellectual Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-learning\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-learning\">learning</a></td><td>Learning Disability</td><td>Neurological disorders affecting acquisition and use of listening, speaking, reading, writing, reasoning, or mathematical abilities.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;learning&quot;, &quot;display&quot;: &quot;Learning Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;learning&quot;&gt;&lt;display value=&quot;Learning Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-psychosocial\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-psychosocial\">psychosocial</a></td><td>Psychosocial Disability</td><td>Mental health conditions and psychosocial impairments.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;psychosocial&quot;, &quot;display&quot;: &quot;Psychosocial Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;psychosocial&quot;&gt;&lt;display value=&quot;Psychosocial Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual-low-vision\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual-low-vision\">visual-low-vision</a></td><td>Low Vision</td><td>Significant visual impairment not correctable by standard glasses/contact lenses.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual-low-vision&quot;, &quot;display&quot;: &quot;Low Vision&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual-low-vision&quot;&gt;&lt;display value=&quot;Low Vision&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual-blindness\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual-blindness\">visual-blindness</a></td><td>Blindness</td><td>Complete loss of vision or light perception.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual-blindness&quot;, &quot;display&quot;: &quot;Blindness&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual-blindness&quot;&gt;&lt;display value=&quot;Blindness&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs",
+      "version" : "0.1.0",
+      "name" : "PWDDisabilityTypeVS",
+      "title" : "PWD Disability Type Value Set",
+      "status" : "draft",
+      "experimental" : true,
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:f77a64de-a443-4b37-999e-f6047377b7c3",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 9,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "visual",
+          "display" : "Visual Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "hearing",
+          "display" : "Hearing Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "speech",
+          "display" : "Speech Impairment"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "physical",
+          "display" : "Physical/Orthopedic Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "intellectual",
+          "display" : "Intellectual Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "learning",
+          "display" : "Learning Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "psychosocial",
+          "display" : "Psychosocial Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "visual-low-vision",
+          "display" : "Low Vision"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "visual-blindness",
+          "display" : "Blindness"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-pwd-disability-type-cs.html\">codesystem PWD Disability Type Code System v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 9 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual\">visual</a></td><td>Visual Disability</td><td>Complete or partial loss of sight/visual function.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual&quot;, &quot;display&quot;: &quot;Visual Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual&quot;&gt;&lt;display value=&quot;Visual Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-hearing\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-hearing\">hearing</a></td><td>Hearing Disability</td><td>Complete or partial loss of hearing/hearing function.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;hearing&quot;, &quot;display&quot;: &quot;Hearing Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;hearing&quot;&gt;&lt;display value=&quot;Hearing Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-speech\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-speech\">speech</a></td><td>Speech Impairment</td><td>Complete or partial loss of speech or communication function.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;speech&quot;, &quot;display&quot;: &quot;Speech Impairment&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;speech&quot;&gt;&lt;display value=&quot;Speech Impairment&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-physical\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-physical\">physical</a></td><td>Physical/Orthopedic Disability</td><td>Impairment in physical/orthopedic function including locomotor disabilities.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;physical&quot;, &quot;display&quot;: &quot;Physical/Orthopedic Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;physical&quot;&gt;&lt;display value=&quot;Physical/Orthopedic Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-intellectual\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-intellectual\">intellectual</a></td><td>Intellectual Disability</td><td>Significant limitations in intellectual functioning and adaptive behavior.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;intellectual&quot;, &quot;display&quot;: &quot;Intellectual Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;intellectual&quot;&gt;&lt;display value=&quot;Intellectual Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-learning\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-learning\">learning</a></td><td>Learning Disability</td><td>Neurological disorders affecting acquisition and use of listening, speaking, reading, writing, reasoning, or mathematical abilities.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;learning&quot;, &quot;display&quot;: &quot;Learning Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;learning&quot;&gt;&lt;display value=&quot;Learning Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-psychosocial\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-psychosocial\">psychosocial</a></td><td>Psychosocial Disability</td><td>Mental health conditions and psychosocial impairments.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;psychosocial&quot;, &quot;display&quot;: &quot;Psychosocial Disability&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;psychosocial&quot;&gt;&lt;display value=&quot;Psychosocial Disability&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual-low-vision\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual-low-vision\">visual-low-vision</a></td><td>Low Vision</td><td>Significant visual impairment not correctable by standard glasses/contact lenses.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual-low-vision&quot;, &quot;display&quot;: &quot;Low Vision&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual-low-vision&quot;&gt;&lt;display value=&quot;Low Vision&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs-visual-blindness\"> </a><code>https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-pwd-disability-type-cs.html#pwd-disability-type-cs-visual-blindness\">visual-blindness</a></td><td>Blindness</td><td>Complete loss of vision or light perception.</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;visual-blindness&quot;, &quot;display&quot;: &quot;Blindness&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;visual-blindness&quot;&gt;&lt;display value=&quot;Blindness&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs",
+      "version" : "0.1.0",
+      "name" : "PWDDisabilityTypeVS",
+      "title" : "PWD Disability Type Value Set",
+      "status" : "draft",
+      "experimental" : true,
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:fbf37a01-60c9-4f1b-8393-b20f09a1b93f",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 9,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "visual",
+          "display" : "Visual Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "hearing",
+          "display" : "Hearing Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "speech",
+          "display" : "Speech Impairment"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "physical",
+          "display" : "Physical/Orthopedic Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "intellectual",
+          "display" : "Intellectual Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "learning",
+          "display" : "Learning Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "psychosocial",
+          "display" : "Psychosocial Disability"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "visual-low-vision",
+          "display" : "Low Vision"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+          "code" : "visual-blindness",
+          "display" : "Blindness"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/practitioner-role",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-PHCW.html\">codesystem PHCW v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-PSOC.html\">codesystem PSOC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 11 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-158965000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/158965000\">158965000</a></td><td>Medical practitioner</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;158965000&quot;, &quot;display&quot;: &quot;Medical practitioner&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;158965000&quot;&gt;&lt;display value=&quot;Medical practitioner&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-265937000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/265937000\">265937000</a></td><td>Nursing occupation</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;265937000&quot;, &quot;display&quot;: &quot;Nursing occupation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;265937000&quot;&gt;&lt;display value=&quot;Nursing occupation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-309453006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/309453006\">309453006</a></td><td>Registered midwife</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;309453006&quot;, &quot;display&quot;: &quot;Registered midwife&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;309453006&quot;&gt;&lt;display value=&quot;Registered midwife&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-46255001\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/46255001\">46255001</a></td><td>Pharmacist</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;46255001&quot;, &quot;display&quot;: &quot;Pharmacist&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;46255001&quot;&gt;&lt;display value=&quot;Pharmacist&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-386629007\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/386629007\">386629007</a></td><td>Laboratory technologist</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;386629007&quot;, &quot;display&quot;: &quot;Laboratory technologist&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;386629007&quot;&gt;&lt;display value=&quot;Laboratory technologist&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-159282002\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/159282002\">159282002</a></td><td>Laboratory technician</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;159282002&quot;, &quot;display&quot;: &quot;Laboratory technician&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;159282002&quot;&gt;&lt;display value=&quot;Laboratory technician&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-106289002\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/106289002\">106289002</a></td><td>Dentist</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;106289002&quot;, &quot;display&quot;: &quot;Dentist&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;106289002&quot;&gt;&lt;display value=&quot;Dentist&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-4162009\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/4162009\">4162009</a></td><td>Dental assistant</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;4162009&quot;, &quot;display&quot;: &quot;Dental assistant&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;4162009&quot;&gt;&lt;display value=&quot;Dental assistant&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-28229004\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/28229004\">28229004</a></td><td>Optometrist</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;28229004&quot;, &quot;display&quot;: &quot;Optometrist&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;28229004&quot;&gt;&lt;display value=&quot;Optometrist&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC-3253\"> </a><code>https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSOC.html#PSOC-3253\">3253</a></td><td>Barangay Health Worker</td><td>Community health workers</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;3253&quot;, &quot;display&quot;: &quot;Barangay Health Worker&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;3253&quot;&gt;&lt;display value=&quot;Barangay Health Worker&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW-PCW\"> </a><code>https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PHCW.html#PHCW-PCW\">PCW</a></td><td>Primary Care Worker</td><td>Primary Care Worker</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;PCW&quot;, &quot;display&quot;: &quot;Primary Care Worker&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;PCW&quot;&gt;&lt;display value=&quot;Primary Care Worker&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/practitioner-role",
+      "version" : "0.1.0",
+      "name" : "EReferralPractitionerRoleCode",
+      "title" : "Practitioner Role VS",
+      "status" : "active",
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:7aa7dc49-ee0c-49d5-9bd6-da7e0dd0fbf7",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 11,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "includeDefinition",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "158965000",
+          "display" : "Medical practitioner"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "265937000",
+          "display" : "Nursing occupation"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "309453006",
+          "display" : "Registered midwife"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "46255001",
+          "display" : "Pharmacist"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "386629007",
+          "display" : "Laboratory technologist"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "159282002",
+          "display" : "Laboratory technician"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "106289002",
+          "display" : "Dentist"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "4162009",
+          "display" : "Dental assistant"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "28229004",
+          "display" : "Optometrist"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC",
+          "code" : "3253",
+          "display" : "Barangay Health Worker"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW",
+          "code" : "PCW",
+          "display" : "Primary Care Worker"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/practitioner-role",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li>SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-PHCW.html\">codesystem PHCW v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li><li><a href=\"CodeSystem-PSOC.html\">codesystem PSOC v0.1.0 (CodeSystem)</a><span class=\"copy-text-inline\"><button data-clipboard-text=\"https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC|0.1.0\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></li></ul></div><p>This value set contains 11 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-158965000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/158965000\">158965000</a></td><td>Medical practitioner</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;158965000&quot;, &quot;display&quot;: &quot;Medical practitioner&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;158965000&quot;&gt;&lt;display value=&quot;Medical practitioner&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-265937000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/265937000\">265937000</a></td><td>Nursing occupation</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;265937000&quot;, &quot;display&quot;: &quot;Nursing occupation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;265937000&quot;&gt;&lt;display value=&quot;Nursing occupation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-309453006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/309453006\">309453006</a></td><td>Registered midwife</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;309453006&quot;, &quot;display&quot;: &quot;Registered midwife&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;309453006&quot;&gt;&lt;display value=&quot;Registered midwife&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-46255001\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/46255001\">46255001</a></td><td>Pharmacist</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;46255001&quot;, &quot;display&quot;: &quot;Pharmacist&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;46255001&quot;&gt;&lt;display value=&quot;Pharmacist&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-386629007\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/386629007\">386629007</a></td><td>Laboratory technologist</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;386629007&quot;, &quot;display&quot;: &quot;Laboratory technologist&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;386629007&quot;&gt;&lt;display value=&quot;Laboratory technologist&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-159282002\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/159282002\">159282002</a></td><td>Laboratory technician</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;159282002&quot;, &quot;display&quot;: &quot;Laboratory technician&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;159282002&quot;&gt;&lt;display value=&quot;Laboratory technician&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-106289002\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/106289002\">106289002</a></td><td>Dentist</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;106289002&quot;, &quot;display&quot;: &quot;Dentist&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;106289002&quot;&gt;&lt;display value=&quot;Dentist&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-4162009\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/4162009\">4162009</a></td><td>Dental assistant</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;4162009&quot;, &quot;display&quot;: &quot;Dental assistant&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;4162009&quot;&gt;&lt;display value=&quot;Dental assistant&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-28229004\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/28229004\">28229004</a></td><td>Optometrist</td><td/><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;28229004&quot;, &quot;display&quot;: &quot;Optometrist&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;28229004&quot;&gt;&lt;display value=&quot;Optometrist&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC-3253\"> </a><code>https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PSOC.html#PSOC-3253\">3253</a></td><td>Barangay Health Worker</td><td>Community health workers</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;3253&quot;, &quot;display&quot;: &quot;Barangay Health Worker&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;3253&quot;&gt;&lt;display value=&quot;Barangay Health Worker&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW-PCW\"> </a><code>https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"CodeSystem-PHCW.html#PHCW-PCW\">PCW</a></td><td>Primary Care Worker</td><td>Primary Care Worker</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;PCW&quot;, &quot;display&quot;: &quot;Primary Care Worker&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;PCW&quot;&gt;&lt;display value=&quot;Primary Care Worker&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/practitioner-role",
+      "version" : "0.1.0",
+      "name" : "EReferralPractitionerRoleCode",
+      "title" : "Practitioner Role VS",
+      "status" : "active",
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:ef5a91d5-8fb9-4d23-b9cf-3d11d0899420",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 11,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "includeDefinition",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC|0.1.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "158965000",
+          "display" : "Medical practitioner"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "265937000",
+          "display" : "Nursing occupation"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "309453006",
+          "display" : "Registered midwife"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "46255001",
+          "display" : "Pharmacist"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "386629007",
+          "display" : "Laboratory technologist"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "159282002",
+          "display" : "Laboratory technician"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "106289002",
+          "display" : "Dentist"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "4162009",
+          "display" : "Dental assistant"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "28229004",
+          "display" : "Optometrist"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC",
+          "code" : "3253",
+          "display" : "Barangay Health Worker"
+        },
+        {
+          "system" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW",
+          "code" : "PCW",
+          "display" : "Primary Care Worker"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/reason-for-referral-service-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-11429006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/11429006\">11429006</a></td><td>Consultation</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;11429006&quot;, &quot;display&quot;: &quot;Consultation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;11429006&quot;&gt;&lt;display value=&quot;Consultation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-165197003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/165197003\">165197003</a></td><td>Diagnostic assessment</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;165197003&quot;, &quot;display&quot;: &quot;Diagnostic assessment&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;165197003&quot;&gt;&lt;display value=&quot;Diagnostic assessment&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-71388002\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/71388002\">71388002</a></td><td>Procedure</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;71388002&quot;, &quot;display&quot;: &quot;Procedure&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;71388002&quot;&gt;&lt;display value=&quot;Procedure&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-3457005\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/3457005\">3457005</a></td><td>Patient referral</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;3457005&quot;, &quot;display&quot;: &quot;Patient referral&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;3457005&quot;&gt;&lt;display value=&quot;Patient referral&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/reason-for-referral-service-type",
+      "version" : "0.1.0",
+      "name" : "EReferralReason",
+      "title" : "Reason for Referral (Service Type) VS",
+      "status" : "active",
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:d94da60e-e25a-4272-bf44-8b819bfd44f2",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "includeDefinition",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "11429006",
+          "display" : "Consultation"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "165197003",
+          "display" : "Diagnostic assessment"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "71388002",
+          "display" : "Procedure"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "3457005",
+          "display" : "Patient referral"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/reason-for-referral-service-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 4 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-11429006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/11429006\">11429006</a></td><td>Consultation</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;11429006&quot;, &quot;display&quot;: &quot;Consultation&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;11429006&quot;&gt;&lt;display value=&quot;Consultation&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-165197003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/165197003\">165197003</a></td><td>Diagnostic assessment</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;165197003&quot;, &quot;display&quot;: &quot;Diagnostic assessment&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;165197003&quot;&gt;&lt;display value=&quot;Diagnostic assessment&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-71388002\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/71388002\">71388002</a></td><td>Procedure</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;71388002&quot;, &quot;display&quot;: &quot;Procedure&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;71388002&quot;&gt;&lt;display value=&quot;Procedure&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-3457005\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/3457005\">3457005</a></td><td>Patient referral</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;3457005&quot;, &quot;display&quot;: &quot;Patient referral&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;3457005&quot;&gt;&lt;display value=&quot;Patient referral&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/reason-for-referral-service-type",
+      "version" : "0.1.0",
+      "name" : "EReferralReason",
+      "title" : "Reason for Referral (Service Type) VS",
+      "status" : "active",
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:3e4f6e4f-010e-41d4-bacc-00643b622189",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 4,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "includeDefinition",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "11429006",
+          "display" : "Consultation"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "165197003",
+          "display" : "Diagnostic assessment"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "71388002",
+          "display" : "Procedure"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "3457005",
+          "display" : "Patient referral"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/referral-category",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-73770003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/73770003\">73770003</a></td><td>Hospital-based outpatient emergency care center</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;73770003&quot;, &quot;display&quot;: &quot;Hospital-based outpatient emergency care center&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;73770003&quot;&gt;&lt;display value=&quot;Hospital-based outpatient emergency care center&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-440655000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/440655000\">440655000</a></td><td>Outpatient environment</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;440655000&quot;, &quot;display&quot;: &quot;Outpatient environment&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;440655000&quot;&gt;&lt;display value=&quot;Outpatient environment&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/referral-category",
+      "version" : "0.1.0",
+      "name" : "EReferralServiceCategory",
+      "title" : "Referral Category VS",
+      "status" : "active",
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:849c4ece-1c7e-4d77-ae51-72550e5ed0b6",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "includeDefinition",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "73770003",
+          "display" : "Hospital-based outpatient emergency care center"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "440655000",
+          "display" : "Outpatient environment"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/referral-category",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\" data-fhir=\"generated\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion from tx.fhir.org based on SNOMED CT International edition 01-Feb 2025<span class=\"copy-text-inline\"><button data-clipboard-text=\"http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201\" title=\"Click to Copy URL\" class=\"btn-copy\"> </button></span></p><p>This value set contains 2 concepts</p><table class=\"codes\" data-fhir=\"generated\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display (en)</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name=\"x-http://snomed.info/sct-73770003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/73770003\">73770003</a></td><td>Hospital-based outpatient emergency care center</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;73770003&quot;, &quot;display&quot;: &quot;Hospital-based outpatient emergency care center&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;73770003&quot;&gt;&lt;display value=&quot;Hospital-based outpatient emergency care center&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr><tr><td><a name=\"x-http://snomed.info/sct-440655000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://snomed.info/id/440655000\">440655000</a></td><td>Outpatient environment</td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"{&quot;system&quot;: &quot;http://snomed.info/sct&quot;, &quot;version&quot;: &quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;, &quot;code&quot;: &quot;440655000&quot;, &quot;display&quot;: &quot;Outpatient environment&quot;}\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td><td><span class=\"copy-text-inline\"><button data-clipboard-text=\"&lt;coding&gt;&lt;system value=&quot;http://snomed.info/sct&quot;&gt;&lt;version value=&quot;http://snomed.info/sct/900000000000207008/version/20250201&quot;&gt;&lt;code value=&quot;440655000&quot;&gt;&lt;display value=&quot;Outpatient environment&quot;&gt;&lt;/coding&gt;\" title=\"Click to Copy as Coding\" class=\"btn-copy\"> </button></span></td></tr></table></div>"
+      },
+      "url" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/referral-category",
+      "version" : "0.1.0",
+      "name" : "EReferralServiceCategory",
+      "title" : "Referral Category VS",
+      "status" : "active",
+      "date" : "2026-09-09T03:53:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "PH",
+          "display" : "Philippines"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:955d3146-5b8a-4472-acda-c29ab8a98fe6",
+        "timestamp" : "2026-09-09T03:54:51+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "en"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "includeDefinition",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+        }],
+        "contains" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "73770003",
+          "display" : "Hospital-based outpatient emergency care center"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "440655000",
+          "display" : "Outpatient environment"
+        }]
+      }
+    }
+  }]
+}

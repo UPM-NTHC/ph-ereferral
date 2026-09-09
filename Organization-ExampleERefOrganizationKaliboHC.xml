@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefOrganizationKaliboHC"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization ExampleERefOrganizationKaliboHC</b></p><a name="ExampleERefOrganizationKaliboHC"> </a><a name="hcExampleERefOrganizationKaliboHC"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-organization.html">PH Core Organization</a></p></div><p><b>identifier</b>: <a href="https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-DOHNHFRCodeNS.html" title="Health Facility Code (HFC) from the National Health Facility Registry.">DOHNHFRCode</a>/3056, <a href="https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-HCPNCodeNS.html" title="Health Care Provider Network (HCPN) code uniquely identifying an organization within its Health Care Provider Network in the Philippines.">HCPNCode</a>/Aklan HCPN</p><p><b>name</b>: Kalibo Health Center</p><p><b>telecom</b>: ph: (043) 756-2233(Work)</p><p><b>address</b>: Mabini Street 5600 PH (work)</p></div>
+  </text>
+  <identifier>
+    <system value="https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"/>
+    <value value="3056"/>
+  </identifier>
+  <identifier>
+    <system value="https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"/>
+    <value value="Aklan HCPN"/>
+  </identifier>
+  <name value="Kalibo Health Center"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="(043) 756-2233"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/region">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0600000000"/>
+        <display value="Region VI (Western Visayas)"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/province">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0600400000"/>
+        <display value="Aklan"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0600407000"/>
+        <display value="Kalibo"/>
+      </valueCoding>
+    </extension>
+    <extension url="https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay">
+      <valueCoding>
+        <system value="https://psa.gov.ph/classification/psgc"/>
+        <code value="0600407013"/>
+        <display value="Poblacion"/>
+      </valueCoding>
+    </extension>
+    <use value="work"/>
+    <line value="Mabini Street"/>
+    <postalCode value="5600"/>
+    <country value="PH"/>
+  </address>
+</Organization>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="PSOC"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem PSOC</b></p><a name="PSOC"> </a><a name="hcPSOC"> </a><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC</code> provides <b>a fragment</b> that includes following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">2211<a name="PSOC-2211"> </a></td><td>Generalist medical practitioners</td><td>Generalist medical practitioners</td></tr><tr><td style="white-space:nowrap">2212<a name="PSOC-2212"> </a></td><td>Specialist medical practitioners</td><td>Specialist medical practitioners</td></tr><tr><td style="white-space:nowrap">2221<a name="PSOC-2221"> </a></td><td>Nursing professionals</td><td>Nursing professionals</td></tr><tr><td style="white-space:nowrap">2222<a name="PSOC-2222"> </a></td><td>Midwifery professionals</td><td>Midwifery professionals</td></tr><tr><td style="white-space:nowrap">2261<a name="PSOC-2261"> </a></td><td>Dentists</td><td>Dentists</td></tr><tr><td style="white-space:nowrap">2262<a name="PSOC-2262"> </a></td><td>Pharmacists</td><td>Pharmacists</td></tr><tr><td style="white-space:nowrap">2267<a name="PSOC-2267"> </a></td><td>Optometrists and ophthalmic opticians</td><td>Optometrists and ophthalmic opticians</td></tr><tr><td style="white-space:nowrap">1342<a name="PSOC-1342"> </a></td><td>Health services managers</td><td>Health services managers</td></tr><tr><td style="white-space:nowrap">3253<a name="PSOC-3253"> </a></td><td>Community health workers</td><td>Community health workers</td></tr><tr><td style="white-space:nowrap">5321<a name="PSOC-5321"> </a></td><td>Healthcare assistants</td><td>Healthcare assistants</td></tr></table></div>
+  </text>
+  <url value="https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC"/>
+  <version value="0.1.0"/>
+  <name value="PHCorePSOC"/>
+  <title value="PSOC"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-09-09T03:53:23+00:00"/>
+  <publisher value="SILab CoP IG Accelerator (eReferral)"/>
+  <contact>
+    <name value="SILab CoP IG Accelerator (eReferral)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-Manila-SILab"/>
+    </telecom>
+  </contact>
+  <description value="Philippine Standard Occupational Classification (fragment — healthcare-relevant codes)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="fragment"/>
+  <concept>
+    <code value="2211"/>
+    <display value="Generalist medical practitioners"/>
+    <definition value="Generalist medical practitioners"/>
+  </concept>
+  <concept>
+    <code value="2212"/>
+    <display value="Specialist medical practitioners"/>
+    <definition value="Specialist medical practitioners"/>
+  </concept>
+  <concept>
+    <code value="2221"/>
+    <display value="Nursing professionals"/>
+    <definition value="Nursing professionals"/>
+  </concept>
+  <concept>
+    <code value="2222"/>
+    <display value="Midwifery professionals"/>
+    <definition value="Midwifery professionals"/>
+  </concept>
+  <concept>
+    <code value="2261"/>
+    <display value="Dentists"/>
+    <definition value="Dentists"/>
+  </concept>
+  <concept>
+    <code value="2262"/>
+    <display value="Pharmacists"/>
+    <definition value="Pharmacists"/>
+  </concept>
+  <concept>
+    <code value="2267"/>
+    <display value="Optometrists and ophthalmic opticians"/>
+    <definition value="Optometrists and ophthalmic opticians"/>
+  </concept>
+  <concept>
+    <code value="1342"/>
+    <display value="Health services managers"/>
+    <definition value="Health services managers"/>
+  </concept>
+  <concept>
+    <code value="3253"/>
+    <display value="Community health workers"/>
+    <definition value="Community health workers"/>
+  </concept>
+  <concept>
+    <code value="5321"/>
+    <display value="Healthcare assistants"/>
+    <definition value="Healthcare assistants"/>
+  </concept>
+</CodeSystem>

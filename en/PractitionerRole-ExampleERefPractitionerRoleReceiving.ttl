@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleReceiving> a fhir:PractitionerRole ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleERefPractitionerRoleReceiving"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRoleReceiving</b></p><a name=\"ExampleERefPractitionerRoleReceiving\"> </a><a name=\"hcExampleERefPractitionerRoleReceiving\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-practitioner-role.html\">PH eReferral PractitionerRole</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/7890123</p><p><b>practitioner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e\">Practitioner Carlos Lim (official)</a></p><p><b>organization</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-8c97c63e-4dbf-45d5-894e-f671e385a126\">Organization Dr. Rafael S. Tumbokon Memorial Hospital</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></p></div>"
+  ] ;
+  fhir:PractitionerRole.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://prc.gov.ph/" ] ;
+     fhir:Identifier.value [ fhir:value "7890123" ]
+  ] ;
+  fhir:PractitionerRole.practitioner [
+     fhir:Reference.reference [ fhir:value "urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e" ]
+  ] ;
+  fhir:PractitionerRole.organization [
+     fhir:Reference.reference [ fhir:value "urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126" ]
+  ] ;
+  fhir:PractitionerRole.code [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:158965000 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "158965000" ] ;
+       fhir:Coding.display [ fhir:value "Medical practitioner" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleReceiving.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

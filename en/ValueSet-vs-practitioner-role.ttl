@@ -1,0 +1,108 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ValueSet/vs-practitioner-role> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "vs-practitioner-role"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet vs-practitioner-role</b></p><a name=\"vs-practitioner-role\"> </a><a name=\"hcvs-practitioner-role\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/158965000\">158965000</a></td><td>Doctor</td></tr><tr><td><a href=\"http://snomed.info/id/265937000\">265937000</a></td><td>Nurse</td></tr><tr><td><a href=\"http://snomed.info/id/309453006\">309453006</a></td><td>Midwife</td></tr><tr><td><a href=\"http://snomed.info/id/46255001\">46255001</a></td><td>Pharmacist</td></tr><tr><td><a href=\"http://snomed.info/id/386629007\">386629007</a></td><td>Medical Technologist</td></tr><tr><td><a href=\"http://snomed.info/id/159282002\">159282002</a></td><td>Laboratory Aide</td></tr><tr><td><a href=\"http://snomed.info/id/106289002\">106289002</a></td><td>Dentist</td></tr><tr><td><a href=\"http://snomed.info/id/4162009\">4162009</a></td><td>Dental Aide</td></tr><tr><td><a href=\"http://snomed.info/id/28229004\">28229004</a></td><td>Optometrist</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-PSOC.html\"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-PSOC.html#PSOC-3253\">3253</a></td><td>Barangay Health Worker</td><td>Community health workers</td></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-PHCW.html\"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-PHCW.html#PHCW-PCW\">PCW</a></td><td>Primary Care Worker</td><td>Primary Care Worker</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://www.fhir.doh.gov.ph/pheref/ValueSet/practitioner-role"] ;
+  fhir:ValueSet.version [ fhir:value "0.1.0"] ;
+  fhir:ValueSet.name [ fhir:value "EReferralPractitionerRoleCode"] ;
+  fhir:ValueSet.title [ fhir:value "Practitioner Role VS"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-09T03:53:23+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "SILab CoP IG Accelerator (eReferral)"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "SILab CoP IG Accelerator (eReferral)" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-Manila-SILab" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Designation of referring individual"] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "158965000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Doctor" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "265937000" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nurse" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "309453006" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Midwife" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "46255001" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pharmacist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "386629007" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medical Technologist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "159282002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Laboratory Aide" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "106289002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dentist" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "4162009" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Aide" ]
+       ], [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "28229004" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Optometrist" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3253" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Barangay Health Worker" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index -1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PCW" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Primary Care Worker" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ValueSet/vs-practitioner-role.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

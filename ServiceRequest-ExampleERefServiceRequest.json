@@ -1,0 +1,53 @@
+{
+  "resourceType" : "ServiceRequest",
+  "id" : "ExampleERefServiceRequest",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleERefServiceRequest</b></p><a name=\"ExampleERefServiceRequest\"> </a><a name=\"hcExampleERefServiceRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-service-request.html\">EReferral ServiceRequest</a></p></div><p><b>requisition</b>: <code>urn:oid:1.2.840.113619.21.1.2</code>/REF-2026-001234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 73770003}\">Emergency</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>occurrence</b>: 2026-06-18 08:30:00+0800</p><p><b>authoredOn</b>: 2026-06-18 08:30:00+0800</p><p><b>requester</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></p><p><b>performer</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-6ce0a17b-7fb3-4075-a524-3afd390731de\">PractitionerRole Medical practitioner</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 71388002}\">Severe pre-eclampsia requiring IV antihypertensive, seizure prophylaxis, and maternal-fetal monitoring</span></p><p><b>reasonReference</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-7166d722-982f-4d35-841d-c63d4d5ec772\">Condition Pre-eclampsia</a></p><p><b>note</b>: </p><blockquote><div><p>Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</p>\n</div></blockquote></div>"
+  },
+  "requisition" : {
+    "system" : "urn:oid:1.2.840.113619.21.1.2",
+    "value" : "REF-2026-001234"
+  },
+  "status" : "active",
+  "intent" : "order",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "73770003",
+      "display" : "Hospital-based outpatient emergency care center"
+    }],
+    "text" : "Emergency"
+  }],
+  "subject" : {
+    "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+  },
+  "encounter" : {
+    "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+  },
+  "occurrenceDateTime" : "2026-06-18T08:30:00+08:00",
+  "authoredOn" : "2026-06-18T08:30:00+08:00",
+  "requester" : {
+    "reference" : "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9"
+  },
+  "performer" : [{
+    "reference" : "urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de"
+  }],
+  "reasonCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "71388002",
+      "display" : "Procedure"
+    }],
+    "text" : "Severe pre-eclampsia requiring IV antihypertensive, seizure prophylaxis, and maternal-fetal monitoring"
+  }],
+  "reasonReference" : [{
+    "reference" : "urn:uuid:7166d722-982f-4d35-841d-c63d4d5ec772"
+  }],
+  "note" : [{
+    "text" : "Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia."
+  }]
+}

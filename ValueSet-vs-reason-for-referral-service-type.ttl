@@ -1,0 +1,71 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ValueSet/vs-reason-for-referral-service-type> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "vs-reason-for-referral-service-type"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet vs-reason-for-referral-service-type</b></p><a name=\"vs-reason-for-referral-service-type\"> </a><a name=\"hcvs-reason-for-referral-service-type\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/11429006\">11429006</a></td><td>Consultation</td></tr><tr><td><a href=\"http://snomed.info/id/165197003\">165197003</a></td><td>Diagnostics</td></tr><tr><td><a href=\"http://snomed.info/id/71388002\">71388002</a></td><td>Procedure</td></tr><tr><td><a href=\"http://snomed.info/id/3457005\">3457005</a></td><td>Others</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://www.fhir.doh.gov.ph/pheref/ValueSet/reason-for-referral-service-type"] ;
+  fhir:ValueSet.version [ fhir:value "0.1.0"] ;
+  fhir:ValueSet.name [ fhir:value "EReferralReason"] ;
+  fhir:ValueSet.title [ fhir:value "Reason for Referral (Service Type) VS"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-09T03:53:23+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "SILab CoP IG Accelerator (eReferral)"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "SILab CoP IG Accelerator (eReferral)" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-Manila-SILab" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Reason for referral (Service type)"] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "11429006" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Consultation" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "165197003" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Diagnostics" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "71388002" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Procedure" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3457005" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Others" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ValueSet/vs-reason-for-referral-service-type.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

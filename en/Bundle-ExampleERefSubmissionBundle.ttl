@@ -1,0 +1,1313 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Bundle/ExampleERefSubmissionBundle> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleERefSubmissionBundle"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:Bundle.type [ fhir:value "transaction"] ;
+  fhir:Bundle.timestamp [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Patient?identifier=http://philsys.gov.ph/fhir/Identifier/philsys-id|7731-0812-4491-0326" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Practitioner?identifier=https://prc.gov.ph/|5466863" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Practitioner?identifier=https://prc.gov.ph/|7890123" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Organization?identifier=https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code|3056" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Organization?identifier=https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code|513" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "PractitionerRole?identifier=https://prc.gov.ph/|5466863" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "PUT" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "PractitionerRole?identifier=https://prc.gov.ph/|7890123" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "ServiceRequest" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Encounter" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:99a80644-e928-4fbd-b07f-8ac5fb5675b1" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:99a80644-e928-4fbd-b07f-8ac5fb5675b1> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:7166d722-982f-4d35-841d-c63d4d5ec772" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:7166d722-982f-4d35-841d-c63d4d5ec772> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Condition" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:27ea0c24-b2e3-4f4e-ba6f-d40b4653232e" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:27ea0c24-b2e3-4f4e-ba6f-d40b4653232e> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:75b09e76-3c93-4a69-af02-71a6d9713558" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:75b09e76-3c93-4a69-af02-71a6d9713558> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:0bd2221b-dac4-44ec-811b-a10683f301c9" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:0bd2221b-dac4-44ec-811b-a10683f301c9> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:080d6fb5-aed8-4dc0-b7dd-51d38f903819" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:080d6fb5-aed8-4dc0-b7dd-51d38f903819> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:3f56fb3e-b0ea-4ab0-a7a5-2adac78d5c9b" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:3f56fb3e-b0ea-4ab0-a7a5-2adac78d5c9b> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:d70026e6-2a52-4f4e-99d3-b73dbf52cfc3" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:d70026e6-2a52-4f4e-99d3-b73dbf52cfc3> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Observation" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:873a6d29-a842-43e7-a267-c3df56193f7f" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:873a6d29-a842-43e7-a267-c3df56193f7f> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Procedure" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:1e517f0b-6324-47f1-a626-8ddb5b617c59" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:1e517f0b-6324-47f1-a626-8ddb5b617c59> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "DiagnosticReport" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:05fe9d1b-3653-4a4e-8aa6-9dbb51acb4d4" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:05fe9d1b-3653-4a4e-8aa6-9dbb51acb4d4> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Task" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:6760bfb4-3596-4568-b8ff-b487736a70f5" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:6760bfb4-3596-4568-b8ff-b487736a70f5> ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "Provenance" ]
+     ]
+  ] .
+
+<urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542> a fhir:Patient ;
+  fhir:Resource.id [ fhir:value "ExampleERefPatient"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_ExampleERefPatient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleERefPatient</b></p><a name=\"ExampleERefPatient\"> </a><a name=\"hcExampleERefPatient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-patient.html\">ERefPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-PhilSysIDNS.html\" title=\"The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program.\">PhilSysID</a>/7731-0812-4491-0326</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"tel:+63-919-876-5432\">+63-919-876-5432</a></li><li>Area 4, Barangay Mabuhay 5600 PH (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Husband\">Husband:</td><td colspan=\"3\"><ul><li>Roberto Reyes (Official)</li></ul></td></tr></table></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "http://philhealth.gov.ph/fhir/Identifier/philhealth-id" ] ;
+     fhir:Identifier.value [ fhir:value "78-658064775-3" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "http://philsys.gov.ph/fhir/Identifier/philsys-id" ] ;
+     fhir:Identifier.value [ fhir:value "7731-0812-4491-0326" ]
+  ] ;
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean] ;
+  fhir:Patient.name [
+     fhir:index -1 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.family [ fhir:value "Reyes" ] ;
+     fhir:HumanName.given [
+       fhir:value "Ana" ;
+       fhir:index -1
+     ], [
+       fhir:value "Luisa" ;
+       fhir:index -1
+     ]
+  ] ;
+  fhir:Patient.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+63-919-876-5432" ] ;
+     fhir:ContactPoint.use [ fhir:value "mobile" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "female"] ;
+  fhir:Patient.birthDate [ fhir:value "1988-03-12"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/region" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600000000" ] ;
+         fhir:Coding.display [ fhir:value "Region VI (Western Visayas)" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/province" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600400000" ] ;
+         fhir:Coding.display [ fhir:value "Aklan" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600407000" ] ;
+         fhir:Coding.display [ fhir:value "Kalibo" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600407013" ] ;
+         fhir:Coding.display [ fhir:value "Poblacion" ]
+       ]
+     ] ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.line [
+       fhir:value "Area 4, Barangay Mabuhay" ;
+       fhir:index -1
+     ] ;
+     fhir:Address.postalCode [ fhir:value "5600" ] ;
+     fhir:Address.country [ fhir:value "PH" ]
+  ] ;
+  fhir:Patient.contact [
+     fhir:index -1 ;
+     fhir:Patient.contact.relationship [
+       fhir:index -1 ;
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleCode" ] ;
+         fhir:Coding.code [ fhir:value "HUSB" ] ;
+         fhir:Coding.display [ fhir:value "Husband" ]
+       ]
+     ] ;
+     fhir:Patient.contact.name [
+       fhir:HumanName.use [ fhir:value "official" ] ;
+       fhir:HumanName.family [ fhir:value "Reyes" ] ;
+       fhir:HumanName.given [
+         fhir:value "Roberto" ;
+         fhir:index -1
+       ]
+     ]
+  ] .
+
+<urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e> a fhir:Practitioner ;
+  fhir:Resource.id [ fhir:value "ExampleERefPractitionerSubmission"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ExampleERefPractitionerSubmission\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExampleERefPractitionerSubmission</b></p><a name=\"ExampleERefPractitionerSubmission\"> </a><a name=\"hcExampleERefPractitionerSubmission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/5466863</p><p><b>name</b>: Maria Villanueva (Official)</p></div>"
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://prc.gov.ph/" ] ;
+     fhir:Identifier.value [ fhir:value "5466863" ]
+  ] ;
+  fhir:Practitioner.name [
+     fhir:index -1 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.family [ fhir:value "Villanueva" ] ;
+     fhir:HumanName.given [
+       fhir:value "Maria" ;
+       fhir:index -1
+     ] ;
+     fhir:HumanName.prefix [
+       fhir:value "Dr." ;
+       fhir:index -1
+     ]
+  ] .
+
+<urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e> a fhir:Practitioner ;
+  fhir:Resource.id [ fhir:value "ExampleERefPractitionerReceiving"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ExampleERefPractitionerReceiving\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExampleERefPractitionerReceiving</b></p><a name=\"ExampleERefPractitionerReceiving\"> </a><a name=\"hcExampleERefPractitionerReceiving\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/7890123</p><p><b>name</b>: Carlos Lim (Official)</p></div>"
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://prc.gov.ph/" ] ;
+     fhir:Identifier.value [ fhir:value "7890123" ]
+  ] ;
+  fhir:Practitioner.name [
+     fhir:index -1 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.family [ fhir:value "Lim" ] ;
+     fhir:HumanName.given [
+       fhir:value "Carlos" ;
+       fhir:index -1
+     ] ;
+     fhir:HumanName.prefix [
+       fhir:value "Dr." ;
+       fhir:index -1
+     ]
+  ] .
+
+<urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b> a fhir:Organization ;
+  fhir:Resource.id [ fhir:value "ExampleERefOrganizationKaliboHC"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ExampleERefOrganizationKaliboHC\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleERefOrganizationKaliboHC</b></p><a name=\"ExampleERefOrganizationKaliboHC\"> </a><a name=\"hcExampleERefOrganizationKaliboHC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-DOHNHFRCodeNS.html\" title=\"Health Facility Code (HFC) from the National Health Facility Registry.\">DOHNHFRCode</a>/3056, <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-HCPNCodeNS.html\" title=\"Health Care Provider Network (HCPN) code uniquely identifying an organization within its Health Care Provider Network in the Philippines.\">HCPNCode</a>/Aklan HCPN</p><p><b>name</b>: Kalibo Health Center</p><p><b>telecom</b>: ph: (043) 756-2233(Work)</p><p><b>address</b>: Mabini Street 5600 PH (work)</p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code" ] ;
+     fhir:Identifier.value [ fhir:value "3056" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code" ] ;
+     fhir:Identifier.value [ fhir:value "Aklan HCPN" ]
+  ] ;
+  fhir:Organization.name [ fhir:value "Kalibo Health Center"] ;
+  fhir:Organization.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "(043) 756-2233" ] ;
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ] ;
+  fhir:Organization.address [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/region" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600000000" ] ;
+         fhir:Coding.display [ fhir:value "Region VI (Western Visayas)" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/province" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600400000" ] ;
+         fhir:Coding.display [ fhir:value "Aklan" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600407000" ] ;
+         fhir:Coding.display [ fhir:value "Kalibo" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600407013" ] ;
+         fhir:Coding.display [ fhir:value "Poblacion" ]
+       ]
+     ] ;
+     fhir:Address.use [ fhir:value "work" ] ;
+     fhir:Address.line [
+       fhir:value "Mabini Street" ;
+       fhir:index -1
+     ] ;
+     fhir:Address.postalCode [ fhir:value "5600" ] ;
+     fhir:Address.country [ fhir:value "PH" ]
+  ] .
+
+<urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126> a fhir:Organization ;
+  fhir:Resource.id [ fhir:value "ExampleERefOrganizationDRSTMH"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ExampleERefOrganizationDRSTMH\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleERefOrganizationDRSTMH</b></p><a name=\"ExampleERefOrganizationDRSTMH\"> </a><a name=\"hcExampleERefOrganizationDRSTMH\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-DOHNHFRCodeNS.html\" title=\"Health Facility Code (HFC) from the National Health Facility Registry.\">DOHNHFRCode</a>/513, <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-HCPNCodeNS.html\" title=\"Health Care Provider Network (HCPN) code uniquely identifying an organization within its Health Care Provider Network in the Philippines.\">HCPNCode</a>/Aklan HCPN</p><p><b>name</b>: Dr. Rafael S. Tumbokon Memorial Hospital</p><p><b>telecom</b>: ph: (043) 756-3124(Work)</p><p><b>address</b>: National Highway 5600 PH (work)</p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code" ] ;
+     fhir:Identifier.value [ fhir:value "513" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code" ] ;
+     fhir:Identifier.value [ fhir:value "Aklan HCPN" ]
+  ] ;
+  fhir:Organization.name [ fhir:value "Dr. Rafael S. Tumbokon Memorial Hospital"] ;
+  fhir:Organization.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "(043) 756-3124" ] ;
+     fhir:ContactPoint.use [ fhir:value "work" ]
+  ] ;
+  fhir:Organization.address [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/region" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600000000" ] ;
+         fhir:Coding.display [ fhir:value "Region VI (Western Visayas)" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/province" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600400000" ] ;
+         fhir:Coding.display [ fhir:value "Aklan" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600407000" ] ;
+         fhir:Coding.display [ fhir:value "Kalibo" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://psa.gov.ph/classification/psgc" ] ;
+         fhir:Coding.code [ fhir:value "0600407013" ] ;
+         fhir:Coding.display [ fhir:value "Poblacion" ]
+       ]
+     ] ;
+     fhir:Address.use [ fhir:value "work" ] ;
+     fhir:Address.line [
+       fhir:value "National Highway" ;
+       fhir:index -1
+     ] ;
+     fhir:Address.postalCode [ fhir:value "5600" ] ;
+     fhir:Address.country [ fhir:value "PH" ]
+  ] .
+
+<urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9> a fhir:PractitionerRole ;
+  fhir:Resource.id [ fhir:value "ExampleERefPractitionerRoleSubmission"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_ExampleERefPractitionerRoleSubmission\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRoleSubmission</b></p><a name=\"ExampleERefPractitionerRoleSubmission\"> </a><a name=\"hcExampleERefPractitionerRoleSubmission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-practitioner-role.html\">PH eReferral PractitionerRole</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/5466863</p><p><b>practitioner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-309021d0-7abe-4b54-b2e9-23a056851d0e\">Practitioner Maria Villanueva (official)</a></p><p><b>organization</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a038f451-6557-4b01-b05c-aa4ff967545b\">Organization Kalibo Health Center</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></p></div>"
+  ] ;
+  fhir:PractitionerRole.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://prc.gov.ph/" ] ;
+     fhir:Identifier.value [ fhir:value "5466863" ]
+  ] ;
+  fhir:PractitionerRole.practitioner [
+     fhir:Reference.reference [ fhir:value "urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e" ]
+  ] ;
+  fhir:PractitionerRole.organization [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b" ]
+  ] ;
+  fhir:PractitionerRole.code [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:158965000 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "158965000" ] ;
+       fhir:Coding.display [ fhir:value "Medical practitioner" ]
+     ]
+  ] .
+
+<urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de> a fhir:PractitionerRole ;
+  fhir:Resource.id [ fhir:value "ExampleERefPractitionerRoleReceiving"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_ExampleERefPractitionerRoleReceiving\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRoleReceiving</b></p><a name=\"ExampleERefPractitionerRoleReceiving\"> </a><a name=\"hcExampleERefPractitionerRoleReceiving\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-practitioner-role.html\">PH eReferral PractitionerRole</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/7890123</p><p><b>practitioner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e\">Practitioner Carlos Lim (official)</a></p><p><b>organization</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-8c97c63e-4dbf-45d5-894e-f671e385a126\">Organization Dr. Rafael S. Tumbokon Memorial Hospital</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></p></div>"
+  ] ;
+  fhir:PractitionerRole.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "https://prc.gov.ph/" ] ;
+     fhir:Identifier.value [ fhir:value "7890123" ]
+  ] ;
+  fhir:PractitionerRole.practitioner [
+     fhir:Reference.reference [ fhir:value "urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e" ]
+  ] ;
+  fhir:PractitionerRole.organization [
+     fhir:Reference.reference [ fhir:value "urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126" ]
+  ] ;
+  fhir:PractitionerRole.code [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:158965000 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "158965000" ] ;
+       fhir:Coding.display [ fhir:value "Medical practitioner" ]
+     ]
+  ] .
+
+<urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759> a fhir:ServiceRequest ;
+  fhir:Resource.id [ fhir:value "ExampleERefServiceRequest"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_ExampleERefServiceRequest\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleERefServiceRequest</b></p><a name=\"ExampleERefServiceRequest\"> </a><a name=\"hcExampleERefServiceRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-service-request.html\">EReferral ServiceRequest</a></p></div><p><b>requisition</b>: <code>urn:oid:1.2.840.113619.21.1.2</code>/REF-2026-001234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 73770003}\">Emergency</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>occurrence</b>: 2026-06-18 08:30:00+0800</p><p><b>authoredOn</b>: 2026-06-18 08:30:00+0800</p><p><b>requester</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></p><p><b>performer</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-6ce0a17b-7fb3-4075-a524-3afd390731de\">PractitionerRole Medical practitioner</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 71388002}\">Severe pre-eclampsia requiring IV antihypertensive, seizure prophylaxis, and maternal-fetal monitoring</span></p><p><b>reasonReference</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-7166d722-982f-4d35-841d-c63d4d5ec772\">Condition Pre-eclampsia</a></p><p><b>note</b>: </p><blockquote><div><p>Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:ServiceRequest.requisition [
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.840.113619.21.1.2" ] ;
+     fhir:Identifier.value [ fhir:value "REF-2026-001234" ]
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "active"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:73770003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "73770003" ] ;
+       fhir:Coding.display [ fhir:value "Hospital-based outpatient emergency care center" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Emergency" ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:ServiceRequest.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:ServiceRequest.occurrenceDateTime [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.requester [
+     fhir:Reference.reference [ fhir:value "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9" ]
+  ] ;
+  fhir:ServiceRequest.performer [
+     fhir:index -1 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de" ]
+  ] ;
+  fhir:ServiceRequest.reasonCode [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:71388002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "71388002" ] ;
+       fhir:Coding.display [ fhir:value "Procedure" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Severe pre-eclampsia requiring IV antihypertensive, seizure prophylaxis, and maternal-fetal monitoring" ]
+  ] ;
+  fhir:ServiceRequest.reasonReference [
+     fhir:index -1 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:7166d722-982f-4d35-841d-c63d4d5ec772" ]
+  ] ;
+  fhir:ServiceRequest.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia." ]
+  ] .
+
+<urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce> a fhir:Encounter ;
+  fhir:Resource.id [ fhir:value "ExampleERefSubmissionEncounter"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_ExampleERefSubmissionEncounter\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter ExampleERefSubmissionEncounter</b></p><a name=\"ExampleERefSubmissionEncounter\"> </a><a name=\"hcExampleERefSubmissionEncounter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-encounter.html\">ERefEncounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p></div>"
+  ] ;
+  fhir:Encounter.status [ fhir:value "finished"] ;
+  fhir:Encounter.class [
+     fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+     fhir:Coding.code [ fhir:value "AMB" ] ;
+     fhir:Coding.display [ fhir:value "ambulatory" ]
+  ] ;
+  fhir:Encounter.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] .
+
+<urn:uuid:99a80644-e928-4fbd-b07f-8ac5fb5675b1> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "ExampleERefConditionChiefComplaint"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_ExampleERefConditionChiefComplaint\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition ExampleERefConditionChiefComplaint</b></p><a name=\"ExampleERefConditionChiefComplaint\"> </a><a name=\"hcExampleERefConditionChiefComplaint\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-condition.html\">EReferral Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 25064002}\">Severe headache, dizziness, blurring of vision and epigastric pain for 2 days</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>note</b>: </p><blockquote><div><p>Chief complaint: severe headache, dizziness, blurring of vision and epigastric pain for 2 days. G2P1, 32 weeks AOG.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ] ;
+       fhir:Coding.code [ fhir:value "problem-list-item" ] ;
+       fhir:Coding.display [ fhir:value "Problem List Item" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:25064002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "25064002" ] ;
+       fhir:Coding.display [ fhir:value "Headache" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Severe headache, dizziness, blurring of vision and epigastric pain for 2 days" ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Condition.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Chief complaint: severe headache, dizziness, blurring of vision and epigastric pain for 2 days. G2P1, 32 weeks AOG." ]
+  ] .
+
+<urn:uuid:7166d722-982f-4d35-841d-c63d4d5ec772> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "ExampleERefCondition"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_ExampleERefCondition\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition ExampleERefCondition</b></p><a name=\"ExampleERefCondition\"> </a><a name=\"hcExampleERefCondition\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-condition.html\">EReferral Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status provisional}\">Provisional</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 398254007}\">Severe pre-eclampsia, 32 weeks AOG, G2P1</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>note</b>: </p><blockquote><div><p>G2P1, 32 weeks AOG. EDD: Aug 20 2026. LMP: Nov 13 2025.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ] ;
+       fhir:Coding.code [ fhir:value "provisional" ] ;
+       fhir:Coding.display [ fhir:value "Provisional" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ] ;
+       fhir:Coding.code [ fhir:value "encounter-diagnosis" ] ;
+       fhir:Coding.display [ fhir:value "Encounter Diagnosis" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:398254007 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "398254007" ] ;
+       fhir:Coding.display [ fhir:value "Pre-eclampsia" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Severe pre-eclampsia, 32 weeks AOG, G2P1" ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Condition.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "G2P1, 32 weeks AOG. EDD: Aug 20 2026. LMP: Nov 13 2025." ]
+  ] .
+
+<urn:uuid:27ea0c24-b2e3-4f4e-ba6f-d40b4653232e> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "ExampleERefObservationBP"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationBP\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationBP</b></p><a name=\"ExampleERefObservationBP\"> </a><a name=\"hcExampleERefObservationBP\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85354-9}, {http://snomed.info/sct 75367002}\">Blood pressure panel with all children optional</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8480-6}, {http://snomed.info/sct 271649006}\">Systolic blood pressure</span></p><p><b>value</b>: 180 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8462-4}, {http://snomed.info/sct 271650006}\">Diastolic blood pressure</span></p><p><b>value</b>: 110 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "vital-signs" ] ;
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:85354-9 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "85354-9" ] ;
+       fhir:Coding.display [ fhir:value "Blood pressure panel with all children optional" ]
+     ], [
+       fhir:index -1 ;
+       a sct:75367002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "75367002" ] ;
+       fhir:Coding.display [ fhir:value "Blood pressure" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-06-18T08:15:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.component [
+     fhir:index -1 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a loinc:8480-6 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "8480-6" ] ;
+         fhir:Coding.display [ fhir:value "Systolic blood pressure" ]
+       ], [
+         fhir:index -1 ;
+         a sct:271649006 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "271649006" ] ;
+         fhir:Coding.display [ fhir:value "Systolic blood pressure" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "180"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "mmHg" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "mm[Hg]" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         a loinc:8462-4 ;
+         fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+         fhir:Coding.code [ fhir:value "8462-4" ] ;
+         fhir:Coding.display [ fhir:value "Diastolic blood pressure" ]
+       ], [
+         fhir:index -1 ;
+         a sct:271650006 ;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+         fhir:Coding.code [ fhir:value "271650006" ] ;
+         fhir:Coding.display [ fhir:value "Diastolic blood pressure" ]
+       ]
+     ] ;
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "110"^^xsd:decimal ] ;
+       fhir:Quantity.unit [ fhir:value "mmHg" ] ;
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+       fhir:Quantity.code [ fhir:value "mm[Hg]" ]
+     ]
+  ] .
+
+<urn:uuid:75b09e76-3c93-4a69-af02-71a6d9713558> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "ExampleERefObservationHR"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationHR\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationHR</b></p><a name=\"ExampleERefObservationHR\"> </a><a name=\"hcExampleERefObservationHR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8867-4}, {http://snomed.info/sct 78564009}\">Heart rate</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 112 beats/minute<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/min = '/min')</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "vital-signs" ] ;
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:8867-4 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "8867-4" ] ;
+       fhir:Coding.display [ fhir:value "Heart rate" ]
+     ], [
+       fhir:index -1 ;
+       a sct:78564009 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "78564009" ] ;
+       fhir:Coding.display [ fhir:value "Pulse rate" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-06-18T08:15:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "112"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "beats/minute" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "/min" ]
+  ] .
+
+<urn:uuid:0bd2221b-dac4-44ec-811b-a10683f301c9> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "ExampleERefObservationRR"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationRR\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationRR</b></p><a name=\"ExampleERefObservationRR\"> </a><a name=\"hcExampleERefObservationRR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 9279-1}, {http://snomed.info/sct 86290005}\">Respiratory rate</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 24 breaths/minute<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/min = '/min')</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "vital-signs" ] ;
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:9279-1 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "9279-1" ] ;
+       fhir:Coding.display [ fhir:value "Respiratory rate" ]
+     ], [
+       fhir:index -1 ;
+       a sct:86290005 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "86290005" ] ;
+       fhir:Coding.display [ fhir:value "Respiratory rate" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-06-18T08:15:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "24"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "breaths/minute" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "/min" ]
+  ] .
+
+<urn:uuid:080d6fb5-aed8-4dc0-b7dd-51d38f903819> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "ExampleERefObservationSpO2"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationSpO2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationSpO2</b></p><a name=\"ExampleERefObservationSpO2\"> </a><a name=\"hcExampleERefObservationSpO2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2708-6}, {http://snomed.info/sct 103228002}\">Oxygen saturation in Arterial blood</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 96 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "vital-signs" ] ;
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:2708-6 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "2708-6" ] ;
+       fhir:Coding.display [ fhir:value "Oxygen saturation in Arterial blood" ]
+     ], [
+       fhir:index -1 ;
+       a sct:103228002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "103228002" ] ;
+       fhir:Coding.display [ fhir:value "Hemoglobin saturation with oxygen" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-06-18T08:15:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "96"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "%" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "%" ]
+  ] .
+
+<urn:uuid:3f56fb3e-b0ea-4ab0-a7a5-2adac78d5c9b> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "ExampleERefObservationTemp"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationTemp\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationTemp</b></p><a name=\"ExampleERefObservationTemp\"> </a><a name=\"hcExampleERefObservationTemp\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8310-5}, {http://snomed.info/sct 386725007}\">Body temperature</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 36.8 Celsius<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeCel = 'Cel')</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "vital-signs" ] ;
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:8310-5 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "8310-5" ] ;
+       fhir:Coding.display [ fhir:value "Body temperature" ]
+     ], [
+       fhir:index -1 ;
+       a sct:386725007 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "386725007" ] ;
+       fhir:Coding.display [ fhir:value "Body temperature" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-06-18T08:15:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "36.8"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "Celsius" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "Cel" ]
+  ] .
+
+<urn:uuid:d70026e6-2a52-4f4e-99d3-b73dbf52cfc3> a fhir:Observation ;
+  fhir:Resource.id [ fhir:value "ExampleERefObservationWeight"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationWeight\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationWeight</b></p><a name=\"ExampleERefObservationWeight\"> </a><a name=\"hcExampleERefObservationWeight\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29463-7}, {http://snomed.info/sct 27113001}\">Body weight</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 72 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekg = 'kg')</span></p></div>"
+  ] ;
+  fhir:Observation.status [ fhir:value "final"] ;
+  fhir:Observation.category [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ] ;
+       fhir:Coding.code [ fhir:value "vital-signs" ] ;
+       fhir:Coding.display [ fhir:value "Vital Signs" ]
+     ]
+  ] ;
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:29463-7 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "29463-7" ] ;
+       fhir:Coding.display [ fhir:value "Body weight" ]
+     ], [
+       fhir:index -1 ;
+       a sct:27113001 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "27113001" ] ;
+       fhir:Coding.display [ fhir:value "Body weight" ]
+     ]
+  ] ;
+  fhir:Observation.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Observation.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Observation.effectiveDateTime [ fhir:value "2026-06-18T08:15:00+08:00"^^xsd:dateTime] ;
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "72"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "kg" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "kg" ]
+  ] .
+
+<urn:uuid:873a6d29-a842-43e7-a267-c3df56193f7f> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "ExampleERefProcedureTreatment"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_ExampleERefProcedureTreatment\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure ExampleERefProcedureTreatment</b></p><a name=\"ExampleERefProcedureTreatment\"> </a><a name=\"hcExampleERefProcedureTreatment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-procedure.html\">EReferral Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 416608005}\">Drug therapy</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>note</b>: </p><blockquote><div><p>Pre-referral treatment given: Methyldopa 250mg BID, Folic Acid 5mg OD, FeSO4 300mg OD, CaCO3 500mg TID.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:416608005 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "416608005" ] ;
+       fhir:Coding.display [ fhir:value "Drug therapy" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Procedure.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Procedure.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Pre-referral treatment given: Methyldopa 250mg BID, Folic Acid 5mg OD, FeSO4 300mg OD, CaCO3 500mg TID." ]
+  ] .
+
+<urn:uuid:1e517f0b-6324-47f1-a626-8ddb5b617c59> a fhir:DiagnosticReport ;
+  fhir:Resource.id [ fhir:value "ExampleERefDiagnosticReport"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_ExampleERefDiagnosticReport\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport ExampleERefDiagnosticReport</b></p><a name=\"ExampleERefDiagnosticReport\"> </a><a name=\"hcExampleERefDiagnosticReport\"> </a><h2><span title=\"Codes:{http://loinc.org 24356-8}\">Urinalysis complete panel - Urine</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</td></tr><tr><td>Presented Form</td><td> </td></tr></table><p><b>Report Details</b></p><p>Proteinuria 3+. Findings consistent with severe pre-eclampsia.</p></div>"
+  ] ;
+  fhir:DiagnosticReport.status [ fhir:value "final"] ;
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a loinc:24356-8 ;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ] ;
+       fhir:Coding.code [ fhir:value "24356-8" ] ;
+       fhir:Coding.display [ fhir:value "Urinalysis complete panel - Urine" ]
+     ]
+  ] ;
+  fhir:DiagnosticReport.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:DiagnosticReport.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:DiagnosticReport.conclusion [ fhir:value "Proteinuria 3+. Findings consistent with severe pre-eclampsia."] ;
+  fhir:DiagnosticReport.presentedForm [
+     fhir:index -1 ;
+     fhir:Attachment.title [ fhir:value "Urinalysis Results — Kalibo Health Center" ]
+  ] .
+
+<urn:uuid:05fe9d1b-3653-4a4e-8aa6-9dbb51acb4d4> a fhir:Task ;
+  fhir:Resource.id [ fhir:value "ExampleERefTaskRequested"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_ExampleERefTaskRequested\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Task ExampleERefTaskRequested</b></p><a name=\"ExampleERefTaskRequested\"> </a><a name=\"hcExampleERefTaskRequested\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-task.html\">EReferral Task</a></p></div><p><b>status</b>: Requested</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 3457005}\">eReferral for severe pre-eclampsia management</span></p><p><b>focus</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-2da5e918-42d1-4d2c-b5dd-570b0b172759\">ServiceRequest: requisition = urn:oid:1.2.840.113619.21.1.2#REF-2026-001234; status = active; intent = order; category = Hospital-based outpatient emergency care center; occurrence[x] = 2026-06-18 08:30:00+0800; authoredOn = 2026-06-18 08:30:00+0800; reasonCode = Procedure; note = Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</a></p><p><b>for</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>authoredOn</b>: 2026-06-18 08:30:00+0800</p><p><b>lastModified</b>: 2026-06-18 08:30:00+0800</p><p><b>requester</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></p><p><b>owner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-6ce0a17b-7fb3-4075-a524-3afd390731de\">PractitionerRole Medical practitioner</a></p><p><b>note</b>: </p><blockquote><div><p>New referral for Ana Reyes with severe pre-eclampsia. Awaiting DRSTMH response.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Task.status [ fhir:value "requested"] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       a sct:3457005 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "3457005" ] ;
+       fhir:Coding.display [ fhir:value "Patient referral" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "eReferral for severe pre-eclampsia management" ]
+  ] ;
+  fhir:Task.focus [
+     fhir:Reference.reference [ fhir:value "urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759" ]
+  ] ;
+  fhir:Task.for [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.lastModified [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:Reference.reference [ fhir:value "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:Reference.reference [ fhir:value "urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de" ]
+  ] ;
+  fhir:Task.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "New referral for Ana Reyes with severe pre-eclampsia. Awaiting DRSTMH response." ]
+  ] .
+
+<urn:uuid:6760bfb4-3596-4568-b8ff-b487736a70f5> a fhir:Provenance ;
+  fhir:Resource.id [ fhir:value "ExampleERefProvenanceSubmission"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance" ;
+       fhir:index -1 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Provenance_ExampleERefProvenanceSubmission\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Provenance ExampleERefProvenanceSubmission</b></p><a name=\"ExampleERefProvenanceSubmission\"> </a><a name=\"hcExampleERefProvenanceSubmission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-provenance.html\">EReferral Provenance</a></p></div><p>Provenance for <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-2da5e918-42d1-4d2c-b5dd-570b0b172759\">ServiceRequest: requisition = urn:oid:1.2.840.113619.21.1.2#REF-2026-001234; status = active; intent = order; category = Hospital-based outpatient emergency care center; occurrence[x] = 2026-06-18 08:30:00+0800; authoredOn = 2026-06-18 08:30:00+0800; reasonCode = Procedure; note = Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2026-06-18 08:30:00+0800</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-DataOperation CREATE}\">create</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td><td><b>On Behalf Of</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type author}\">Author</span></td><td><a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></td><td><a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a038f451-6557-4b01-b05c-aa4ff967545b\">Organization Kalibo Health Center</a></td></tr></table></div>"
+  ] ;
+  fhir:Provenance.target [
+     fhir:index -1 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759" ]
+  ] ;
+  fhir:Provenance.recorded [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-DataOperation" ] ;
+       fhir:Coding.code [ fhir:value "CREATE" ] ;
+       fhir:Coding.display [ fhir:value "create" ]
+     ]
+  ] ;
+  fhir:Provenance.agent [
+     fhir:index -1 ;
+     fhir:Provenance.agent.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+         fhir:Coding.code [ fhir:value "author" ] ;
+         fhir:Coding.display [ fhir:value "Author" ]
+       ]
+     ] ;
+     fhir:Provenance.agent.who [
+       fhir:Reference.reference [ fhir:value "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9" ]
+     ] ;
+     fhir:Provenance.agent.onBehalfOf [
+       fhir:Reference.reference [ fhir:value "urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b" ]
+     ]
+  ] ;
+  fhir:Provenance.signature [
+     fhir:index -1 ;
+     fhir:Signature.type [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso-astm:E1762-95:2013" ] ;
+       fhir:Coding.code [ fhir:value "1.2.840.10065.1.12.1.5" ] ;
+       fhir:Coding.display [ fhir:value "Verification Signature" ]
+     ] ;
+     fhir:Signature.when [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:Signature.who [
+       fhir:Reference.reference [ fhir:value "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9" ]
+     ] ;
+     fhir:Signature.data [ fhir:value "dGVzdHNpZ25hdHVyZWJhc2U2NA=="^^xsd:base64Binary ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Bundle/ExampleERefSubmissionBundle.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

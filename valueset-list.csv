@@ -1,0 +1,7 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response,0.1.0,draft,,EReferralReceivingResponse,eReferral Receiving Facility Response,"Response states used by a receiving facility after referral receipt in the PH eReferral workflow.",,"Internal"
+https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type,0.1.0,draft,,EReferralRelationshipType,eReferral Relationship Type,"Relationship roles used for patient contacts, next of kin, emergency contacts, guardians, and accompanying persons in Philippine eReferral.",,"THO (V3)"
+https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs,0.1.0,draft,,PWDDisabilityTypeVS,PWD Disability Type Value Set,"Value set for types of disability as defined by the Philippine government for PWD registration.",,"Internal"
+https://www.fhir.doh.gov.ph/pheref/ValueSet/practitioner-role,0.1.0,active,,EReferralPractitionerRoleCode,Practitioner Role VS,"Designation of referring individual",,"SCT,Internal"
+https://www.fhir.doh.gov.ph/pheref/ValueSet/reason-for-referral-service-type,0.1.0,active,,EReferralReason,Reason for Referral (Service Type) VS,"Reason for referral (Service type)",,"SCT"
+https://www.fhir.doh.gov.ph/pheref/ValueSet/referral-category,0.1.0,active,,EReferralServiceCategory,Referral Category VS,"Referral category (Emergency or Outpatient)",,"SCT"

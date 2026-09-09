@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>References - PH eReferral Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style>
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.ph-table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+}
+
+.ph-table table {
+  width: 100%;
+  }
+
+.ph-table thead {
+  display: table-header-group;
+}
+
+.ph-table th {
+  background-color: #555555;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #444444;
+}
+
+.ph-table td {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.ph-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ph-table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.ph-table tbody tr:hover {
+  background-color: #ebf8ff;
+  transition: background-color 0.2s ease;
+}
+
+.ph-table td code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="logical-information-model.html">Logical Information Model</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Sample Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="sample-case-ana-reyes.html">Ana Reyes Referral</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>References</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>References</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#references" id="markdown-toc-references">References</a>    <ul>
+      <li><a href="#ph-ereferral-l1-basis-department-of-health" id="markdown-toc-ph-ereferral-l1-basis-department-of-health">PH eReferral L1 Basis: Department of Health</a>        <ul>
+          <li><a href="#republic-act-no-11223" id="markdown-toc-republic-act-no-11223">Republic Act No. 11223</a></li>
+          <li><a href="#doh-administrative-order-no-2020-0019" id="markdown-toc-doh-administrative-order-no-2020-0019">DOH Administrative Order No. 2020-0019</a></li>
+          <li><a href="#doh-administrative-order-no-2020-0019-a" id="markdown-toc-doh-administrative-order-no-2020-0019-a">DOH Administrative Order No. 2020-0019-A</a></li>
+          <li><a href="#doh-administrative-order-no-2020-0021" id="markdown-toc-doh-administrative-order-no-2020-0021">DOH Administrative Order No. 2020-0021</a></li>
+          <li><a href="#doh-administrative-order-no-2020-0024" id="markdown-toc-doh-administrative-order-no-2020-0024">DOH Administrative Order No. 2020-0024</a></li>
+          <li><a href="#doh-philhealth-joint-administrative-order-no-2021-0001" id="markdown-toc-doh-philhealth-joint-administrative-order-no-2021-0001">DOH-PhilHealth Joint Administrative Order No. 2021-0001</a></li>
+          <li><a href="#doh-philhealth-dict-joint-administrative-order-no-2021-0001" id="markdown-toc-doh-philhealth-dict-joint-administrative-order-no-2021-0001">DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001</a></li>
+        </ul>
+      </li>
+      <li><a href="#related-fhir-implementation-guides" id="markdown-toc-related-fhir-implementation-guides">Related FHIR Implementation Guides</a></li>
+      <li><a href="#technical-standards" id="markdown-toc-technical-standards">Technical Standards</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="references">References</h1>
+
+<p>This page lists reference documents, standards, and policies that inform the development of the PH eReferral Implementation Guide.</p>
+
+<h2 id="ph-ereferral-l1-basis-department-of-health">PH eReferral L1 Basis: Department of Health</h2>
+
+<h3 id="republic-act-no-11223">Republic Act No. 11223</h3>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/15yXvPqFEAiUC1m3uhNAevwAflr3mcTEf/view">View on Google Drive</a></li>
+  <li>
+    <p>Inline preview:</p>
+
+    <object data="references/republic-act-11223.pdf" type="application/pdf" width="100%" height="500px">
+  <div class="pdf-fallback" style="max-height: 500px; overflow-y: auto; border: 1px solid #d0d0d0; padding: 0.75rem; background: #ffffff; box-shadow: inset 0 0 0 1px #f8f8f8;" role="region" aria-label="Image preview pages for Republic Act No. 11223 PDF">
+    <p>
+      Inline PDF preview unavailable. View the generated page images below, or
+      <a href="https://drive.google.com/file/d/15yXvPqFEAiUC1m3uhNAevwAflr3mcTEf/view" target="_blank">open on Google Drive</a>.
+    </p>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-01.png" alt="Republic Act No. 11223, page 1" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-02.png" alt="Republic Act No. 11223, page 2" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-03.png" alt="Republic Act No. 11223, page 3" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-04.png" alt="Republic Act No. 11223, page 4" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-05.png" alt="Republic Act No. 11223, page 5" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-06.png" alt="Republic Act No. 11223, page 6" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-07.png" alt="Republic Act No. 11223, page 7" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-08.png" alt="Republic Act No. 11223, page 8" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-09.png" alt="Republic Act No. 11223, page 9" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-10.png" alt="Republic Act No. 11223, page 10" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-11.png" alt="Republic Act No. 11223, page 11" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-12.png" alt="Republic Act No. 11223, page 12" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-13.png" alt="Republic Act No. 11223, page 13" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-14.png" alt="Republic Act No. 11223, page 14" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-15.png" alt="Republic Act No. 11223, page 15" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-16.png" alt="Republic Act No. 11223, page 16" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/republic-act-11223-page-17.png" alt="Republic Act No. 11223, page 17" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0;">
+      <img src="references-pages/republic-act-11223-page-18.png" alt="Republic Act No. 11223, page 18" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+  </div>
+</object>
+  </li>
+</ul>
+
+<h3 id="doh-administrative-order-no-2020-0019">DOH Administrative Order No. 2020-0019</h3>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/17IjOJpcMWzXmE_Uyo0fWeX_eNBziQCAj/view">View on Google Drive</a></li>
+  <li>
+    <p>Inline preview:</p>
+
+    <object data="references/doh-ao-2020-0019.pdf" type="application/pdf" width="100%" height="500px">
+  <div class="pdf-fallback" style="max-height: 500px; overflow-y: auto; border: 1px solid #d0d0d0; padding: 0.75rem; background: #ffffff; box-shadow: inset 0 0 0 1px #f8f8f8;" role="region" aria-label="Image preview pages for DOH Administrative Order No. 2020-0019 PDF">
+    <p>
+      Inline PDF preview unavailable. View the generated page images below, or
+      <a href="https://drive.google.com/file/d/17IjOJpcMWzXmE_Uyo0fWeX_eNBziQCAj/view" target="_blank">open on Google Drive</a>.
+    </p>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-01.png" alt="DOH Administrative Order No. 2020-0019, page 1" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-02.png" alt="DOH Administrative Order No. 2020-0019, page 2" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-03.png" alt="DOH Administrative Order No. 2020-0019, page 3" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-04.png" alt="DOH Administrative Order No. 2020-0019, page 4" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-05.png" alt="DOH Administrative Order No. 2020-0019, page 5" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-06.png" alt="DOH Administrative Order No. 2020-0019, page 6" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-07.png" alt="DOH Administrative Order No. 2020-0019, page 7" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-08.png" alt="DOH Administrative Order No. 2020-0019, page 8" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-09.png" alt="DOH Administrative Order No. 2020-0019, page 9" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-10.png" alt="DOH Administrative Order No. 2020-0019, page 10" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-11.png" alt="DOH Administrative Order No. 2020-0019, page 11" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-12.png" alt="DOH Administrative Order No. 2020-0019, page 12" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-13.png" alt="DOH Administrative Order No. 2020-0019, page 13" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0019-page-14.png" alt="DOH Administrative Order No. 2020-0019, page 14" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0;">
+      <img src="references-pages/doh-ao-2020-0019-page-15.png" alt="DOH Administrative Order No. 2020-0019, page 15" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+  </div>
+</object>
+  </li>
+</ul>
+
+<h3 id="doh-administrative-order-no-2020-0019-a">DOH Administrative Order No. 2020-0019-A</h3>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/1wW6Mn_FB3X_Mqq-PP0T0kX60mq_YqFTD/view">View on Google Drive</a></li>
+  <li>
+    <p>Inline preview:</p>
+
+    <object data="references/doh-ao-2020-0019-A.pdf" type="application/pdf" width="100%" height="500px">
+  <div class="pdf-fallback" style="max-height: 500px; overflow-y: auto; border: 1px solid #d0d0d0; padding: 0.75rem; background: #ffffff; box-shadow: inset 0 0 0 1px #f8f8f8;" role="region" aria-label="Image preview pages for DOH Administrative Order No. 2020-0019-A PDF">
+    <p>
+      Inline PDF preview unavailable. View the generated page images below, or
+      <a href="https://drive.google.com/file/d/1wW6Mn_FB3X_Mqq-PP0T0kX60mq_YqFTD/view" target="_blank">open on Google Drive</a>.
+    </p>
+    <figure style="margin: 0;">
+      <img src="references-pages/doh-ao-2020-0019-A-page-01.png" alt="DOH Administrative Order No. 2020-0019-A, page 1" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+  </div>
+</object>
+  </li>
+</ul>
+
+<h3 id="doh-administrative-order-no-2020-0021">DOH Administrative Order No. 2020-0021</h3>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/19spglg4DVl3aGmloIK6sRQl77d09xPRD/view">View on Google Drive</a></li>
+  <li>
+    <p>Inline preview:</p>
+
+    <object data="references/doh-ao-2020-0021.pdf" type="application/pdf" width="100%" height="500px">
+  <div class="pdf-fallback" style="max-height: 500px; overflow-y: auto; border: 1px solid #d0d0d0; padding: 0.75rem; background: #ffffff; box-shadow: inset 0 0 0 1px #f8f8f8;" role="region" aria-label="Image preview pages for DOH Administrative Order No. 2020-0021 PDF">
+    <p>
+      Inline PDF preview unavailable. View the generated page images below, or
+      <a href="https://drive.google.com/file/d/19spglg4DVl3aGmloIK6sRQl77d09xPRD/view" target="_blank">open on Google Drive</a>.
+    </p>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-01.png" alt="DOH Administrative Order No. 2020-0021, page 1" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-02.png" alt="DOH Administrative Order No. 2020-0021, page 2" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-03.png" alt="DOH Administrative Order No. 2020-0021, page 3" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-04.png" alt="DOH Administrative Order No. 2020-0021, page 4" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-05.png" alt="DOH Administrative Order No. 2020-0021, page 5" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-06.png" alt="DOH Administrative Order No. 2020-0021, page 6" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-07.png" alt="DOH Administrative Order No. 2020-0021, page 7" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-08.png" alt="DOH Administrative Order No. 2020-0021, page 8" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-09.png" alt="DOH Administrative Order No. 2020-0021, page 9" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-10.png" alt="DOH Administrative Order No. 2020-0021, page 10" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-11.png" alt="DOH Administrative Order No. 2020-0021, page 11" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-12.png" alt="DOH Administrative Order No. 2020-0021, page 12" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-13.png" alt="DOH Administrative Order No. 2020-0021, page 13" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0021-page-14.png" alt="DOH Administrative Order No. 2020-0021, page 14" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0;">
+      <img src="references-pages/doh-ao-2020-0021-page-15.png" alt="DOH Administrative Order No. 2020-0021, page 15" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+  </div>
+</object>
+  </li>
+</ul>
+
+<h3 id="doh-administrative-order-no-2020-0024">DOH Administrative Order No. 2020-0024</h3>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/1otz_RIyhe9IxzbHZPlvjmJ2GtJaInaU4/view">View on Google Drive</a></li>
+  <li>
+    <p>Inline preview:</p>
+
+    <object data="references/doh-ao-2020-0024.pdf" type="application/pdf" width="100%" height="500px">
+  <div class="pdf-fallback" style="max-height: 500px; overflow-y: auto; border: 1px solid #d0d0d0; padding: 0.75rem; background: #ffffff; box-shadow: inset 0 0 0 1px #f8f8f8;" role="region" aria-label="Image preview pages for DOH Administrative Order No. 2020-0024 PDF">
+    <p>
+      Inline PDF preview unavailable. View the generated page images below, or
+      <a href="https://drive.google.com/file/d/1otz_RIyhe9IxzbHZPlvjmJ2GtJaInaU4/view" target="_blank">open on Google Drive</a>.
+    </p>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-01.png" alt="DOH Administrative Order No. 2020-0024, page 1" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-02.png" alt="DOH Administrative Order No. 2020-0024, page 2" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-03.png" alt="DOH Administrative Order No. 2020-0024, page 3" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-04.png" alt="DOH Administrative Order No. 2020-0024, page 4" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-05.png" alt="DOH Administrative Order No. 2020-0024, page 5" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-06.png" alt="DOH Administrative Order No. 2020-0024, page 6" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-07.png" alt="DOH Administrative Order No. 2020-0024, page 7" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-08.png" alt="DOH Administrative Order No. 2020-0024, page 8" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-09.png" alt="DOH Administrative Order No. 2020-0024, page 9" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-10.png" alt="DOH Administrative Order No. 2020-0024, page 10" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-ao-2020-0024-page-11.png" alt="DOH Administrative Order No. 2020-0024, page 11" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0;">
+      <img src="references-pages/doh-ao-2020-0024-page-12.png" alt="DOH Administrative Order No. 2020-0024, page 12" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+  </div>
+</object>
+  </li>
+</ul>
+
+<h3 id="doh-philhealth-joint-administrative-order-no-2021-0001">DOH-PhilHealth Joint Administrative Order No. 2021-0001</h3>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/1vdAUUoIuXZG3pNlUfAGiwkHy6-qVp4EK/view">View on Google Drive</a></li>
+  <li>
+    <p>Inline preview:</p>
+
+    <object data="references/doh-philhealth-jao-2021-0001.pdf" type="application/pdf" width="100%" height="500px">
+  <div class="pdf-fallback" style="max-height: 500px; overflow-y: auto; border: 1px solid #d0d0d0; padding: 0.75rem; background: #ffffff; box-shadow: inset 0 0 0 1px #f8f8f8;" role="region" aria-label="Image preview pages for DOH-PhilHealth Joint Administrative Order No. 2021-0001 PDF">
+    <p>
+      Inline PDF preview unavailable. View the generated page images below, or
+      <a href="https://drive.google.com/file/d/1vdAUUoIuXZG3pNlUfAGiwkHy6-qVp4EK/view" target="_blank">open on Google Drive</a>.
+    </p>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-01.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 1" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-02.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 2" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-03.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 3" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-04.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 4" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-05.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 5" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-06.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 6" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-07.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 7" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-08.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 8" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-09.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 9" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-10.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 10" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-11.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 11" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-12.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 12" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-13.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 13" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0;">
+      <img src="references-pages/doh-philhealth-jao-2021-0001-page-14.png" alt="DOH-PhilHealth Joint Administrative Order No. 2021-0001, page 14" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+  </div>
+</object>
+  </li>
+</ul>
+
+<h3 id="doh-philhealth-dict-joint-administrative-order-no-2021-0001">DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001</h3>
+
+<ul>
+  <li><a href="https://drive.google.com/file/d/1mfjq2MT2ugI0Fqqcx6GAVqFmTpYkItg8/view">View on Google Drive</a></li>
+  <li>
+    <p>Inline preview:</p>
+
+    <object data="references/doh-philhealth-dict-jao-2021-0001.pdf" type="application/pdf" width="100%" height="500px">
+  <div class="pdf-fallback" style="max-height: 500px; overflow-y: auto; border: 1px solid #d0d0d0; padding: 0.75rem; background: #ffffff; box-shadow: inset 0 0 0 1px #f8f8f8;" role="region" aria-label="Image preview pages for DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001 PDF">
+    <p>
+      Inline PDF preview unavailable. View the generated page images below, or
+      <a href="https://drive.google.com/file/d/1mfjq2MT2ugI0Fqqcx6GAVqFmTpYkItg8/view" target="_blank">open on Google Drive</a>.
+    </p>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-dict-jao-2021-0001-page-01.png" alt="DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001, page 1" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-dict-jao-2021-0001-page-02.png" alt="DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001, page 2" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-dict-jao-2021-0001-page-03.png" alt="DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001, page 3" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-dict-jao-2021-0001-page-04.png" alt="DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001, page 4" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-dict-jao-2021-0001-page-05.png" alt="DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001, page 5" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-dict-jao-2021-0001-page-06.png" alt="DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001, page 6" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-dict-jao-2021-0001-page-07.png" alt="DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001, page 7" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0 0 1rem;">
+      <img src="references-pages/doh-philhealth-dict-jao-2021-0001-page-08.png" alt="DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001, page 8" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+    <figure style="margin: 0;">
+      <img src="references-pages/doh-philhealth-dict-jao-2021-0001-page-09.png" alt="DOH-PhilHealth-DICT Joint Administrative Order No. 2021-0001, page 9" style="width: 100%; height: auto;" loading="lazy" />
+    </figure>
+  </div>
+</object>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="related-fhir-implementation-guides">Related FHIR Implementation Guides</h2>
+
+<ul>
+  <li><a href="https://github.com/UP-Manila-SILab/ph-core">PH Core FHIR IG</a></li>
+  <li><a href="https://github.com/ph-ereferral-organization/ph-ereferral">PH eReferral IG</a></li>
+</ul>
+
+<h2 id="technical-standards">Technical Standards</h2>
+
+<ul>
+  <li><a href="http://hl7.org/fhir/R4/">FHIR R4</a></li>
+  <li><a href="https://fshschool.org/">FHIR Shorthand (FSH)</a></li>
+  <li><a href="https://github.com/HL7/fhir-ig-publisher">HL7 FHIR IG Publisher</a></li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-09-09 03:53:00 +0000">
+    2026-09-09
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

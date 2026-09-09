@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskReferredOnward> a fhir:Task ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleERefTaskReferredOnward"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task ExampleERefTaskReferredOnward</b></p><a name=\"ExampleERefTaskReferredOnward\"> </a><a name=\"hcExampleERefTaskReferredOnward\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-task.html\">EReferral Task</a></p></div><p><b>status</b>: Rejected</p><p><b>statusReason</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow capacity-full}\">Capacity full</span></p><p><b>businessStatus</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow referred-onward}\">Referred onward</span></p><p><b>intent</b>: order</p><p><b>focus</b>: <a href=\"ServiceRequest-ExampleERefServiceRequest.html\">ServiceRequest: requisition = urn:oid:1.2.840.113619.21.1.2#REF-2026-001234; status = active; intent = order; category = Hospital-based outpatient emergency care center; occurrence[x] = 2026-06-18 08:30:00+0800; authoredOn = 2026-06-18 08:30:00+0800; reasonCode = Procedure; note = Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</a></p><p><b>for</b>: <a href=\"Patient-ExampleERefPatient.html\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>authoredOn</b>: 2026-06-18 08:30:00+0800</p><p><b>lastModified</b>: 2026-06-18 12:45:00+0800</p><p><b>requester</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRoleSubmission.html\">PractitionerRole Medical practitioner</a></p><p><b>owner</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRoleReceiving.html\">PractitionerRole Medical practitioner</a></p></div>"
+  ] ;
+  fhir:Task.status [ fhir:value "rejected"] ;
+  fhir:Task.statusReason [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow" ] ;
+       fhir:Coding.code [ fhir:value "capacity-full" ] ;
+       fhir:Coding.display [ fhir:value "Capacity full" ]
+     ]
+  ] ;
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow" ] ;
+       fhir:Coding.code [ fhir:value "referred-onward" ] ;
+       fhir:Coding.display [ fhir:value "Referred onward" ]
+     ]
+  ] ;
+  fhir:Task.intent [ fhir:value "order"] ;
+  fhir:Task.focus [
+     fhir:link <https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequest> ;
+     fhir:Reference.reference [ fhir:value "ServiceRequest/ExampleERefServiceRequest" ]
+  ] ;
+  fhir:Task.for [
+     fhir:link <https://fhir.doh.gov.ph/pheref/Patient/ExampleERefPatient> ;
+     fhir:Reference.reference [ fhir:value "Patient/ExampleERefPatient" ]
+  ] ;
+  fhir:Task.authoredOn [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.lastModified [ fhir:value "2026-06-18T12:45:00+08:00"^^xsd:dateTime] ;
+  fhir:Task.requester [
+     fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleSubmission> ;
+     fhir:Reference.reference [ fhir:value "PractitionerRole/ExampleERefPractitionerRoleSubmission" ]
+  ] ;
+  fhir:Task.owner [
+     fhir:link <https://fhir.doh.gov.ph/pheref/PractitionerRole/ExampleERefPractitionerRoleReceiving> ;
+     fhir:Reference.reference [ fhir:value "PractitionerRole/ExampleERefPractitionerRoleReceiving" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Task/ExampleERefTaskReferredOnward.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

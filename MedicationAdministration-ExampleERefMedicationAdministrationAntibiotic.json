@@ -1,0 +1,59 @@
+{
+  "resourceType" : "MedicationAdministration",
+  "id" : "ExampleERefMedicationAdministrationAntibiotic",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationAdministration ExampleERefMedicationAdministrationAntibiotic</b></p><a name=\"ExampleERefMedicationAdministrationAntibiotic\"> </a><a name=\"hcExampleERefMedicationAdministrationAntibiotic\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-medication-administration.html\">EReferral MedicationAdministration</a></p></div><p><b>status</b>: Completed</p><p><b>medication</b>: <a href=\"Medication-ExampleERefMedicationAntibiotic.html\">Medication Substance</a></p><p><b>subject</b>: <a href=\"Patient-ExampleERefPatient.html\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>effective</b>: 2026-06-18 08:00:00+0800 --&gt; 2026-06-18 08:30:00+0800</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></td><td><a href=\"Practitioner-ExampleERefPractitionerSubmission.html\">Practitioner Maria Villanueva (official)</a></td></tr></table><p><b>note</b>: </p><blockquote><div><p>Administered as part of pre-referral treatment for suspected sepsis.</p>\n</div></blockquote><h3>Dosages</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Site</b></td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 49852007}\">Structure of median cubital vein</span></td><td><span title=\"Codes:{http://snomed.info/sct 47625008}\">Intravenous route</span></td><td>750 mg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemg = 'mg')</span></td></tr></table></div>"
+  },
+  "status" : "completed",
+  "medicationReference" : {
+    "reference" : "Medication/ExampleERefMedicationAntibiotic"
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleERefPatient"
+  },
+  "effectivePeriod" : {
+    "start" : "2026-06-18T08:00:00+08:00",
+    "end" : "2026-06-18T08:30:00+08:00"
+  },
+  "performer" : [{
+    "function" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "158965000",
+        "display" : "Medical practitioner"
+      }]
+    },
+    "actor" : {
+      "reference" : "Practitioner/ExampleERefPractitionerSubmission"
+    }
+  }],
+  "note" : [{
+    "text" : "Administered as part of pre-referral treatment for suspected sepsis."
+  }],
+  "dosage" : {
+    "site" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "49852007",
+        "display" : "Structure of median cubital vein"
+      }]
+    },
+    "route" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "47625008",
+        "display" : "Intravenous route"
+      }]
+    },
+    "dose" : {
+      "value" : 750,
+      "unit" : "mg",
+      "system" : "http://unitsofmeasure.org",
+      "code" : "mg"
+    }
+  }
+}

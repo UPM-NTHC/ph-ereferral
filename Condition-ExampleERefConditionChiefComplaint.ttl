@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Condition/ExampleERefConditionChiefComplaint> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleERefConditionChiefComplaint"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition ExampleERefConditionChiefComplaint</b></p><a name=\"ExampleERefConditionChiefComplaint\"> </a><a name=\"hcExampleERefConditionChiefComplaint\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-condition.html\">EReferral Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 25064002}\">Severe headache, dizziness, blurring of vision and epigastric pain for 2 days</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>note</b>: </p><blockquote><div><p>Chief complaint: severe headache, dizziness, blurring of vision and epigastric pain for 2 days. G2P1, 32 weeks AOG.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ] ;
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ] ;
+  fhir:Condition.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ] ;
+       fhir:Coding.code [ fhir:value "problem-list-item" ] ;
+       fhir:Coding.display [ fhir:value "Problem List Item" ]
+     ]
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:25064002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "25064002" ] ;
+       fhir:Coding.display [ fhir:value "Headache" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Severe headache, dizziness, blurring of vision and epigastric pain for 2 days" ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:Condition.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:Condition.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Chief complaint: severe headache, dizziness, blurring of vision and epigastric pain for 2 days. G2P1, 32 weeks AOG." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Condition/ExampleERefConditionChiefComplaint.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

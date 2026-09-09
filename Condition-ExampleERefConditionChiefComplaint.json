@@ -1,0 +1,41 @@
+{
+  "resourceType" : "Condition",
+  "id" : "ExampleERefConditionChiefComplaint",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition ExampleERefConditionChiefComplaint</b></p><a name=\"ExampleERefConditionChiefComplaint\"> </a><a name=\"hcExampleERefConditionChiefComplaint\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-condition.html\">EReferral Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 25064002}\">Severe headache, dizziness, blurring of vision and epigastric pain for 2 days</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>note</b>: </p><blockquote><div><p>Chief complaint: severe headache, dizziness, blurring of vision and epigastric pain for 2 days. G2P1, 32 weeks AOG.</p>\n</div></blockquote></div>"
+  },
+  "clinicalStatus" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code" : "active"
+    }]
+  },
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code" : "problem-list-item",
+      "display" : "Problem List Item"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "25064002",
+      "display" : "Headache"
+    }],
+    "text" : "Severe headache, dizziness, blurring of vision and epigastric pain for 2 days"
+  },
+  "subject" : {
+    "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+  },
+  "encounter" : {
+    "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+  },
+  "note" : [{
+    "text" : "Chief complaint: severe headache, dizziness, blurring of vision and epigastric pain for 2 days. G2P1, 32 weeks AOG."
+  }]
+}

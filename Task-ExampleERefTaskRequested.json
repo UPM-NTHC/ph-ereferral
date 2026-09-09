@@ -1,0 +1,38 @@
+{
+  "resourceType" : "Task",
+  "id" : "ExampleERefTaskRequested",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task ExampleERefTaskRequested</b></p><a name=\"ExampleERefTaskRequested\"> </a><a name=\"hcExampleERefTaskRequested\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-task.html\">EReferral Task</a></p></div><p><b>status</b>: Requested</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 3457005}\">eReferral for severe pre-eclampsia management</span></p><p><b>focus</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-2da5e918-42d1-4d2c-b5dd-570b0b172759\">ServiceRequest: requisition = urn:oid:1.2.840.113619.21.1.2#REF-2026-001234; status = active; intent = order; category = Hospital-based outpatient emergency care center; occurrence[x] = 2026-06-18 08:30:00+0800; authoredOn = 2026-06-18 08:30:00+0800; reasonCode = Procedure; note = Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</a></p><p><b>for</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>authoredOn</b>: 2026-06-18 08:30:00+0800</p><p><b>lastModified</b>: 2026-06-18 08:30:00+0800</p><p><b>requester</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></p><p><b>owner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-6ce0a17b-7fb3-4075-a524-3afd390731de\">PractitionerRole Medical practitioner</a></p><p><b>note</b>: </p><blockquote><div><p>New referral for Ana Reyes with severe pre-eclampsia. Awaiting DRSTMH response.</p>\n</div></blockquote></div>"
+  },
+  "status" : "requested",
+  "intent" : "order",
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "3457005",
+      "display" : "Patient referral"
+    }],
+    "text" : "eReferral for severe pre-eclampsia management"
+  },
+  "focus" : {
+    "reference" : "urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759"
+  },
+  "for" : {
+    "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+  },
+  "authoredOn" : "2026-06-18T08:30:00+08:00",
+  "lastModified" : "2026-06-18T08:30:00+08:00",
+  "requester" : {
+    "reference" : "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9"
+  },
+  "owner" : {
+    "reference" : "urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de"
+  },
+  "note" : [{
+    "text" : "New referral for Ana Reyes with severe pre-eclampsia. Awaiting DRSTMH response."
+  }]
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType" : "RelatedPerson",
+  "id" : "ExampleERefRelatedPersonAccompanying",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson ExampleERefRelatedPersonAccompanying</b></p><a name=\"ExampleERefRelatedPersonAccompanying\"> </a><a name=\"hcExampleERefRelatedPersonAccompanying\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-related-person.html\">EReferral RelatedPerson</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-ExampleERefPatient.html\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode ECON}\">emergency contact</span>, <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}\">mother</span></p><p><b>name</b>: Maria Reyes (Official)</p><p><b>telecom</b>: <a href=\"tel:+639171112222\">+639171112222</a></p></div>"
+  },
+  "active" : true,
+  "patient" : {
+    "reference" : "Patient/ExampleERefPatient"
+  },
+  "relationship" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code" : "ECON",
+      "display" : "emergency contact"
+    }]
+  },
+  {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code" : "MTH",
+      "display" : "mother"
+    }]
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Reyes",
+    "given" : ["Maria"]
+  }],
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+639171112222",
+    "use" : "mobile"
+  }]
+}

@@ -1,0 +1,28 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "ExampleERefPractitionerRoleReceiving",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRoleReceiving</b></p><a name=\"ExampleERefPractitionerRoleReceiving\"> </a><a name=\"hcExampleERefPractitionerRoleReceiving\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-practitioner-role.html\">PH eReferral PractitionerRole</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/7890123</p><p><b>practitioner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e\">Practitioner Carlos Lim (official)</a></p><p><b>organization</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-8c97c63e-4dbf-45d5-894e-f671e385a126\">Organization Dr. Rafael S. Tumbokon Memorial Hospital</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></p></div>"
+  },
+  "identifier" : [{
+    "system" : "https://prc.gov.ph/",
+    "value" : "7890123"
+  }],
+  "practitioner" : {
+    "reference" : "urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e"
+  },
+  "organization" : {
+    "reference" : "urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "158965000",
+      "display" : "Medical practitioner"
+    }]
+  }]
+}

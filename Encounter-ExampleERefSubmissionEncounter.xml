@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefSubmissionEncounter"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter ExampleERefSubmissionEncounter</b></p><a name="ExampleERefSubmissionEncounter"> </a><a name="hcExampleERefSubmissionEncounter"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-encounter.html">ERefEncounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href="Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p></div>
+  </text>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+    <display value="ambulatory"/>
+  </class>
+  <subject>
+    <reference value="urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"/>
+  </subject>
+</Encounter>

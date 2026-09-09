@@ -1,0 +1,94 @@
+# fhir.ph.ereferral#0.1.0: PH eReferral Implementation Guide(en)
+
+## Pages
+
+* [Home](index.md)
+* [References](references.md)
+* [Sample Case Ana Reyes](sample-case-ana-reyes.md)
+* [Decision Log](decision-log.md)
+* [Connectathon Readiness](connectathon-readiness.md)
+* [V 01 Scope](v01-scope.md)
+* [Artifacts Summary](artifacts.md)
+* [Who Smart L 1](who-smart-l1.md)
+* [Data Dictionary](data-dictionary.md)
+* [Logical Information Model](logical-information-model.md)
+* [Referral Workflow](referral-workflow.md)
+* [Coverage Map](coverage-map.md)
+
+## Resources
+
+### CodeSystems
+
+* [PHCW](CodeSystem-PHCW.md)
+* [PSOC](CodeSystem-PSOC.md)
+* [eReferral Workflow Code System](CodeSystem-ereferral-workflow.md)
+* [PWD Disability Type Code System](CodeSystem-pwd-disability-type-cs.md)
+
+### ValueSets
+
+* [eReferral Receiving Facility Response](ValueSet-ereferral-receiving-response.md)
+* [eReferral Relationship Type](ValueSet-ereferral-relationship-type.md)
+* [PWD Disability Type Value Set](ValueSet-pwd-disability-type-vs.md)
+* [Practitioner Role VS](ValueSet-vs-practitioner-role.md)
+* [Reason for Referral (Service Type) VS](ValueSet-vs-reason-for-referral-service-type.md)
+* [Referral Category VS](ValueSet-vs-referral-category.md)
+
+### Resource Profiles
+
+* [EReferral Condition](StructureDefinition-ereferral-condition.md)
+* [EReferral DiagnosticReport](StructureDefinition-ereferral-diagnostic-report.md)
+* [ERefEncounter](StructureDefinition-ereferral-encounter.md)
+* [ERefImmunization](StructureDefinition-ereferral-immunization.md)
+* [EReferral MedicationAdministration](StructureDefinition-ereferral-medication-administration.md)
+* [EReferral Observation](StructureDefinition-ereferral-observation.md)
+* [ERefPatient](StructureDefinition-ereferral-patient.md)
+* [PH eReferral PractitionerRole](StructureDefinition-ereferral-practitioner-role.md)
+* [EReferral Procedure](StructureDefinition-ereferral-procedure.md)
+* [EReferral Provenance](StructureDefinition-ereferral-provenance.md)
+* [EReferral RelatedPerson](StructureDefinition-ereferral-related-person.md)
+* [EReferral ServiceRequest](StructureDefinition-ereferral-service-request.md)
+* [EReferral Task](StructureDefinition-ereferral-task.md)
+
+### Extensions
+
+* [PWD Disability Registration](StructureDefinition-ereferral-pwd-disability.md)
+
+### ImplementationGuides
+
+* [PH eReferral Implementation Guide](ImplementationGuide-fhir.ph.ereferral.md)
+
+### Examples
+
+* [ExampleERefSubmissionBundle (Bundle)](Bundle-ExampleERefSubmissionBundle.md)
+* [ExampleERefCondition (Condition)](Condition-ExampleERefCondition.md)
+* [ExampleERefConditionChiefComplaint (Condition)](Condition-ExampleERefConditionChiefComplaint.md)
+* [ExampleERefDiagnosticReport (DiagnosticReport)](DiagnosticReport-ExampleERefDiagnosticReport.md)
+* [ExampleERefDiagnosticReportPDF (DiagnosticReport)](DiagnosticReport-ExampleERefDiagnosticReportPDF.md)
+* [ExampleERefSubmissionEncounter (Encounter)](Encounter-ExampleERefSubmissionEncounter.md)
+* [ExampleERefImmunizationRoutine (Immunization)](Immunization-ExampleERefImmunizationRoutine.md)
+* [ExampleERefMedicationAntibiotic (Medication)](Medication-ExampleERefMedicationAntibiotic.md)
+* [ExampleERefMedicationTwinact (Medication)](Medication-ExampleERefMedicationTwinact.md)
+* [ExampleERefMedicationAdministrationAntibiotic (MedicationAdministration)](MedicationAdministration-ExampleERefMedicationAdministrationAntibiotic.md)
+* [ExampleERefMedicationAdministrationChronic (MedicationAdministration)](MedicationAdministration-ExampleERefMedicationAdministrationChronic.md)
+* [ExampleERefObservationBP (Observation)](Observation-ExampleERefObservationBP.md)
+* [ExampleERefObservationHR (Observation)](Observation-ExampleERefObservationHR.md)
+* [ExampleERefObservationRR (Observation)](Observation-ExampleERefObservationRR.md)
+* [ExampleERefObservationSpO2 (Observation)](Observation-ExampleERefObservationSpO2.md)
+* [ExampleERefObservationTemp (Observation)](Observation-ExampleERefObservationTemp.md)
+* [ExampleERefObservationWeight (Observation)](Observation-ExampleERefObservationWeight.md)
+* [Dr. Rafael S. Tumbokon Memorial Hospital (Organization)](Organization-ExampleERefOrganizationDRSTMH.md)
+* [Kalibo Health Center (Organization)](Organization-ExampleERefOrganizationKaliboHC.md)
+* [ExampleERefPatient (Patient)](Patient-ExampleERefPatient.md)
+* [ExampleERefPractitionerReceiving (Practitioner)](Practitioner-ExampleERefPractitionerReceiving.md)
+* [ExampleERefPractitionerSubmission (Practitioner)](Practitioner-ExampleERefPractitionerSubmission.md)
+* [ExampleERefPractitionerRoleReceiving (PractitionerRole)](PractitionerRole-ExampleERefPractitionerRoleReceiving.md)
+* [ExampleERefPractitionerRoleSubmission (PractitionerRole)](PractitionerRole-ExampleERefPractitionerRoleSubmission.md)
+* [ExampleERefProcedureTreatment (Procedure)](Procedure-ExampleERefProcedureTreatment.md)
+* [ExampleERefProvenanceSubmission (Provenance)](Provenance-ExampleERefProvenanceSubmission.md)
+* [ExampleERefRelatedPersonAccompanying (RelatedPerson)](RelatedPerson-ExampleERefRelatedPersonAccompanying.md)
+* [ExampleERefRelatedPersonNextOfKin (RelatedPerson)](RelatedPerson-ExampleERefRelatedPersonNextOfKin.md)
+* [ExampleERefServiceRequest (ServiceRequest)](ServiceRequest-ExampleERefServiceRequest.md)
+* [ExampleERefTaskReceived (Task)](Task-ExampleERefTaskReceived.md)
+* [ExampleERefTaskReferredOnward (Task)](Task-ExampleERefTaskReferredOnward.md)
+* [ExampleERefTaskRejected (Task)](Task-ExampleERefTaskRejected.md)
+* [ExampleERefTaskRequested (Task)](Task-ExampleERefTaskRequested.md)

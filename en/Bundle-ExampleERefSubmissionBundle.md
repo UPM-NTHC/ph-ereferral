@@ -1,0 +1,1073 @@
+# Example Submission Bundle — Initial Referral (KHC → DRSTMH) - PH eReferral Implementation Guide v0.1.0
+
+## Example Bundle: Example Submission Bundle — Initial Referral (KHC → DRSTMH)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "ExampleERefSubmissionBundle",
+  "type" : "transaction",
+  "timestamp" : "2026-06-18T08:30:00+08:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "ExampleERefPatient",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_ExampleERefPatient\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient ExampleERefPatient</b></p><a name=\"ExampleERefPatient\"> </a><a name=\"hcExampleERefPatient\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-patient.html\">ERefPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Record is active\">Active:</td><td colspan=\"3\">true</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Other Id (see the one above)\">Other Id:</td><td colspan=\"3\"><a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-PhilSysIDNS.html\" title=\"The National ID Number issued to all Filipino citizens and resident aliens in the Philippines, as part of the Philippine Identification System (PhilSys) program.\">PhilSysID</a>/7731-0812-4491-0326</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li><a href=\"tel:+63-919-876-5432\">+63-919-876-5432</a></li><li>Area 4, Barangay Mabuhay 5600 PH (home)</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Nominated Contact: Husband\">Husband:</td><td colspan=\"3\"><ul><li>Roberto Reyes (Official)</li></ul></td></tr></table></div>"
+      },
+      "identifier" : [{
+        "system" : "http://philhealth.gov.ph/fhir/Identifier/philhealth-id",
+        "value" : "78-658064775-3"
+      },
+      {
+        "system" : "http://philsys.gov.ph/fhir/Identifier/philsys-id",
+        "value" : "7731-0812-4491-0326"
+      }],
+      "active" : true,
+      "name" : [{
+        "use" : "official",
+        "family" : "Reyes",
+        "given" : ["Ana", "Luisa"]
+      }],
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "+63-919-876-5432",
+        "use" : "mobile"
+      }],
+      "gender" : "female",
+      "birthDate" : "1988-03-12",
+      "address" : [{
+        "extension" : [{
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600000000",
+            "display" : "Region VI (Western Visayas)"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/province",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600400000",
+            "display" : "Aklan"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600407000",
+            "display" : "Kalibo"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600407013",
+            "display" : "Poblacion"
+          }
+        }],
+        "use" : "home",
+        "line" : ["Area 4, Barangay Mabuhay"],
+        "postalCode" : "5600",
+        "country" : "PH"
+      }],
+      "contact" : [{
+        "relationship" : [{
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+            "code" : "HUSB",
+            "display" : "Husband"
+          }]
+        }],
+        "name" : {
+          "use" : "official",
+          "family" : "Reyes",
+          "given" : ["Roberto"]
+        }
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Patient?identifier=http://philsys.gov.ph/fhir/Identifier/philsys-id|7731-0812-4491-0326"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "ExampleERefPractitionerSubmission",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ExampleERefPractitionerSubmission\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExampleERefPractitionerSubmission</b></p><a name=\"ExampleERefPractitionerSubmission\"> </a><a name=\"hcExampleERefPractitionerSubmission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/5466863</p><p><b>name</b>: Maria Villanueva (Official)</p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://prc.gov.ph/",
+        "value" : "5466863"
+      }],
+      "name" : [{
+        "use" : "official",
+        "family" : "Villanueva",
+        "given" : ["Maria"],
+        "prefix" : ["Dr."]
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Practitioner?identifier=https://prc.gov.ph/|5466863"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "ExampleERefPractitionerReceiving",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_ExampleERefPractitionerReceiving\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner ExampleERefPractitionerReceiving</b></p><a name=\"ExampleERefPractitionerReceiving\"> </a><a name=\"hcExampleERefPractitionerReceiving\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-practitioner.html\">PH Core Practitioner</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/7890123</p><p><b>name</b>: Carlos Lim (Official)</p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://prc.gov.ph/",
+        "value" : "7890123"
+      }],
+      "name" : [{
+        "use" : "official",
+        "family" : "Lim",
+        "given" : ["Carlos"],
+        "prefix" : ["Dr."]
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Practitioner?identifier=https://prc.gov.ph/|7890123"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "ExampleERefOrganizationKaliboHC",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ExampleERefOrganizationKaliboHC\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleERefOrganizationKaliboHC</b></p><a name=\"ExampleERefOrganizationKaliboHC\"> </a><a name=\"hcExampleERefOrganizationKaliboHC\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-DOHNHFRCodeNS.html\" title=\"Health Facility Code (HFC) from the National Health Facility Registry.\">DOHNHFRCode</a>/3056, <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-HCPNCodeNS.html\" title=\"Health Care Provider Network (HCPN) code uniquely identifying an organization within its Health Care Provider Network in the Philippines.\">HCPNCode</a>/Aklan HCPN</p><p><b>name</b>: Kalibo Health Center</p><p><b>telecom</b>: ph: (043) 756-2233(Work)</p><p><b>address</b>: Mabini Street 5600 PH (work)</p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code",
+        "value" : "3056"
+      },
+      {
+        "system" : "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code",
+        "value" : "Aklan HCPN"
+      }],
+      "name" : "Kalibo Health Center",
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "(043) 756-2233",
+        "use" : "work"
+      }],
+      "address" : [{
+        "extension" : [{
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600000000",
+            "display" : "Region VI (Western Visayas)"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/province",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600400000",
+            "display" : "Aklan"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600407000",
+            "display" : "Kalibo"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600407013",
+            "display" : "Poblacion"
+          }
+        }],
+        "use" : "work",
+        "line" : ["Mabini Street"],
+        "postalCode" : "5600",
+        "country" : "PH"
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Organization?identifier=https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code|3056"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "ExampleERefOrganizationDRSTMH",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_ExampleERefOrganizationDRSTMH\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization ExampleERefOrganizationDRSTMH</b></p><a name=\"ExampleERefOrganizationDRSTMH\"> </a><a name=\"hcExampleERefOrganizationDRSTMH\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-organization.html\">PH Core Organization</a></p></div><p><b>identifier</b>: <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-DOHNHFRCodeNS.html\" title=\"Health Facility Code (HFC) from the National Health Facility Registry.\">DOHNHFRCode</a>/513, <a href=\"https://build.fhir.org/ig/UPM-NTHC/ph-core/NamingSystem-HCPNCodeNS.html\" title=\"Health Care Provider Network (HCPN) code uniquely identifying an organization within its Health Care Provider Network in the Philippines.\">HCPNCode</a>/Aklan HCPN</p><p><b>name</b>: Dr. Rafael S. Tumbokon Memorial Hospital</p><p><b>telecom</b>: ph: (043) 756-3124(Work)</p><p><b>address</b>: National Highway 5600 PH (work)</p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code",
+        "value" : "513"
+      },
+      {
+        "system" : "https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code",
+        "value" : "Aklan HCPN"
+      }],
+      "name" : "Dr. Rafael S. Tumbokon Memorial Hospital",
+      "telecom" : [{
+        "system" : "phone",
+        "value" : "(043) 756-3124",
+        "use" : "work"
+      }],
+      "address" : [{
+        "extension" : [{
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/region",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600000000",
+            "display" : "Region VI (Western Visayas)"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/province",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600400000",
+            "display" : "Aklan"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600407000",
+            "display" : "Kalibo"
+          }
+        },
+        {
+          "url" : "https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay",
+          "valueCoding" : {
+            "system" : "https://psa.gov.ph/classification/psgc",
+            "code" : "0600407013",
+            "display" : "Poblacion"
+          }
+        }],
+        "use" : "work",
+        "line" : ["National Highway"],
+        "postalCode" : "5600",
+        "country" : "PH"
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "Organization?identifier=https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code|513"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "ExampleERefPractitionerRoleSubmission",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_ExampleERefPractitionerRoleSubmission\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRoleSubmission</b></p><a name=\"ExampleERefPractitionerRoleSubmission\"> </a><a name=\"hcExampleERefPractitionerRoleSubmission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-practitioner-role.html\">PH eReferral PractitionerRole</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/5466863</p><p><b>practitioner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-309021d0-7abe-4b54-b2e9-23a056851d0e\">Practitioner Maria Villanueva (official)</a></p><p><b>organization</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a038f451-6557-4b01-b05c-aa4ff967545b\">Organization Kalibo Health Center</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://prc.gov.ph/",
+        "value" : "5466863"
+      }],
+      "practitioner" : {
+        "reference" : "urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e"
+      },
+      "organization" : {
+        "reference" : "urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b"
+      },
+      "code" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "158965000",
+          "display" : "Medical practitioner"
+        }]
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "PractitionerRole?identifier=https://prc.gov.ph/|5466863"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "ExampleERefPractitionerRoleReceiving",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_ExampleERefPractitionerRoleReceiving\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRoleReceiving</b></p><a name=\"ExampleERefPractitionerRoleReceiving\"> </a><a name=\"hcExampleERefPractitionerRoleReceiving\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-practitioner-role.html\">PH eReferral PractitionerRole</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/7890123</p><p><b>practitioner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e\">Practitioner Carlos Lim (official)</a></p><p><b>organization</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-8c97c63e-4dbf-45d5-894e-f671e385a126\">Organization Dr. Rafael S. Tumbokon Memorial Hospital</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></p></div>"
+      },
+      "identifier" : [{
+        "system" : "https://prc.gov.ph/",
+        "value" : "7890123"
+      }],
+      "practitioner" : {
+        "reference" : "urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e"
+      },
+      "organization" : {
+        "reference" : "urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126"
+      },
+      "code" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "158965000",
+          "display" : "Medical practitioner"
+        }]
+      }]
+    },
+    "request" : {
+      "method" : "PUT",
+      "url" : "PractitionerRole?identifier=https://prc.gov.ph/|7890123"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759",
+    "resource" : {
+      "resourceType" : "ServiceRequest",
+      "id" : "ExampleERefServiceRequest",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ServiceRequest_ExampleERefServiceRequest\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleERefServiceRequest</b></p><a name=\"ExampleERefServiceRequest\"> </a><a name=\"hcExampleERefServiceRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-service-request.html\">EReferral ServiceRequest</a></p></div><p><b>requisition</b>: <code>urn:oid:1.2.840.113619.21.1.2</code>/REF-2026-001234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 73770003}\">Emergency</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>occurrence</b>: 2026-06-18 08:30:00+0800</p><p><b>authoredOn</b>: 2026-06-18 08:30:00+0800</p><p><b>requester</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></p><p><b>performer</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-6ce0a17b-7fb3-4075-a524-3afd390731de\">PractitionerRole Medical practitioner</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 71388002}\">Severe pre-eclampsia requiring IV antihypertensive, seizure prophylaxis, and maternal-fetal monitoring</span></p><p><b>reasonReference</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-7166d722-982f-4d35-841d-c63d4d5ec772\">Condition Pre-eclampsia</a></p><p><b>note</b>: </p><blockquote><div><p>Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</p>\n</div></blockquote></div>"
+      },
+      "requisition" : {
+        "system" : "urn:oid:1.2.840.113619.21.1.2",
+        "value" : "REF-2026-001234"
+      },
+      "status" : "active",
+      "intent" : "order",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "73770003",
+          "display" : "Hospital-based outpatient emergency care center"
+        }],
+        "text" : "Emergency"
+      }],
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "occurrenceDateTime" : "2026-06-18T08:30:00+08:00",
+      "authoredOn" : "2026-06-18T08:30:00+08:00",
+      "requester" : {
+        "reference" : "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9"
+      },
+      "performer" : [{
+        "reference" : "urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de"
+      }],
+      "reasonCode" : [{
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "71388002",
+          "display" : "Procedure"
+        }],
+        "text" : "Severe pre-eclampsia requiring IV antihypertensive, seizure prophylaxis, and maternal-fetal monitoring"
+      }],
+      "reasonReference" : [{
+        "reference" : "urn:uuid:7166d722-982f-4d35-841d-c63d4d5ec772"
+      }],
+      "note" : [{
+        "text" : "Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia."
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "ServiceRequest"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "ExampleERefSubmissionEncounter",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Encounter_ExampleERefSubmissionEncounter\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Encounter ExampleERefSubmissionEncounter</b></p><a name=\"ExampleERefSubmissionEncounter\"> </a><a name=\"hcExampleERefSubmissionEncounter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-encounter.html\">ERefEncounter</a></p></div><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p></div>"
+      },
+      "status" : "finished",
+      "class" : {
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code" : "AMB",
+        "display" : "ambulatory"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Encounter"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:99a80644-e928-4fbd-b07f-8ac5fb5675b1",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "ExampleERefConditionChiefComplaint",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_ExampleERefConditionChiefComplaint\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition ExampleERefConditionChiefComplaint</b></p><a name=\"ExampleERefConditionChiefComplaint\"> </a><a name=\"hcExampleERefConditionChiefComplaint\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-condition.html\">EReferral Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category problem-list-item}\">Problem List Item</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 25064002}\">Severe headache, dizziness, blurring of vision and epigastric pain for 2 days</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>note</b>: </p><blockquote><div><p>Chief complaint: severe headache, dizziness, blurring of vision and epigastric pain for 2 days. G2P1, 32 weeks AOG.</p>\n</div></blockquote></div>"
+      },
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "problem-list-item",
+          "display" : "Problem List Item"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "25064002",
+          "display" : "Headache"
+        }],
+        "text" : "Severe headache, dizziness, blurring of vision and epigastric pain for 2 days"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "note" : [{
+        "text" : "Chief complaint: severe headache, dizziness, blurring of vision and epigastric pain for 2 days. G2P1, 32 weeks AOG."
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:7166d722-982f-4d35-841d-c63d4d5ec772",
+    "resource" : {
+      "resourceType" : "Condition",
+      "id" : "ExampleERefCondition",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_ExampleERefCondition\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition ExampleERefCondition</b></p><a name=\"ExampleERefCondition\"> </a><a name=\"hcExampleERefCondition\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-condition.html\">EReferral Condition</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status provisional}\">Provisional</span></p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 398254007}\">Severe pre-eclampsia, 32 weeks AOG, G2P1</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>note</b>: </p><blockquote><div><p>G2P1, 32 weeks AOG. EDD: Aug 20 2026. LMP: Nov 13 2025.</p>\n</div></blockquote></div>"
+      },
+      "clinicalStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code" : "active"
+        }]
+      },
+      "verificationStatus" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code" : "provisional",
+          "display" : "Provisional"
+        }]
+      },
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code" : "encounter-diagnosis",
+          "display" : "Encounter Diagnosis"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "398254007",
+          "display" : "Pre-eclampsia"
+        }],
+        "text" : "Severe pre-eclampsia, 32 weeks AOG, G2P1"
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "note" : [{
+        "text" : "G2P1, 32 weeks AOG. EDD: Aug 20 2026. LMP: Nov 13 2025."
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Condition"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:27ea0c24-b2e3-4f4e-ba6f-d40b4653232e",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ExampleERefObservationBP",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationBP\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationBP</b></p><a name=\"ExampleERefObservationBP\"> </a><a name=\"hcExampleERefObservationBP\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 85354-9}, {http://snomed.info/sct 75367002}\">Blood pressure panel with all children optional</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8480-6}, {http://snomed.info/sct 271649006}\">Systolic blood pressure</span></p><p><b>value</b>: 180 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8462-4}, {http://snomed.info/sct 271650006}\">Diastolic blood pressure</span></p><p><b>value</b>: 110 mmHg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codemm[Hg] = 'mm[Hg]')</span></p></blockquote></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs",
+          "display" : "Vital Signs"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "85354-9",
+          "display" : "Blood pressure panel with all children optional"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "75367002",
+          "display" : "Blood pressure"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "effectiveDateTime" : "2026-06-18T08:15:00+08:00",
+      "component" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "8480-6",
+            "display" : "Systolic blood pressure"
+          },
+          {
+            "system" : "http://snomed.info/sct",
+            "code" : "271649006",
+            "display" : "Systolic blood pressure"
+          }]
+        },
+        "valueQuantity" : {
+          "value" : 180,
+          "unit" : "mmHg",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "mm[Hg]"
+        }
+      },
+      {
+        "code" : {
+          "coding" : [{
+            "system" : "http://loinc.org",
+            "code" : "8462-4",
+            "display" : "Diastolic blood pressure"
+          },
+          {
+            "system" : "http://snomed.info/sct",
+            "code" : "271650006",
+            "display" : "Diastolic blood pressure"
+          }]
+        },
+        "valueQuantity" : {
+          "value" : 110,
+          "unit" : "mmHg",
+          "system" : "http://unitsofmeasure.org",
+          "code" : "mm[Hg]"
+        }
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:75b09e76-3c93-4a69-af02-71a6d9713558",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ExampleERefObservationHR",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationHR\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationHR</b></p><a name=\"ExampleERefObservationHR\"> </a><a name=\"hcExampleERefObservationHR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8867-4}, {http://snomed.info/sct 78564009}\">Heart rate</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 112 beats/minute<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/min = '/min')</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs",
+          "display" : "Vital Signs"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "8867-4",
+          "display" : "Heart rate"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "78564009",
+          "display" : "Pulse rate"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "effectiveDateTime" : "2026-06-18T08:15:00+08:00",
+      "valueQuantity" : {
+        "value" : 112,
+        "unit" : "beats/minute",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "/min"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:0bd2221b-dac4-44ec-811b-a10683f301c9",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ExampleERefObservationRR",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationRR\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationRR</b></p><a name=\"ExampleERefObservationRR\"> </a><a name=\"hcExampleERefObservationRR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 9279-1}, {http://snomed.info/sct 86290005}\">Respiratory rate</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 24 breaths/minute<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/min = '/min')</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs",
+          "display" : "Vital Signs"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "9279-1",
+          "display" : "Respiratory rate"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "86290005",
+          "display" : "Respiratory rate"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "effectiveDateTime" : "2026-06-18T08:15:00+08:00",
+      "valueQuantity" : {
+        "value" : 24,
+        "unit" : "breaths/minute",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "/min"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:080d6fb5-aed8-4dc0-b7dd-51d38f903819",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ExampleERefObservationSpO2",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationSpO2\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationSpO2</b></p><a name=\"ExampleERefObservationSpO2\"> </a><a name=\"hcExampleERefObservationSpO2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 2708-6}, {http://snomed.info/sct 103228002}\">Oxygen saturation in Arterial blood</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 96 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs",
+          "display" : "Vital Signs"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "2708-6",
+          "display" : "Oxygen saturation in Arterial blood"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "103228002",
+          "display" : "Hemoglobin saturation with oxygen"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "effectiveDateTime" : "2026-06-18T08:15:00+08:00",
+      "valueQuantity" : {
+        "value" : 96,
+        "unit" : "%",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "%"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:3f56fb3e-b0ea-4ab0-a7a5-2adac78d5c9b",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ExampleERefObservationTemp",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationTemp\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationTemp</b></p><a name=\"ExampleERefObservationTemp\"> </a><a name=\"hcExampleERefObservationTemp\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 8310-5}, {http://snomed.info/sct 386725007}\">Body temperature</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 36.8 Celsius<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeCel = 'Cel')</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs",
+          "display" : "Vital Signs"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "8310-5",
+          "display" : "Body temperature"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "386725007",
+          "display" : "Body temperature"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "effectiveDateTime" : "2026-06-18T08:15:00+08:00",
+      "valueQuantity" : {
+        "value" : 36.8,
+        "unit" : "Celsius",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "Cel"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:d70026e6-2a52-4f4e-99d3-b73dbf52cfc3",
+    "resource" : {
+      "resourceType" : "Observation",
+      "id" : "ExampleERefObservationWeight",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Observation_ExampleERefObservationWeight\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleERefObservationWeight</b></p><a name=\"ExampleERefObservationWeight\"> </a><a name=\"hcExampleERefObservationWeight\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-observation.html\">EReferral Observation</a></p></div><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 29463-7}, {http://snomed.info/sct 27113001}\">Body weight</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>effective</b>: 2026-06-18 08:15:00+0800</p><p><b>value</b>: 72 kg<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekg = 'kg')</span></p></div>"
+      },
+      "status" : "final",
+      "category" : [{
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code" : "vital-signs",
+          "display" : "Vital Signs"
+        }]
+      }],
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "29463-7",
+          "display" : "Body weight"
+        },
+        {
+          "system" : "http://snomed.info/sct",
+          "code" : "27113001",
+          "display" : "Body weight"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "effectiveDateTime" : "2026-06-18T08:15:00+08:00",
+      "valueQuantity" : {
+        "value" : 72,
+        "unit" : "kg",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "kg"
+      }
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Observation"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:873a6d29-a842-43e7-a267-c3df56193f7f",
+    "resource" : {
+      "resourceType" : "Procedure",
+      "id" : "ExampleERefProcedureTreatment",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_ExampleERefProcedureTreatment\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure ExampleERefProcedureTreatment</b></p><a name=\"ExampleERefProcedureTreatment\"> </a><a name=\"hcExampleERefProcedureTreatment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-procedure.html\">EReferral Procedure</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 416608005}\">Drug therapy</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>note</b>: </p><blockquote><div><p>Pre-referral treatment given: Methyldopa 250mg BID, Folic Acid 5mg OD, FeSO4 300mg OD, CaCO3 500mg TID.</p>\n</div></blockquote></div>"
+      },
+      "status" : "completed",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "416608005",
+          "display" : "Drug therapy"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "note" : [{
+        "text" : "Pre-referral treatment given: Methyldopa 250mg BID, Folic Acid 5mg OD, FeSO4 300mg OD, CaCO3 500mg TID."
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Procedure"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1e517f0b-6324-47f1-a626-8ddb5b617c59",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "ExampleERefDiagnosticReport",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DiagnosticReport_ExampleERefDiagnosticReport\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport ExampleERefDiagnosticReport</b></p><a name=\"ExampleERefDiagnosticReport\"> </a><a name=\"hcExampleERefDiagnosticReport\"> </a><h2><span title=\"Codes:{http://loinc.org 24356-8}\">Urinalysis complete panel - Urine</span> </h2><table class=\"grid\"><tr><td>Subject</td><td>Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</td></tr><tr><td>Presented Form</td><td> </td></tr></table><p><b>Report Details</b></p><p>Proteinuria 3+. Findings consistent with severe pre-eclampsia.</p></div>"
+      },
+      "status" : "final",
+      "code" : {
+        "coding" : [{
+          "system" : "http://loinc.org",
+          "code" : "24356-8",
+          "display" : "Urinalysis complete panel - Urine"
+        }]
+      },
+      "subject" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "encounter" : {
+        "reference" : "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
+      },
+      "conclusion" : "Proteinuria 3+. Findings consistent with severe pre-eclampsia.",
+      "presentedForm" : [{
+        "title" : "Urinalysis Results — Kalibo Health Center"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "DiagnosticReport"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:05fe9d1b-3653-4a4e-8aa6-9dbb51acb4d4",
+    "resource" : {
+      "resourceType" : "Task",
+      "id" : "ExampleERefTaskRequested",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Task_ExampleERefTaskRequested\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Task ExampleERefTaskRequested</b></p><a name=\"ExampleERefTaskRequested\"> </a><a name=\"hcExampleERefTaskRequested\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-task.html\">EReferral Task</a></p></div><p><b>status</b>: Requested</p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 3457005}\">eReferral for severe pre-eclampsia management</span></p><p><b>focus</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-2da5e918-42d1-4d2c-b5dd-570b0b172759\">ServiceRequest: requisition = urn:oid:1.2.840.113619.21.1.2#REF-2026-001234; status = active; intent = order; category = Hospital-based outpatient emergency care center; occurrence[x] = 2026-06-18 08:30:00+0800; authoredOn = 2026-06-18 08:30:00+0800; reasonCode = Procedure; note = Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</a></p><p><b>for</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>authoredOn</b>: 2026-06-18 08:30:00+0800</p><p><b>lastModified</b>: 2026-06-18 08:30:00+0800</p><p><b>requester</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></p><p><b>owner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-6ce0a17b-7fb3-4075-a524-3afd390731de\">PractitionerRole Medical practitioner</a></p><p><b>note</b>: </p><blockquote><div><p>New referral for Ana Reyes with severe pre-eclampsia. Awaiting DRSTMH response.</p>\n</div></blockquote></div>"
+      },
+      "status" : "requested",
+      "intent" : "order",
+      "code" : {
+        "coding" : [{
+          "system" : "http://snomed.info/sct",
+          "code" : "3457005",
+          "display" : "Patient referral"
+        }],
+        "text" : "eReferral for severe pre-eclampsia management"
+      },
+      "focus" : {
+        "reference" : "urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759"
+      },
+      "for" : {
+        "reference" : "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
+      },
+      "authoredOn" : "2026-06-18T08:30:00+08:00",
+      "lastModified" : "2026-06-18T08:30:00+08:00",
+      "requester" : {
+        "reference" : "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9"
+      },
+      "owner" : {
+        "reference" : "urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de"
+      },
+      "note" : [{
+        "text" : "New referral for Ana Reyes with severe pre-eclampsia. Awaiting DRSTMH response."
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Task"
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:6760bfb4-3596-4568-b8ff-b487736a70f5",
+    "resource" : {
+      "resourceType" : "Provenance",
+      "id" : "ExampleERefProvenanceSubmission",
+      "meta" : {
+        "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Provenance_ExampleERefProvenanceSubmission\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Provenance ExampleERefProvenanceSubmission</b></p><a name=\"ExampleERefProvenanceSubmission\"> </a><a name=\"hcExampleERefProvenanceSubmission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-provenance.html\">EReferral Provenance</a></p></div><p>Provenance for <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-2da5e918-42d1-4d2c-b5dd-570b0b172759\">ServiceRequest: requisition = urn:oid:1.2.840.113619.21.1.2#REF-2026-001234; status = active; intent = order; category = Hospital-based outpatient emergency care center; occurrence[x] = 2026-06-18 08:30:00+0800; authoredOn = 2026-06-18 08:30:00+0800; reasonCode = Procedure; note = Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2026-06-18 08:30:00+0800</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-DataOperation CREATE}\">create</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td><td><b>On Behalf Of</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type author}\">Author</span></td><td><a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></td><td><a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a038f451-6557-4b01-b05c-aa4ff967545b\">Organization Kalibo Health Center</a></td></tr></table></div>"
+      },
+      "target" : [{
+        "reference" : "urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759"
+      }],
+      "recorded" : "2026-06-18T08:30:00+08:00",
+      "activity" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-DataOperation",
+          "code" : "CREATE",
+          "display" : "create"
+        }]
+      },
+      "agent" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code" : "author",
+            "display" : "Author"
+          }]
+        },
+        "who" : {
+          "reference" : "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9"
+        },
+        "onBehalfOf" : {
+          "reference" : "urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b"
+        }
+      }],
+      "signature" : [{
+        "type" : [{
+          "system" : "urn:iso-astm:E1762-95:2013",
+          "code" : "1.2.840.10065.1.12.1.5",
+          "display" : "Verification Signature"
+        }],
+        "when" : "2026-06-18T08:30:00+08:00",
+        "who" : {
+          "reference" : "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9"
+        },
+        "data" : "dGVzdHNpZ25hdHVyZWJhc2U2NA=="
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "Provenance"
+    }
+  }]
+}
+
+```

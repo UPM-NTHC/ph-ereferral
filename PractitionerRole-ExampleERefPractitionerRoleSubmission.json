@@ -1,0 +1,28 @@
+{
+  "resourceType" : "PractitionerRole",
+  "id" : "ExampleERefPractitionerRoleSubmission",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRoleSubmission</b></p><a name=\"ExampleERefPractitionerRoleSubmission\"> </a><a name=\"hcExampleERefPractitionerRoleSubmission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-practitioner-role.html\">PH eReferral PractitionerRole</a></p></div><p><b>identifier</b>: <code>https://prc.gov.ph/</code>/5466863</p><p><b>practitioner</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-309021d0-7abe-4b54-b2e9-23a056851d0e\">Practitioner Maria Villanueva (official)</a></p><p><b>organization</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a038f451-6557-4b01-b05c-aa4ff967545b\">Organization Kalibo Health Center</a></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 158965000}\">Medical practitioner</span></p></div>"
+  },
+  "identifier" : [{
+    "system" : "https://prc.gov.ph/",
+    "value" : "5466863"
+  }],
+  "practitioner" : {
+    "reference" : "urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e"
+  },
+  "organization" : {
+    "reference" : "urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b"
+  },
+  "code" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "158965000",
+      "display" : "Medical practitioner"
+    }]
+  }]
+}

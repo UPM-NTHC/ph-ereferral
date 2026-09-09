@@ -1,0 +1,83 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "PSOC",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem PSOC</b></p><a name=\"PSOC\"> </a><a name=\"hcPSOC\"> </a><p>This case-sensitive code system <code>https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC</code> provides <b>a fragment</b> that includes following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">2211<a name=\"PSOC-2211\"> </a></td><td>Generalist medical practitioners</td><td>Generalist medical practitioners</td></tr><tr><td style=\"white-space:nowrap\">2212<a name=\"PSOC-2212\"> </a></td><td>Specialist medical practitioners</td><td>Specialist medical practitioners</td></tr><tr><td style=\"white-space:nowrap\">2221<a name=\"PSOC-2221\"> </a></td><td>Nursing professionals</td><td>Nursing professionals</td></tr><tr><td style=\"white-space:nowrap\">2222<a name=\"PSOC-2222\"> </a></td><td>Midwifery professionals</td><td>Midwifery professionals</td></tr><tr><td style=\"white-space:nowrap\">2261<a name=\"PSOC-2261\"> </a></td><td>Dentists</td><td>Dentists</td></tr><tr><td style=\"white-space:nowrap\">2262<a name=\"PSOC-2262\"> </a></td><td>Pharmacists</td><td>Pharmacists</td></tr><tr><td style=\"white-space:nowrap\">2267<a name=\"PSOC-2267\"> </a></td><td>Optometrists and ophthalmic opticians</td><td>Optometrists and ophthalmic opticians</td></tr><tr><td style=\"white-space:nowrap\">1342<a name=\"PSOC-1342\"> </a></td><td>Health services managers</td><td>Health services managers</td></tr><tr><td style=\"white-space:nowrap\">3253<a name=\"PSOC-3253\"> </a></td><td>Community health workers</td><td>Community health workers</td></tr><tr><td style=\"white-space:nowrap\">5321<a name=\"PSOC-5321\"> </a></td><td>Healthcare assistants</td><td>Healthcare assistants</td></tr></table></div>"
+  },
+  "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC",
+  "version" : "0.1.0",
+  "name" : "PHCorePSOC",
+  "title" : "PSOC",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-09-09T03:53:23+00:00",
+  "publisher" : "SILab CoP IG Accelerator (eReferral)",
+  "contact" : [{
+    "name" : "SILab CoP IG Accelerator (eReferral)",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://github.com/UP-Manila-SILab"
+    }]
+  }],
+  "description" : "Philippine Standard Occupational Classification (fragment — healthcare-relevant codes)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "PH",
+      "display" : "Philippines"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "fragment",
+  "concept" : [{
+    "code" : "2211",
+    "display" : "Generalist medical practitioners",
+    "definition" : "Generalist medical practitioners"
+  },
+  {
+    "code" : "2212",
+    "display" : "Specialist medical practitioners",
+    "definition" : "Specialist medical practitioners"
+  },
+  {
+    "code" : "2221",
+    "display" : "Nursing professionals",
+    "definition" : "Nursing professionals"
+  },
+  {
+    "code" : "2222",
+    "display" : "Midwifery professionals",
+    "definition" : "Midwifery professionals"
+  },
+  {
+    "code" : "2261",
+    "display" : "Dentists",
+    "definition" : "Dentists"
+  },
+  {
+    "code" : "2262",
+    "display" : "Pharmacists",
+    "definition" : "Pharmacists"
+  },
+  {
+    "code" : "2267",
+    "display" : "Optometrists and ophthalmic opticians",
+    "definition" : "Optometrists and ophthalmic opticians"
+  },
+  {
+    "code" : "1342",
+    "display" : "Health services managers",
+    "definition" : "Health services managers"
+  },
+  {
+    "code" : "3253",
+    "display" : "Community health workers",
+    "definition" : "Community health workers"
+  },
+  {
+    "code" : "5321",
+    "display" : "Healthcare assistants",
+    "definition" : "Healthcare assistants"
+  }]
+}

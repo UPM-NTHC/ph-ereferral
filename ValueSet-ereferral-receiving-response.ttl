@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ereferral-receiving-response"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet ereferral-receiving-response</b></p><a name=\"ereferral-receiving-response\"> </a><a name=\"hcereferral-receiving-response\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-ereferral-workflow.html\"><code>https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-received\">received</a></td><td>Received</td><td>The receiving facility has acknowledged receipt of the referral and is reviewing whether it can take the case.</td></tr><tr><td><a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-accepted\">accepted</a></td><td>Accepted</td><td>The receiving facility can take the case and has given a positive transfer or service response.</td></tr><tr><td><a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-rejected\">rejected</a></td><td>Rejected</td><td>The receiving facility cannot take the case and no onward receiving facility is identified in the same response.</td></tr><tr><td><a href=\"CodeSystem-ereferral-workflow.html#ereferral-workflow-referred-onward\">referred-onward</a></td><td>Referred onward</td><td>The receiving facility cannot take the case and directs the patient or referral to another specified facility.</td></tr></table></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response"] ;
+  fhir:ValueSet.version [ fhir:value "0.1.0"] ;
+  fhir:ValueSet.name [ fhir:value "EReferralReceivingResponse"] ;
+  fhir:ValueSet.title [ fhir:value "eReferral Receiving Facility Response"] ;
+  fhir:ValueSet.status [ fhir:value "draft"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-09-09T03:53:23+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "SILab CoP IG Accelerator (eReferral)"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "SILab CoP IG Accelerator (eReferral)" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://github.com/UP-Manila-SILab" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Response states used by a receiving facility after referral receipt in the PH eReferral workflow."] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "PH" ] ;
+       fhir:Coding.display [ fhir:value "Philippines" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow" ] ;
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "received" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Received" ]
+       ], [
+         fhir:index 1 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "accepted" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Accepted" ]
+       ], [
+         fhir:index 2 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "rejected" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rejected" ]
+       ], [
+         fhir:index 3 ;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "referred-onward" ] ;
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Referred onward" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

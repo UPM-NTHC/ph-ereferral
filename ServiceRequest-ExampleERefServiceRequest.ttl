@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequest> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleERefServiceRequest"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ExampleERefServiceRequest</b></p><a name=\"ExampleERefServiceRequest\"> </a><a name=\"hcExampleERefServiceRequest\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-service-request.html\">EReferral ServiceRequest</a></p></div><p><b>requisition</b>: <code>urn:oid:1.2.840.113619.21.1.2</code>/REF-2026-001234</p><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 73770003}\">Emergency</span></p><p><b>subject</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-d7e33c3b-e90b-464e-a5eb-a92f60c71542\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>encounter</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a86d5b74-f8b5-42c2-b27a-5faff8d84cce\">Encounter: status = finished; class = ambulatory (ActCode#AMB)</a></p><p><b>occurrence</b>: 2026-06-18 08:30:00+0800</p><p><b>authoredOn</b>: 2026-06-18 08:30:00+0800</p><p><b>requester</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></p><p><b>performer</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-6ce0a17b-7fb3-4075-a524-3afd390731de\">PractitionerRole Medical practitioner</a></p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 71388002}\">Severe pre-eclampsia requiring IV antihypertensive, seizure prophylaxis, and maternal-fetal monitoring</span></p><p><b>reasonReference</b>: <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-7166d722-982f-4d35-841d-c63d4d5ec772\">Condition Pre-eclampsia</a></p><p><b>note</b>: </p><blockquote><div><p>Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:ServiceRequest.requisition [
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.840.113619.21.1.2" ] ;
+     fhir:Identifier.value [ fhir:value "REF-2026-001234" ]
+  ] ;
+  fhir:ServiceRequest.status [ fhir:value "active"] ;
+  fhir:ServiceRequest.intent [ fhir:value "order"] ;
+  fhir:ServiceRequest.category [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:73770003 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "73770003" ] ;
+       fhir:Coding.display [ fhir:value "Hospital-based outpatient emergency care center" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Emergency" ]
+  ] ;
+  fhir:ServiceRequest.subject [
+     fhir:Reference.reference [ fhir:value "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542" ]
+  ] ;
+  fhir:ServiceRequest.encounter [
+     fhir:Reference.reference [ fhir:value "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce" ]
+  ] ;
+  fhir:ServiceRequest.occurrenceDateTime [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.authoredOn [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:ServiceRequest.requester [
+     fhir:Reference.reference [ fhir:value "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9" ]
+  ] ;
+  fhir:ServiceRequest.performer [
+     fhir:index 0 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de" ]
+  ] ;
+  fhir:ServiceRequest.reasonCode [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       a sct:71388002 ;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+       fhir:Coding.code [ fhir:value "71388002" ] ;
+       fhir:Coding.display [ fhir:value "Procedure" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Severe pre-eclampsia requiring IV antihypertensive, seizure prophylaxis, and maternal-fetal monitoring" ]
+  ] ;
+  fhir:ServiceRequest.reasonReference [
+     fhir:index 0 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:7166d722-982f-4d35-841d-c63d4d5ec772" ]
+  ] ;
+  fhir:ServiceRequest.note [
+     fhir:index 0 ;
+     fhir:Annotation.text [ fhir:value "Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/ServiceRequest/ExampleERefServiceRequest.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

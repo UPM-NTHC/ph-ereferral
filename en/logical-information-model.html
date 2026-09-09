@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Logical Information Model - PH eReferral Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style>
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.ph-table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+}
+
+.ph-table table {
+  width: 100%;
+  }
+
+.ph-table thead {
+  display: table-header-group;
+}
+
+.ph-table th {
+  background-color: #555555;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #444444;
+}
+
+.ph-table td {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.ph-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ph-table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.ph-table tbody tr:hover {
+  background-color: #ebf8ff;
+  transition: background-color 0.2s ease;
+}
+
+.ph-table td code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="logical-information-model.html">Logical Information Model</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Sample Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="sample-case-ana-reyes.html">Ana Reyes Referral</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Logical Information Model</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Logical Information Model</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h1 id="v01-referral-logical-information-model">v0.1 Referral Logical Information Model</h1>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>This page describes the logical information model for the v0.1 PH eReferral
+package. It defines the main groups of information that should be available for
+a safe referral handover before describing how those groups relate to current
+PeReF FHIR profiles, examples, and illustrative RESTful interactions.</p>
+
+<p>The logical information model is not the workflow model, state model, final
+data dictionary, or production API specification. It is a reviewer-facing bridge
+between the referral dataset and the FHIR implementation artifacts. Future
+use-case-specific datasets, such as pregnancy referral, should reuse this core
+logical model structure and add approved clinical content where needed.</p>
+
+<h2 id="guiding-principle">Guiding Principle</h2>
+
+<p>For v0.1, PeReF uses the principle that a referral package should contain
+enough core information for the receiving facility to:</p>
+
+<ul>
+  <li>identify the patient;</li>
+  <li>understand why the referral is needed;</li>
+  <li>judge urgency and receiving-facility readiness;</li>
+  <li>review the relevant clinical context;</li>
+  <li>know what care, treatment, or coordination has already occurred;</li>
+  <li>know who sent the referral and how to follow up;</li>
+  <li>determine who is expected to receive, triage, or act on it;</li>
+  <li>respond or redirect safely;</li>
+  <li>who is making the referral or where the referral is coming from.</li>
+</ul>
+
+<p>Use-case-specific referrals may require additional clinical details, but those
+details should extend the core referral package rather than replace it.</p>
+
+<h2 id="use-case-extensibility">Use-Case Extensibility</h2>
+
+<p>The information groups below define the reusable referral envelope. Later use
+cases should keep the same core groups for patient identity, sending and
+receiving context, referral request, workflow tracking, response, and audit.</p>
+
+<p>Specialty or program-specific datasets should add clinical content under the
+clinical reason, clinical context, and prior care groups. For example, a future
+pregnancy referral use case could add gestational age, estimated delivery date,
+antenatal care history, maternal danger signs, fetal status, relevant
+observations, procedures, and treatment already given without changing the core
+referral envelope.</p>
+
+<h2 id="logical-information-groups">Logical Information Groups</h2>
+
+<p>The groups below describe what the referral package needs to communicate before
+considering the physical FHIR representation.</p>
+
+<!-- markdownlint-disable MD013 -->
+
+<table class="ph-table">
+  <thead>
+    <tr>
+      <th>Logical group</th>
+      <th>What it answers</th>
+      <th>Why it matters</th>
+      <th>Current PeReF mapping</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patient identity</td>
+      <td>Who is being referred?</td>
+      <td>Prevents misidentification and supports patient matching, contact, handover, and billing.</td>
+      <td><a href="StructureDefinition-ereferral-patient.html">ERefPatient</a>; <code class="language-plaintext highlighter-rouge">ServiceRequest.subject</code>; <code class="language-plaintext highlighter-rouge">Task.for</code>; <code class="language-plaintext highlighter-rouge">Encounter.subject</code>.</td>
+    </tr>
+    <tr>
+      <td>Sending context</td>
+      <td>Who created or sent the referral?</td>
+      <td>Supports accountability, callback, role, and originating facility context.</td>
+      <td><a href="StructureDefinition-ereferral-practitioner-role.html">PH eReferral PractitionerRole</a>; Practitioner; Organization; <code class="language-plaintext highlighter-rouge">ServiceRequest.requester</code>; <code class="language-plaintext highlighter-rouge">Task.requester</code>.</td>
+    </tr>
+    <tr>
+      <td>Receiving context</td>
+      <td>Who is expected to receive, triage, or perform the requested service?</td>
+      <td>Supports routing, triage, receiving-facility preparation, and assignment of responsibility.</td>
+      <td>Organization; <a href="StructureDefinition-ereferral-practitioner-role.html">PH eReferral PractitionerRole</a>; <code class="language-plaintext highlighter-rouge">ServiceRequest.performer</code>; <code class="language-plaintext highlighter-rouge">Task.owner</code>.</td>
+    </tr>
+    <tr>
+      <td>Referral request</td>
+      <td>What service, consultation, procedure, or action is being requested?</td>
+      <td>Defines the operational purpose of the referral and the urgency of action.</td>
+      <td><a href="StructureDefinition-ereferral-service-request.html">EReferral ServiceRequest</a>; <code class="language-plaintext highlighter-rouge">ServiceRequest.code</code>; <code class="language-plaintext highlighter-rouge">category</code>; <code class="language-plaintext highlighter-rouge">priority</code>; <code class="language-plaintext highlighter-rouge">authoredOn</code>; <code class="language-plaintext highlighter-rouge">occurrence[x]</code>; <code class="language-plaintext highlighter-rouge">replaces</code>.</td>
+    </tr>
+    <tr>
+      <td>Clinical reason</td>
+      <td>Why is the referral needed?</td>
+      <td>Helps the receiving side triage, accept, redirect, or prepare for the patient.</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.reasonCode</code>; <code class="language-plaintext highlighter-rouge">ServiceRequest.reasonReference</code>; Condition; Observation.</td>
+    </tr>
+    <tr>
+      <td>Clinical context and prior care</td>
+      <td>What is the patient's current condition, and what has already been done?</td>
+      <td>Supports safe handover, continuity of care, and avoidance of duplicate or unsafe treatment.</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.supportingInfo</code>; Observation; Condition; Procedure; <a href="StructureDefinition-ereferral-medication-administration.html">EReferral MedicationAdministration</a>; <a href="StructureDefinition-ereferral-immunization.html">ERefImmunization</a>.</td>
+    </tr>
+    <tr>
+      <td>Workflow and response tracking</td>
+      <td>Where is the referral in the process, and what has the receiving side reported?</td>
+      <td>Tracks responsibility, response, redirection, and closure without changing the clinical referral request itself.</td>
+      <td><a href="StructureDefinition-ereferral-task.html">EReferral Task</a>; <code class="language-plaintext highlighter-rouge">Task.focus</code>; <code class="language-plaintext highlighter-rouge">Task.status</code>; <code class="language-plaintext highlighter-rouge">Task.businessStatus</code>; <code class="language-plaintext highlighter-rouge">Task.statusReason</code>; <code class="language-plaintext highlighter-rouge">Task.output</code>.</td>
+    </tr>
+    <tr>
+      <td>Audit and provenance</td>
+      <td>Who submitted, signed, or changed referral information?</td>
+      <td>Supports traceability, trust, review, and medico-legal accountability.</td>
+      <td><a href="StructureDefinition-ereferral-provenance.html">EReferral Provenance</a>; <code class="language-plaintext highlighter-rouge">ServiceRequest.relevantHistory</code>; <code class="language-plaintext highlighter-rouge">Provenance.target</code>; <code class="language-plaintext highlighter-rouge">Provenance.recorded</code>; <code class="language-plaintext highlighter-rouge">Provenance.agent</code>; <code class="language-plaintext highlighter-rouge">Provenance.signature</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-enable MD013 -->
+
+<h2 id="v01-data-dictionary-traceability">v0.1 Data Dictionary Traceability</h2>
+
+<p>The data dictionary remains the source of individual data elements. This page
+groups the v0.1 general referral elements into referral-package concepts so
+reviewers and implementers can discuss the dataset without starting from FHIR
+paths.</p>
+
+<p>Current draft mapping references include these v0.1 row clusters and gap
+annotations so missing row numbers are not read as accidental omissions:</p>
+
+<!-- markdownlint-disable MD013 -->
+
+<table class="ph-table">
+  <thead>
+    <tr>
+      <th>Data dictionary area</th>
+      <th>Draft row references</th>
+      <th>Logical group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Referring practitioner and role</td>
+      <td>REF-1, REF-2</td>
+      <td>Sending context</td>
+    </tr>
+    <tr>
+      <td>Signature and recorded activity</td>
+      <td>REF-3, REF-4</td>
+      <td>Audit and provenance</td>
+    </tr>
+    <tr>
+      <td>Initiating facility</td>
+      <td>REF-5 to REF-8</td>
+      <td>Sending context</td>
+    </tr>
+    <tr>
+      <td>Care navigator and receiving facility</td>
+      <td>REF-9 to REF-11</td>
+      <td>Receiving context; workflow tracking</td>
+    </tr>
+    <tr>
+      <td>Health Care Provider Network name</td>
+      <td>REF-12</td>
+      <td>Sending context; receiving context; referral routing</td>
+    </tr>
+    <tr>
+      <td>Referral date, category, priority, supporting information, and reason</td>
+      <td>REF-13 to REF-16</td>
+      <td>Referral request; clinical reason; clinical context</td>
+    </tr>
+    <tr>
+      <td>Receiving action points</td>
+      <td>REF-17, REF-18</td>
+      <td>Workflow and response tracking</td>
+    </tr>
+    <tr>
+      <td>Return referral slip attachment</td>
+      <td>REF-19</td>
+      <td>Future work; attachment exchange</td>
+    </tr>
+    <tr>
+      <td>Removed data dictionary row</td>
+      <td>REF-20</td>
+      <td>Removed in current data dictionary</td>
+    </tr>
+    <tr>
+      <td>Patient demographics and contact details</td>
+      <td>REF-21 to REF-30</td>
+      <td>Patient identity</td>
+    </tr>
+    <tr>
+      <td>Treatment given</td>
+      <td>REF-39</td>
+      <td>Clinical context and prior care</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-enable MD013 -->
+
+<p>These row references should be verified against the approved data dictionary
+before release. Missing or changed rows should be updated from the source data
+dictionary, not inferred from this page. Future use-case-specific datasets
+should add their own approved row clusters and map them into the reusable
+logical groups.</p>
+
+<h2 id="ereferral-profile-relationships">eReferral Profile Relationships</h2>
+
+<p>The diagram shows the current v0.3 draft PeReF profile relationships. It is
+not a complete catalogue of every future clinical profile that may be added for
+specialty or program-specific referral use cases.</p>
+
+<!-- markdownlint-disable MD013 MD033 -->
+
+<p><img src="peref-fhir-relationship-diagram.png" alt="PH eReferral FHIR Profile Relationship Diagram v0.3 (draft). ERefServiceRequest is the central resource, connected to ERefPractitionerRole (requester), PHCoreOrganization (performer), ERefPatient (subject), ERefTask (focus), ERefProvenance (relevantHistory), and ERefEncounter (basedOn). ServiceRequest.supportingInfo and reasonReference reference clinical summary resources: ERefObservation, ERefImmunization, ERefMedicationAdministration, PHCoreCondition, and PHCoreProcedure. ERefRelatedPerson links to ERefPatient." style="max-width:100%;height:auto;" /></p>
+
+<!-- markdownlint-enable MD013 MD033 -->
+
+<!-- markdownlint-disable MD013 -->
+
+<table class="ph-table">
+  <thead>
+    <tr>
+      <th>Relationship</th>
+      <th>FHIR path</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patient to referral request</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.subject</code></td>
+      <td>The patient being referred.</td>
+    </tr>
+    <tr>
+      <td>Sending side to request</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.requester</code></td>
+      <td>The practitioner, role, or facility responsible for creating the referral.</td>
+    </tr>
+    <tr>
+      <td>Receiving side to request</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.performer</code></td>
+      <td>The intended receiving facility or role.</td>
+    </tr>
+    <tr>
+      <td>Clinical reason to request</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.reasonCode</code>; <code class="language-plaintext highlighter-rouge">ServiceRequest.reasonReference</code></td>
+      <td>The reason the receiving side should evaluate the referral.</td>
+    </tr>
+    <tr>
+      <td>Supporting clinical information to request</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.supportingInfo</code></td>
+      <td>Clinical observations, conditions, procedures, treatment, medications, or immunizations needed for handover.</td>
+    </tr>
+    <tr>
+      <td>Workflow tracking to request</td>
+      <td><code class="language-plaintext highlighter-rouge">Task.focus</code></td>
+      <td>The Task tracking status, receiving response, assignment, and closure for the ServiceRequest.</td>
+    </tr>
+    <tr>
+      <td>Audit record to request</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.relevantHistory</code>; <code class="language-plaintext highlighter-rouge">Provenance.target</code></td>
+      <td>The provenance record for signatures, submissions, and updates.</td>
+    </tr>
+    <tr>
+      <td>ServiceRequest to Encounter</td>
+      <td><code class="language-plaintext highlighter-rouge">ServiceRequest.encounter</code></td>
+      <td>The encounter associated with acting on or closing the referral.</td>
+    </tr>
+    <tr>
+      <td>Clinical Summary Resources to Encounter</td>
+      <td><code class="language-plaintext highlighter-rouge">Condition.encounter</code>;  <code class="language-plaintext highlighter-rouge">Observation.encounter</code>; <code class="language-plaintext highlighter-rouge">Procedure.encounter</code>; <code class="language-plaintext highlighter-rouge">DiagnosticReport.encounter</code></td>
+      <td>The encounter associated with the clinical summary resources.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-enable MD013 -->
+
+<h2 id="example-fhir-restful-interaction-flow">Example FHIR RESTful Interaction Flow</h2>
+
+<p>The following flow is illustrative and non-normative. Do not treat it as a
+required API contract. Actual supported searches, update methods, transaction
+behavior, and security controls should be stated in the server
+CapabilityStatement and exchange agreement.</p>
+
+<p>Each interaction implies a corresponding FHIR REST response, such as <code class="language-plaintext highlighter-rouge">200 OK</code>,
+<code class="language-plaintext highlighter-rouge">201 Created</code>, or an <code class="language-plaintext highlighter-rouge">OperationOutcome</code>. Standard HTTP responses are omitted
+from the diagram for readability.</p>
+
+<!-- markdownlint-disable MD013 MD033 -->
+
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="flow-title flow-desc" width="100%" viewBox="0 0 1180 510" preserveAspectRatio="xMidYMin meet">
+  <title id="flow-title">Example eReferral RESTful interaction flow</title>
+  <desc id="flow-desc">Sequence-style diagram showing a referring system (Initiating Facility) creating referral resources, a FHIR server storing them, and a receiving system (Receiving Facility) searching, reading, updating, and closing referral workflow resources.</desc>
+  <defs>
+    <style>
+      .flow-head { fill: #eef4fb; stroke: #2f5f8f; stroke-width: 2; rx: 8; }
+      .flow-server { fill: #edf7f0; stroke: #28724a; stroke-width: 2; rx: 8; }
+      .flow-line { stroke: #8894a0; stroke-width: 2; }
+      .flow-arrow { stroke: #2f4050; stroke-width: 2.4; marker-end: url(#flow-arrow); fill: none; }
+      .flow-text { font-family: Arial, sans-serif; font-size: 18px; fill: #1b1f24; }
+      .flow-small { font-family: Arial, sans-serif; font-size: 14px; fill: #1b1f24; }
+      .flow-note { font-family: Arial, sans-serif; font-size: 13px; fill: #44515f; }
+    </style>
+    <marker id="flow-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2f4050" />
+    </marker>
+  </defs>
+
+  <rect x="55" y="34" width="260" height="58" class="flow-head" />
+  <text x="185" y="70" text-anchor="middle" class="flow-text">Referring system</text>
+  <rect x="460" y="34" width="260" height="58" class="flow-server" />
+  <text x="590" y="70" text-anchor="middle" class="flow-text">FHIR server</text>
+  <rect x="865" y="34" width="260" height="58" class="flow-head" />
+  <text x="995" y="70" text-anchor="middle" class="flow-text">Receiving system</text>
+
+  <line x1="185" y1="100" x2="185" y2="460" class="flow-line" />
+  <line x1="590" y1="100" x2="590" y2="460" class="flow-line" />
+  <line x1="995" y1="100" x2="995" y2="460" class="flow-line" />
+
+  <line x1="190" y1="138" x2="585" y2="138" class="flow-arrow" />
+  <text x="205" y="125" class="flow-small">1. POST/PUT patient, facility, practitioner, and clinical evidence resources</text>
+
+  <line x1="190" y1="198" x2="585" y2="198" class="flow-arrow" />
+  <text x="205" y="185" class="flow-small">2. POST ServiceRequest using ERefServiceRequest</text>
+
+  <line x1="190" y1="258" x2="585" y2="258" class="flow-arrow" />
+  <text x="205" y="245" class="flow-small">3. POST Task with focus = ServiceRequest and status = requested</text>
+
+  <line x1="990" y1="318" x2="598" y2="318" class="flow-arrow" />
+  <text x="608" y="305" class="flow-small">4. SEARCH/READ referral Task or ServiceRequest</text>
+
+  <line x1="990" y1="378" x2="598" y2="378" class="flow-arrow" />
+  <text x="608" y="365" class="flow-small">5. PUT/PATCH Task response, businessStatus, statusReason, or output</text>
+
+  <line x1="990" y1="438" x2="598" y2="438" class="flow-arrow" />
+  <text x="608" y="425" class="flow-small">6. POST Provenance, Encounter, onward ServiceRequest, or close Task as needed</text>
+
+  <text x="590" y="492" text-anchor="middle" class="flow-note">Exact supported searches, transaction use, update style, and security controls are server capability decisions.</text>
+</svg>
+
+<!-- markdownlint-enable MD013 MD033 -->
+
+<!-- markdownlint-disable MD013 -->
+
+<table class="ph-table">
+  <thead>
+    <tr>
+      <th>Interaction</th>
+      <th>Example REST operation</th>
+      <th>Main artifacts</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Create or update shared reference data</td>
+      <td><code class="language-plaintext highlighter-rouge">POST /Patient</code>, <code class="language-plaintext highlighter-rouge">PUT /Patient/{id}</code>, <code class="language-plaintext highlighter-rouge">POST /Organization</code>, <code class="language-plaintext highlighter-rouge">POST /PractitionerRole</code></td>
+      <td>ERefPatient, Organization, Practitioner, PractitionerRole</td>
+      <td>Use existing records when available. Create or update only when the exchange agreement allows it.</td>
+    </tr>
+    <tr>
+      <td>Create the referral request</td>
+      <td><code class="language-plaintext highlighter-rouge">POST /ServiceRequest</code></td>
+      <td>ERefServiceRequest</td>
+      <td>Carries patient, requester, receiving performer, requested service, urgency, reason, and supporting clinical references.</td>
+    </tr>
+    <tr>
+      <td>Create workflow tracking</td>
+      <td><code class="language-plaintext highlighter-rouge">POST /Task</code></td>
+      <td>ERefTask</td>
+      <td><code class="language-plaintext highlighter-rouge">Task.focus</code> points to the ServiceRequest. Initial v0.1 exchange normally starts with a requested Task.</td>
+    </tr>
+    <tr>
+      <td>Read or search for referrals</td>
+      <td><code class="language-plaintext highlighter-rouge">GET /Task?focus=ServiceRequest/{id}</code>, <code class="language-plaintext highlighter-rouge">GET /ServiceRequest?performer=Organization/{id}&amp;status=active</code></td>
+      <td>Task, ServiceRequest</td>
+      <td>These are example searches. Actual support belongs in the server CapabilityStatement.</td>
+    </tr>
+    <tr>
+      <td>Record receiving response</td>
+      <td><code class="language-plaintext highlighter-rouge">PUT /Task/{id}</code> or <code class="language-plaintext highlighter-rouge">PATCH /Task/{id}</code></td>
+      <td>ERefTask</td>
+      <td>Updates <code class="language-plaintext highlighter-rouge">Task.status</code>, <code class="language-plaintext highlighter-rouge">Task.businessStatus</code>, <code class="language-plaintext highlighter-rouge">Task.statusReason</code>, and/or <code class="language-plaintext highlighter-rouge">Task.output</code> depending on the response.</td>
+    </tr>
+    <tr>
+      <td>Record onward referral</td>
+      <td><code class="language-plaintext highlighter-rouge">POST /ServiceRequest</code>; <code class="language-plaintext highlighter-rouge">PUT/PATCH /Task/{id}</code></td>
+      <td>ServiceRequest, Task</td>
+      <td>An onward ServiceRequest can use <code class="language-plaintext highlighter-rouge">ServiceRequest.replaces</code> to link back to the previous referral request.</td>
+    </tr>
+    <tr>
+      <td>Record audit event or signature</td>
+      <td><code class="language-plaintext highlighter-rouge">POST /Provenance</code></td>
+      <td>ERefProvenance</td>
+      <td>Provenance can target the ServiceRequest and record signer, author, update, or other auditable activity.</td>
+    </tr>
+    <tr>
+      <td>Record encounter or closure context</td>
+      <td><code class="language-plaintext highlighter-rouge">POST /Encounter</code>; <code class="language-plaintext highlighter-rouge">PUT/PATCH /Task/{id}</code></td>
+      <td>ERefEncounter, Task</td>
+      <td>Encounter can point back to the referral using <code class="language-plaintext highlighter-rouge">Encounter.basedOn</code>. Task completion records closure of the workflow tracking item.</td>
+    </tr>
+    <tr>
+      <td>Submit as one package when supported</td>
+      <td><code class="language-plaintext highlighter-rouge">POST /</code> with a transaction Bundle</td>
+      <td>Bundle containing the referral package resources</td>
+      <td>Transaction Bundles are useful for keeping references consistent, but server support and security rules must be confirmed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-enable MD013 -->
+
+<h2 id="review-expectations">Review Expectations</h2>
+
+<p>Reviewers should confirm:</p>
+
+<ul>
+  <li>the logical groups match clinical and operational expectations for v0.1;</li>
+  <li>the data dictionary row clusters are accurate;</li>
+  <li>the profile relationships are consistent with the current PeReF profiles;</li>
+  <li>REST interaction examples match the intended server CapabilityStatement;</li>
+  <li>future use cases can extend clinical content without replacing the core
+referral envelope;</li>
+  <li>production topics such as routing, consent, security, attachments, and
+exchange hosting are handled in the appropriate implementation guidance.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-09-09 03:53:00 +0000">
+    2026-09-09
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

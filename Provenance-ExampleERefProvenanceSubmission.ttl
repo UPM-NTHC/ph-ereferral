@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Provenance/ExampleERefProvenanceSubmission> a fhir:Provenance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "ExampleERefProvenanceSubmission"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance" ;
+       fhir:index 0 ;
+       fhir:link <https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance ExampleERefProvenanceSubmission</b></p><a name=\"ExampleERefProvenanceSubmission\"> </a><a name=\"hcExampleERefProvenanceSubmission\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-provenance.html\">EReferral Provenance</a></p></div><p>Provenance for <a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-2da5e918-42d1-4d2c-b5dd-570b0b172759\">ServiceRequest: requisition = urn:oid:1.2.840.113619.21.1.2#REF-2026-001234; status = active; intent = order; category = Hospital-based outpatient emergency care center; occurrence[x] = 2026-06-18 08:30:00+0800; authoredOn = 2026-06-18 08:30:00+0800; reasonCode = Procedure; note = Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</a></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2026-06-18 08:30:00+0800</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-DataOperation CREATE}\">create</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>who</b></td><td><b>On Behalf Of</b></td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type author}\">Author</span></td><td><a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-06924c91-7363-40ab-932b-6f64d0a102b9\">PractitionerRole Medical practitioner</a></td><td><a href=\"Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a038f451-6557-4b01-b05c-aa4ff967545b\">Organization Kalibo Health Center</a></td></tr></table></div>"
+  ] ;
+  fhir:Provenance.target [
+     fhir:index 0 ;
+     fhir:Reference.reference [ fhir:value "urn:uuid:2da5e918-42d1-4d2c-b5dd-570b0b172759" ]
+  ] ;
+  fhir:Provenance.recorded [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime] ;
+  fhir:Provenance.activity [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-DataOperation" ] ;
+       fhir:Coding.code [ fhir:value "CREATE" ] ;
+       fhir:Coding.display [ fhir:value "create" ]
+     ]
+  ] ;
+  fhir:Provenance.agent [
+     fhir:index 0 ;
+     fhir:Provenance.agent.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/provenance-participant-type" ] ;
+         fhir:Coding.code [ fhir:value "author" ] ;
+         fhir:Coding.display [ fhir:value "Author" ]
+       ]
+     ] ;
+     fhir:Provenance.agent.who [
+       fhir:Reference.reference [ fhir:value "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9" ]
+     ] ;
+     fhir:Provenance.agent.onBehalfOf [
+       fhir:Reference.reference [ fhir:value "urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b" ]
+     ]
+  ] ;
+  fhir:Provenance.signature [
+     fhir:index 0 ;
+     fhir:Signature.type [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso-astm:E1762-95:2013" ] ;
+       fhir:Coding.code [ fhir:value "1.2.840.10065.1.12.1.5" ] ;
+       fhir:Coding.display [ fhir:value "Verification Signature" ]
+     ] ;
+     fhir:Signature.when [ fhir:value "2026-06-18T08:30:00+08:00"^^xsd:dateTime ] ;
+     fhir:Signature.who [
+       fhir:Reference.reference [ fhir:value "urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9" ]
+     ] ;
+     fhir:Signature.data [ fhir:value "dGVzdHNpZ25hdHVyZWJhc2U2NA=="^^xsd:base64Binary ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://fhir.doh.gov.ph/pheref/Provenance/ExampleERefProvenanceSubmission.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

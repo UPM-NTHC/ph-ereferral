@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-practitioner-role"/>
+  <language value="en"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet vs-practitioner-role</b></p><a name="vs-practitioner-role"> </a><a name="hcvs-practitioner-role"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/158965000">158965000</a></td><td>Doctor</td></tr><tr><td><a href="http://snomed.info/id/265937000">265937000</a></td><td>Nurse</td></tr><tr><td><a href="http://snomed.info/id/309453006">309453006</a></td><td>Midwife</td></tr><tr><td><a href="http://snomed.info/id/46255001">46255001</a></td><td>Pharmacist</td></tr><tr><td><a href="http://snomed.info/id/386629007">386629007</a></td><td>Medical Technologist</td></tr><tr><td><a href="http://snomed.info/id/159282002">159282002</a></td><td>Laboratory Aide</td></tr><tr><td><a href="http://snomed.info/id/106289002">106289002</a></td><td>Dentist</td></tr><tr><td><a href="http://snomed.info/id/4162009">4162009</a></td><td>Dental Aide</td></tr><tr><td><a href="http://snomed.info/id/28229004">28229004</a></td><td>Optometrist</td></tr></table></li><li>Include these codes as defined in <a href="CodeSystem-PSOC.html"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-PSOC.html#PSOC-3253">3253</a></td><td>Barangay Health Worker</td><td>Community health workers</td></tr></table></li><li>Include these codes as defined in <a href="CodeSystem-PHCW.html"><code>https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-PHCW.html#PHCW-PCW">PCW</a></td><td>Primary Care Worker</td><td>Primary Care Worker</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://www.fhir.doh.gov.ph/pheref/ValueSet/practitioner-role"/>
+  <version value="0.1.0"/>
+  <name value="EReferralPractitionerRoleCode"/>
+  <title value="Practitioner Role VS"/>
+  <status value="active"/>
+  <date value="2026-09-09T03:53:23+00:00"/>
+  <publisher value="SILab CoP IG Accelerator (eReferral)"/>
+  <contact>
+    <name value="SILab CoP IG Accelerator (eReferral)"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/UP-Manila-SILab"/>
+    </telecom>
+  </contact>
+  <description value="Designation of referring individual"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="PH"/>
+      <display value="Philippines"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <concept>
+        <code value="158965000"/>
+        <display value="Doctor"/>
+      </concept>
+      <concept>
+        <code value="265937000"/>
+        <display value="Nurse"/>
+      </concept>
+      <concept>
+        <code value="309453006"/>
+        <display value="Midwife"/>
+      </concept>
+      <concept>
+        <code value="46255001"/>
+        <display value="Pharmacist"/>
+      </concept>
+      <concept>
+        <code value="386629007"/>
+        <display value="Medical Technologist"/>
+      </concept>
+      <concept>
+        <code value="159282002"/>
+        <display value="Laboratory Aide"/>
+      </concept>
+      <concept>
+        <code value="106289002"/>
+        <display value="Dentist"/>
+      </concept>
+      <concept>
+        <code value="4162009"/>
+        <display value="Dental Aide"/>
+      </concept>
+      <concept>
+        <code value="28229004"/>
+        <display value="Optometrist"/>
+      </concept>
+    </include>
+    <include>
+      <system value="https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC"/>
+      <concept>
+        <code value="3253"/>
+        <display value="Barangay Health Worker"/>
+      </concept>
+    </include>
+    <include>
+      <system value="https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW"/>
+      <concept>
+        <code value="PCW"/>
+        <display value="Primary Care Worker"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

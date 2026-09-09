@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefMedicationAntibiotic"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-medication"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication ExampleERefMedicationAntibiotic</b></p><a name="ExampleERefMedicationAntibiotic"> </a><a name="hcExampleERefMedicationAntibiotic"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-medication.html">PH Core Medication</a></p></div><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 105590001}">Cefuroxime 750mg IV (antibiotic)</span></p><p><b>status</b>: Active</p></div>
+  </text>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="105590001"/>
+      <display value="Substance"/>
+    </coding>
+    <text value="Cefuroxime 750mg IV (antibiotic)"/>
+  </code>
+  <status value="active"/>
+</Medication>

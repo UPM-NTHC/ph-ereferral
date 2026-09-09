@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefDiagnosticReportPDF"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-diagnostic-report"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DiagnosticReport ExampleERefDiagnosticReportPDF</b></p><a name="ExampleERefDiagnosticReportPDF"> </a><a name="hcExampleERefDiagnosticReportPDF"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-diagnostic-report.html">EReferral DiagnosticReport</a></p></div><h2><span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span> </h2><table class="grid"><tr><td>Subject</td><td>Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</td></tr><tr><td>Performer</td><td> <a href="Organization-ExampleERefOrganizationKaliboHC.html">Organization Kalibo Health Center</a></td></tr><tr><td>Presented Form</td><td> application/pdf @ <a href="https://example.org/fhir/reports/laboratory-report-2025-001.pdf">https://example.org/fhir/reports/laboratory-report-2025-001.pdf <img src="external.png" alt="icon" style="vertical-align: baseline"/></a></td></tr></table><p><b>Report Details</b></p></div>
+  </text>
+  <basedOn>
+    <reference value="ServiceRequest/ExampleERefServiceRequest"/>
+  </basedOn>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11502-2"/>
+      <display value="Laboratory report"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleERefPatient"/>
+  </subject>
+  <performer>
+    <reference value="Organization/ExampleERefOrganizationKaliboHC"/>
+  </performer>
+  <presentedForm>
+    <contentType value="application/pdf"/>
+    <url value="https://example.org/fhir/reports/laboratory-report-2025-001.pdf"/>
+    <title value="Laboratory Report 2025-001"/>
+  </presentedForm>
+</DiagnosticReport>

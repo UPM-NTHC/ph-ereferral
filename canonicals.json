@@ -1,0 +1,175 @@
+[{
+  "id" : "PHCW",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW",
+  "version" : "0.1.0",
+  "name" : "PHCorePHCW"
+},
+{
+  "id" : "PSOC",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC",
+  "version" : "0.1.0",
+  "name" : "PHCorePSOC"
+},
+{
+  "id" : "ereferral-workflow",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+  "version" : "0.1.0",
+  "name" : "EReferralWorkflowCS"
+},
+{
+  "id" : "pwd-disability-type-cs",
+  "type" : "CodeSystem",
+  "url" : "https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs",
+  "version" : "0.1.0",
+  "name" : "PWDDisabilityTypeCS"
+},
+{
+  "id" : "fhir.ph.ereferral",
+  "type" : "ImplementationGuide",
+  "url" : "https://fhir.doh.gov.ph/pheref/ImplementationGuide/fhir.ph.ereferral",
+  "version" : "0.1.0",
+  "name" : "PHeReferralImplementationGuide"
+},
+{
+  "id" : "ereferral-condition",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-condition",
+  "version" : "0.1.0",
+  "name" : "ERefCondition"
+},
+{
+  "id" : "ereferral-diagnostic-report",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-diagnostic-report",
+  "version" : "0.1.0",
+  "name" : "ERefDiagnosticReport"
+},
+{
+  "id" : "ereferral-encounter",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-encounter",
+  "version" : "0.1.0",
+  "name" : "ERefEncounter"
+},
+{
+  "id" : "ereferral-immunization",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-immunization",
+  "version" : "0.1.0",
+  "name" : "ERefImmunization"
+},
+{
+  "id" : "ereferral-medication-administration",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-medication-administration",
+  "version" : "0.1.0",
+  "name" : "ERefMedicationAdministration"
+},
+{
+  "id" : "ereferral-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-observation",
+  "version" : "0.1.0",
+  "name" : "ERefObservation"
+},
+{
+  "id" : "ereferral-patient",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-patient",
+  "version" : "0.1.0",
+  "name" : "ERefPatient"
+},
+{
+  "id" : "ereferral-practitioner-role",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role",
+  "version" : "0.1.0",
+  "name" : "ERefPractitionerRole"
+},
+{
+  "id" : "ereferral-procedure",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-procedure",
+  "version" : "0.1.0",
+  "name" : "ERefProcedure"
+},
+{
+  "id" : "ereferral-provenance",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-provenance",
+  "version" : "0.1.0",
+  "name" : "ERefProvenance"
+},
+{
+  "id" : "ereferral-pwd-disability",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-pwd-disability",
+  "version" : "0.1.0",
+  "name" : "PWDDisabilityExtension"
+},
+{
+  "id" : "ereferral-related-person",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person",
+  "version" : "0.1.0",
+  "name" : "ERefRelatedPerson"
+},
+{
+  "id" : "ereferral-service-request",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-service-request",
+  "version" : "0.1.0",
+  "name" : "ERefServiceRequest"
+},
+{
+  "id" : "ereferral-task",
+  "type" : "StructureDefinition",
+  "url" : "https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task",
+  "version" : "0.1.0",
+  "name" : "ERefTask"
+},
+{
+  "id" : "ereferral-receiving-response",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-receiving-response",
+  "version" : "0.1.0",
+  "name" : "EReferralReceivingResponse"
+},
+{
+  "id" : "ereferral-relationship-type",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/ereferral-relationship-type",
+  "version" : "0.1.0",
+  "name" : "EReferralRelationshipType"
+},
+{
+  "id" : "pwd-disability-type-vs",
+  "type" : "ValueSet",
+  "url" : "https://fhir.doh.gov.ph/pheref/ValueSet/pwd-disability-type-vs",
+  "version" : "0.1.0",
+  "name" : "PWDDisabilityTypeVS"
+},
+{
+  "id" : "vs-practitioner-role",
+  "type" : "ValueSet",
+  "url" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/practitioner-role",
+  "version" : "0.1.0",
+  "name" : "EReferralPractitionerRoleCode"
+},
+{
+  "id" : "vs-reason-for-referral-service-type",
+  "type" : "ValueSet",
+  "url" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/reason-for-referral-service-type",
+  "version" : "0.1.0",
+  "name" : "EReferralReason"
+},
+{
+  "id" : "vs-referral-category",
+  "type" : "ValueSet",
+  "url" : "https://www.fhir.doh.gov.ph/pheref/ValueSet/referral-category",
+  "version" : "0.1.0",
+  "name" : "EReferralServiceCategory"
+}]

@@ -1,0 +1,41 @@
+{
+  "resourceType" : "Task",
+  "id" : "ExampleERefTaskReferredOnward",
+  "meta" : {
+    "profile" : ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Task ExampleERefTaskReferredOnward</b></p><a name=\"ExampleERefTaskReferredOnward\"> </a><a name=\"hcExampleERefTaskReferredOnward\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-ereferral-task.html\">EReferral Task</a></p></div><p><b>status</b>: Rejected</p><p><b>statusReason</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow capacity-full}\">Capacity full</span></p><p><b>businessStatus</b>: <span title=\"Codes:{https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow referred-onward}\">Referred onward</span></p><p><b>intent</b>: order</p><p><b>focus</b>: <a href=\"ServiceRequest-ExampleERefServiceRequest.html\">ServiceRequest: requisition = urn:oid:1.2.840.113619.21.1.2#REF-2026-001234; status = active; intent = order; category = Hospital-based outpatient emergency care center; occurrence[x] = 2026-06-18 08:30:00+0800; authoredOn = 2026-06-18 08:30:00+0800; reasonCode = Procedure; note = Ana Reyes, 38-year-old G2P1, 32 weeks AOG. BP 180/110 mmHg with severe headache, dizziness, and blurring of vision. Proteinuria 3+. Referred for urgent management of severe pre-eclampsia.</a></p><p><b>for</b>: <a href=\"Patient-ExampleERefPatient.html\">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></p><p><b>authoredOn</b>: 2026-06-18 08:30:00+0800</p><p><b>lastModified</b>: 2026-06-18 12:45:00+0800</p><p><b>requester</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRoleSubmission.html\">PractitionerRole Medical practitioner</a></p><p><b>owner</b>: <a href=\"PractitionerRole-ExampleERefPractitionerRoleReceiving.html\">PractitionerRole Medical practitioner</a></p></div>"
+  },
+  "status" : "rejected",
+  "statusReason" : {
+    "coding" : [{
+      "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+      "code" : "capacity-full",
+      "display" : "Capacity full"
+    }]
+  },
+  "businessStatus" : {
+    "coding" : [{
+      "system" : "https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow",
+      "code" : "referred-onward",
+      "display" : "Referred onward"
+    }]
+  },
+  "intent" : "order",
+  "focus" : {
+    "reference" : "ServiceRequest/ExampleERefServiceRequest"
+  },
+  "for" : {
+    "reference" : "Patient/ExampleERefPatient"
+  },
+  "authoredOn" : "2026-06-18T08:30:00+08:00",
+  "lastModified" : "2026-06-18T12:45:00+08:00",
+  "requester" : {
+    "reference" : "PractitionerRole/ExampleERefPractitionerRoleSubmission"
+  },
+  "owner" : {
+    "reference" : "PractitionerRole/ExampleERefPractitionerRoleReceiving"
+  }
+}

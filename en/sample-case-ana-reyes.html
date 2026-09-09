@@ -1,0 +1,1716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Sample Case Ana Reyes - PH eReferral Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <style>
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.ph-table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+}
+
+.ph-table table {
+  width: 100%;
+  }
+
+.ph-table thead {
+  display: table-header-group;
+}
+
+.ph-table th {
+  background-color: #555555;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #444444;
+}
+
+.ph-table td {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.ph-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ph-table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.ph-table tbody tr:hover {
+  background-color: #ebf8ff;
+  transition: background-color 0.2s ease;
+}
+
+.ph-table td code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="logical-information-model.html">Logical Information Model</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Sample Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="sample-case-ana-reyes.html">Ana Reyes Referral</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Sample Case Ana Reyes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Sample Case Ana Reyes</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#sample-case-ana-reyes-ereferral--initiation-and-workflow-tutorial" id="markdown-toc-sample-case-ana-reyes-ereferral--initiation-and-workflow-tutorial">Sample Case: Ana Reyes eReferral — Initiation and Workflow Tutorial</a>    <ul>
+      <li><a href="#table-of-contents" id="markdown-toc-table-of-contents">Table of Contents</a></li>
+      <li><a href="#the-case-scenario" id="markdown-toc-the-case-scenario">The Case Scenario</a>        <ul>
+          <li><a href="#clinical-summary" id="markdown-toc-clinical-summary">Clinical Summary</a></li>
+          <li><a href="#what-this-referral-models" id="markdown-toc-what-this-referral-models">What This Referral Models</a></li>
+          <li><a href="#reference-rules-in-this-bundle" id="markdown-toc-reference-rules-in-this-bundle">Reference Rules in This Bundle</a></li>
+        </ul>
+      </li>
+      <li><a href="#looking-up-codes-at-txfhirlabnet" id="markdown-toc-looking-up-codes-at-txfhirlabnet">Looking Up Codes at tx.fhirlab.net</a>        <ul>
+          <li><a href="#terminology-systems-used" id="markdown-toc-terminology-systems-used">Terminology Systems Used</a></li>
+          <li><a href="#code-lookup-commands" id="markdown-toc-code-lookup-commands">Code Lookup Commands</a></li>
+          <li><a href="#key-snomed-ct-codes-in-this-referral" id="markdown-toc-key-snomed-ct-codes-in-this-referral">Key SNOMED CT Codes in This Referral</a></li>
+          <li><a href="#key-loinc-codes-in-this-referral" id="markdown-toc-key-loinc-codes-in-this-referral">Key LOINC Codes in This Referral</a></li>
+          <li><a href="#key-psgc-geographic-codes-in-this-referral" id="markdown-toc-key-psgc-geographic-codes-in-this-referral">Key PSGC Geographic Codes in This Referral</a></li>
+        </ul>
+      </li>
+      <li><a href="#the-transaction-bundle" id="markdown-toc-the-transaction-bundle">The Transaction Bundle</a>        <ul>
+          <li><a href="#conditional-update-put" id="markdown-toc-conditional-update-put">Conditional Update (PUT)</a></li>
+          <li><a href="#the-7-conditional-put-entries" id="markdown-toc-the-7-conditional-put-entries">The 7 Conditional PUT Entries</a></li>
+          <li><a href="#full-bundle-downloads" id="markdown-toc-full-bundle-downloads">Full Bundle Downloads</a></li>
+          <li><a href="#bundle-entry-ordering-note" id="markdown-toc-bundle-entry-ordering-note">Bundle Entry Ordering Note</a></li>
+        </ul>
+      </li>
+      <li><a href="#reading-back-resources" id="markdown-toc-reading-back-resources">Reading Back Resources</a>        <ul>
+          <li><a href="#read-a-patient" id="markdown-toc-read-a-patient">Read a Patient</a></li>
+          <li><a href="#read-the-servicerequest" id="markdown-toc-read-the-servicerequest">Read the ServiceRequest</a></li>
+          <li><a href="#read-all-observations-for-the-encounter" id="markdown-toc-read-all-observations-for-the-encounter">Read All Observations for the Encounter</a></li>
+          <li><a href="#read-the-task" id="markdown-toc-read-the-task">Read the Task</a></li>
+        </ul>
+      </li>
+      <li><a href="#searching-for-referrals" id="markdown-toc-searching-for-referrals">Searching for Referrals</a>        <ul>
+          <li><a href="#search-for-referrals-by-patient" id="markdown-toc-search-for-referrals-by-patient">Search for Referrals by Patient</a></li>
+          <li><a href="#search-for-referrals-by-status" id="markdown-toc-search-for-referrals-by-status">Search for Referrals by Status</a></li>
+          <li><a href="#search-for-tasks-by-status" id="markdown-toc-search-for-tasks-by-status">Search for Tasks by Status</a></li>
+          <li><a href="#search-for-tasks-by-focus-referral" id="markdown-toc-search-for-tasks-by-focus-referral">Search for Tasks by Focus (Referral)</a></li>
+          <li><a href="#search-for-conditions-by-patient" id="markdown-toc-search-for-conditions-by-patient">Search for Conditions by Patient</a></li>
+          <li><a href="#common-search-parameters" id="markdown-toc-common-search-parameters">Common Search Parameters</a></li>
+        </ul>
+      </li>
+      <li><a href="#tracing-the-workflow--task-state-progression" id="markdown-toc-tracing-the-workflow--task-state-progression">Tracing the Workflow — Task State Progression</a>        <ul>
+          <li><a href="#workflow-states" id="markdown-toc-workflow-states">Workflow States</a></li>
+          <li><a href="#step-1-referral-created-requested" id="markdown-toc-step-1-referral-created-requested">Step 1: Referral Created (<code class="language-plaintext highlighter-rouge">requested</code>)</a></li>
+          <li><a href="#step-2-receiving-facility-acknowledges-received" id="markdown-toc-step-2-receiving-facility-acknowledges-received">Step 2: Receiving Facility Acknowledges (<code class="language-plaintext highlighter-rouge">received</code>)</a></li>
+          <li><a href="#step-3-receiving-facility-accepts-accepted" id="markdown-toc-step-3-receiving-facility-accepts-accepted">Step 3: Receiving Facility Accepts (<code class="language-plaintext highlighter-rouge">accepted</code>)</a></li>
+          <li><a href="#step-4-referral-completed-completed" id="markdown-toc-step-4-referral-completed-completed">Step 4: Referral Completed (<code class="language-plaintext highlighter-rouge">completed</code>)</a></li>
+          <li><a href="#using-patch-for-status-updates" id="markdown-toc-using-patch-for-status-updates">Using PATCH for Status Updates</a></li>
+        </ul>
+      </li>
+      <li><a href="#complete-curl-commands" id="markdown-toc-complete-curl-commands">Complete cURL Commands</a>        <ul>
+          <li><a href="#1-verify-server-is-available" id="markdown-toc-1-verify-server-is-available">1. Verify Server is Available</a></li>
+          <li><a href="#2-post-the-referral-initiation-bundle" id="markdown-toc-2-post-the-referral-initiation-bundle">2. Post the Referral Initiation Bundle</a></li>
+          <li><a href="#3-read-back-key-resources" id="markdown-toc-3-read-back-key-resources">3. Read Back Key Resources</a></li>
+          <li><a href="#4-search-for-all-referrals-for-this-patient" id="markdown-toc-4-search-for-all-referrals-for-this-patient">4. Search for All Referrals for This Patient</a></li>
+          <li><a href="#5-trace-the-workflow" id="markdown-toc-5-trace-the-workflow">5. Trace the Workflow</a></li>
+          <li><a href="#6-verify-final-state" id="markdown-toc-6-verify-final-state">6. Verify Final State</a></li>
+        </ul>
+      </li>
+      <li><a href="#key-takeaways" id="markdown-toc-key-takeaways">Key Takeaways</a>        <ul>
+          <li><a href="#bundle-structure" id="markdown-toc-bundle-structure">Bundle Structure</a></li>
+          <li><a href="#codes-and-terminology" id="markdown-toc-codes-and-terminology">Codes and Terminology</a></li>
+          <li><a href="#psgc-address-pattern" id="markdown-toc-psgc-address-pattern">PSGC Address Pattern</a></li>
+          <li><a href="#workflow-tracing" id="markdown-toc-workflow-tracing">Workflow Tracing</a></li>
+          <li><a href="#server-specific-notes" id="markdown-toc-server-specific-notes">Server-Specific Notes</a></li>
+        </ul>
+      </li>
+      <li><a href="#links-to-rendered-artifacts" id="markdown-toc-links-to-rendered-artifacts">Links to Rendered Artifacts</a>        <ul>
+          <li><a href="#profiles-used" id="markdown-toc-profiles-used">Profiles Used</a></li>
+          <li><a href="#example-instances-used" id="markdown-toc-example-instances-used">Example Instances Used</a></li>
+          <li><a href="#source-fsh" id="markdown-toc-source-fsh">Source FSH</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="sample-case-ana-reyes-ereferral--initiation-and-workflow-tutorial">Sample Case: Ana Reyes eReferral — Initiation and Workflow Tutorial</h1>
+
+<blockquote>
+  <p><strong>Target Audience:</strong> Connectathon participants, implementers, and developers learning how to create, send, and trace an eReferral using the PH eReferral IG profiles against a FHIR server.</p>
+
+  <p><strong>Prerequisite:</strong> Familiarity with basic FHIR concepts (resources, references, Bundles). If you are new to FHIR, read <a href="https://www.hl7.org/fhir/overview.html">What is FHIR?</a> first.</p>
+</blockquote>
+
+<p><strong>Test Server (REST API):</strong> <code class="language-plaintext highlighter-rouge">https://cdr.fhirlab.net/fhir</code><br />
+<strong>Terminology Server (Code Lookup):</strong> <code class="language-plaintext highlighter-rouge">https://tx.fhirlab.net/fhir</code></p>
+
+<p>This tutorial walks you through the complete eReferral initiation workflow using a <strong>FHIR transaction Bundle</strong>. You will learn how to submit a referral with conditional PUT for master data and POST for clinical data, and how to trace the referral through task state progression.</p>
+
+<hr />
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#the-case-scenario">The Case Scenario</a></li>
+  <li><a href="#reference-rules-in-this-bundle">Reference Rules in This Bundle</a></li>
+  <li><a href="#looking-up-codes-at-txfhirlabnet">Looking Up Codes at tx.fhirlab.net</a></li>
+  <li><a href="#the-transaction-bundle">The Transaction Bundle</a></li>
+  <li><a href="#reading-back-resources">Reading Back Resources</a></li>
+  <li><a href="#searching-for-referrals">Searching for Referrals</a></li>
+  <li><a href="#tracing-the-workflow--task-state-progression">Tracing the Workflow — Task State Progression</a></li>
+  <li><a href="#complete-curl-commands">Complete cURL Commands</a></li>
+  <li><a href="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#links-to-rendered-artifacts">Links to Rendered Artifacts</a></li>
+</ol>
+
+<hr />
+
+<h2 id="the-case-scenario">The Case Scenario</h2>
+
+<p><strong>Ana Luisa Reyes</strong>, a 38-year-old pregnant woman (G2P1, 32 weeks AOG), presents to <strong>Kalibo Health Center (KHC)</strong> with severe headache, dizziness, blurring of vision, chest tightness, and epigastric pain persisting for two days.</p>
+
+<h3 id="clinical-summary">Clinical Summary</h3>
+
+<table class="ph-table">
+  <thead>
+    <tr>
+      <th>Detail</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Patient</strong></td>
+      <td>Ana Luisa Reyes, 38F, DOB 12 March 1988</td>
+    </tr>
+    <tr>
+      <td><strong>Address</strong></td>
+      <td>Area 4, Barangay Mabuhay, Kalibo, Aklan</td>
+    </tr>
+    <tr>
+      <td><strong>PhilHealth ID</strong></td>
+      <td>78-658064775-3</td>
+    </tr>
+    <tr>
+      <td><strong>PhilSys ID</strong></td>
+      <td>7731-0812-4491-0326</td>
+    </tr>
+    <tr>
+      <td><strong>Blood Pressure</strong></td>
+      <td>180/110 mmHg (Severe Hypertension)</td>
+    </tr>
+    <tr>
+      <td><strong>Heart Rate</strong></td>
+      <td>112 bpm</td>
+    </tr>
+    <tr>
+      <td><strong>Respiratory Rate</strong></td>
+      <td>24/min</td>
+    </tr>
+    <tr>
+      <td><strong>SpO₂</strong></td>
+      <td>96%</td>
+    </tr>
+    <tr>
+      <td><strong>Temperature</strong></td>
+      <td>36.8°C</td>
+    </tr>
+    <tr>
+      <td><strong>Weight</strong></td>
+      <td>72 kg</td>
+    </tr>
+    <tr>
+      <td><strong>Laboratory</strong></td>
+      <td>Urinalysis: Proteinuria 3+</td>
+    </tr>
+    <tr>
+      <td><strong>Working Impression</strong></td>
+      <td>G2P1(1001), Pregnancy Uterine, 32 weeks AOG — Severe Pre-eclampsia</td>
+    </tr>
+    <tr>
+      <td><strong>Initial Treatment</strong></td>
+      <td>Methyldopa 250mg BID, Folic Acid 5mg OD, FeSO₄ 300mg OD, CaCO₃ 500mg TID</td>
+    </tr>
+    <tr>
+      <td><strong>Referring Provider</strong></td>
+      <td>Dr. Maria Villanueva, Primary Care Physician</td>
+    </tr>
+    <tr>
+      <td><strong>Referring Facility</strong></td>
+      <td>Kalibo Health Center (NHFR: 3056)</td>
+    </tr>
+    <tr>
+      <td><strong>Receiving Facility</strong></td>
+      <td>Dr. Rafael S. Tumbokon Memorial Hospital — DRSTMH (NHFR: 513)</td>
+    </tr>
+    <tr>
+      <td><strong>Receiving Practitioner</strong></td>
+      <td>Dr. Carlos Lim, Care Navigator (PRC: 7890123)</td>
+    </tr>
+    <tr>
+      <td><strong>Referral Category</strong></td>
+      <td>Emergency</td>
+    </tr>
+    <tr>
+      <td><strong>Reason Category</strong></td>
+      <td>Procedure</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="what-this-referral-models">What This Referral Models</h3>
+
+<p>This is a <strong>referral initiation</strong> — the moment Kalibo Health Center determines Ana needs higher-level care and sends the referral to DRSTMH. It is modeled as a <strong>FHIR transaction Bundle</strong> containing 20 entries that together form a complete, self-contained referral payload.</p>
+
+<hr />
+
+<h3 id="reference-rules-in-this-bundle">Reference Rules in This Bundle</h3>
+
+<ul>
+  <li>Every clinical resource points to the <strong>Patient</strong> via <code class="language-plaintext highlighter-rouge">subject</code> and the <strong>Encounter</strong> via <code class="language-plaintext highlighter-rouge">encounter</code></li>
+  <li>The <strong>ServiceRequest</strong> (<code class="language-plaintext highlighter-rouge">requester</code>) points to the referring facility's PractitionerRole</li>
+  <li>The <strong>ServiceRequest</strong> (<code class="language-plaintext highlighter-rouge">performer</code>) points to the receiving facility's PractitionerRole</li>
+  <li>The <strong>Task</strong> (<code class="language-plaintext highlighter-rouge">focus</code>) points to the ServiceRequest and (<code class="language-plaintext highlighter-rouge">owner</code>) points to the receiving PractitionerRole</li>
+  <li>The <strong>Provenance</strong> (<code class="language-plaintext highlighter-rouge">target</code>) attests to the ServiceRequest</li>
+  <li>All intra-Bundle references use <code class="language-plaintext highlighter-rouge">urn:uuid:</code> identifiers matching the bundle entry <code class="language-plaintext highlighter-rouge">fullUrl</code> values</li>
+</ul>
+
+<hr />
+
+<h2 id="looking-up-codes-at-txfhirlabnet">Looking Up Codes at tx.fhirlab.net</h2>
+
+<p>The eReferral IG uses codes from multiple terminology systems. Here is how to verify them interactively.</p>
+
+<h3 id="terminology-systems-used">Terminology Systems Used</h3>
+
+<table class="ph-table">
+  <thead>
+    <tr>
+      <th>System URL</th>
+      <th>Name</th>
+      <th>What It Codes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://snomed.info/sct</code></td>
+      <td>SNOMED CT</td>
+      <td>Clinical findings, procedures, body sites</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://loinc.org</code></td>
+      <td>LOINC</td>
+      <td>Observations, lab panels, document types</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">https://psa.gov.ph/classification/psgc</code></td>
+      <td>PSGC</td>
+      <td>Philippine geographic codes (region, province, city, barangay)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://philhealth.gov.ph/fhir/Identifier/philhealth-id</code></td>
+      <td>PhilHealth ID</td>
+      <td>National health insurance identifiers</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://philsys.gov.ph/fhir/Identifier/philsys-id</code></td>
+      <td>PhilSys ID</td>
+      <td>National identification system</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/condition-clinical</code></td>
+      <td>Condition Clinical Status</td>
+      <td>active, recurrence, relapse, inactive, remission, resolved</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/condition-ver-status</code></td>
+      <td>Condition Verification</td>
+      <td>unconfirmed, provisional, differential, confirmed, refuted, entered-in-error</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/condition-category</code></td>
+      <td>Condition Category</td>
+      <td>problem-list-item, encounter-diagnosis</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/observation-category</code></td>
+      <td>Observation Category</td>
+      <td>vital-signs, laboratory, imaging, survey, etc.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/v3-ActCode</code></td>
+      <td>HL7 v3 ActCode</td>
+      <td>Encounter class (AMB, EMER, IMP, etc.)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></td>
+      <td>HL7 v3 RoleCode</td>
+      <td>Contact relationships (HUSB, WIFE, etc.)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">http://terminology.hl7.org/CodeSystem/v3-DataOperation</code></td>
+      <td>HL7 v3 DataOperation</td>
+      <td>Provenance activity (CREATE, UPDATE, etc.)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">urn:iso-astm:E1762-95:2013</code></td>
+      <td>Signature Type Codes</td>
+      <td>Digital signature types</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="code-lookup-commands">Code Lookup Commands</h3>
+
+<p>Look up a SNOMED CT concept by code:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://tx.fhirlab.net/fhir/CodeSystem/</span><span class="se">\$</span><span class="s2">lookup?system=http://snomed.info/sct&amp;code=398254007"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>This returns the display name and properties for "Pre-eclampsia" (SNOMED 398254007).</p>
+
+<p>Look up a PSGC geographic code:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://tx.fhirlab.net/fhir/CodeSystem/</span><span class="se">\$</span><span class="s2">lookup?system=https://psa.gov.ph/classification/psgc&amp;code=0600400000"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>Verify a LOINC observation code:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://tx.fhirlab.net/fhir/CodeSystem/</span><span class="se">\$</span><span class="s2">lookup?system=http://loinc.org&amp;code=85354-9"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="key-snomed-ct-codes-in-this-referral">Key SNOMED CT Codes in This Referral</h3>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Display</th>
+        <th>Where Used</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">398254007</code></td>
+        <td>Pre-eclampsia</td>
+        <td>Working impression diagnosis</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">25064002</code></td>
+        <td>Headache</td>
+        <td>Chief complaint</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">75367002</code></td>
+        <td>Blood pressure</td>
+        <td>BP observation co-coding</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">78564009</code></td>
+        <td>Pulse rate</td>
+        <td>Heart rate observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">86290005</code></td>
+        <td>Respiratory rate</td>
+        <td>Respiratory rate observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">103228002</code></td>
+        <td>Hemoglobin saturation with oxygen</td>
+        <td>SpO₂ observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">386725007</code></td>
+        <td>Body temperature</td>
+        <td>Temperature observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">27113001</code></td>
+        <td>Body weight</td>
+        <td>Weight observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">416608005</code></td>
+        <td>Drug therapy</td>
+        <td>Pre-referral treatment procedure</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">73770003</code></td>
+        <td>Hospital-based outpatient emergency care center</td>
+        <td>Referral category</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">71388002</code></td>
+        <td>Procedure</td>
+        <td>Reason for referral</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">3457005</code></td>
+        <td>Patient referral</td>
+        <td>Task code</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">158965000</code></td>
+        <td>Medical practitioner</td>
+        <td>PractitionerRole code</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="key-loinc-codes-in-this-referral">Key LOINC Codes in This Referral</h3>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Display</th>
+        <th>Where Used</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">85354-9</code></td>
+        <td>Blood pressure panel with all children optional</td>
+        <td>BP observation magic code</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">8480-6</code></td>
+        <td>Systolic blood pressure</td>
+        <td>BP component systolic</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">8462-4</code></td>
+        <td>Diastolic blood pressure</td>
+        <td>BP component diastolic</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">8867-4</code></td>
+        <td>Heart rate</td>
+        <td>HR observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">9279-1</code></td>
+        <td>Respiratory rate</td>
+        <td>RR observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">2708-6</code></td>
+        <td>Oxygen saturation in Arterial blood</td>
+        <td>SpO₂ observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">8310-5</code></td>
+        <td>Body temperature</td>
+        <td>Temperature observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">29463-7</code></td>
+        <td>Body weight</td>
+        <td>Weight observation</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">24356-8</code></td>
+        <td>Urinalysis complete panel - Urine</td>
+        <td>Diagnostic report</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="key-psgc-geographic-codes-in-this-referral">Key PSGC Geographic Codes in This Referral</h3>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Display</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">0600000000</code></td>
+        <td>Region VI (Western Visayas)</td>
+        <td>Region</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">0600400000</code></td>
+        <td>Aklan</td>
+        <td>Province</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">0600407000</code></td>
+        <td>Kalibo</td>
+        <td>City/Municipality</td>
+      </tr>
+      <tr>
+        <td><code class="language-plaintext highlighter-rouge">0600407013</code></td>
+        <td>Poblacion</td>
+        <td>Barangay</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<hr />
+
+<h2 id="the-transaction-bundle">The Transaction Bundle</h2>
+
+<p>The referral initiation is sent as a <strong>single FHIR transaction Bundle</strong> — all entries succeed or fail atomically.</p>
+
+<h3 id="conditional-update-put">Conditional Update (PUT)</h3>
+
+<p>Master data entries use FHIR's <a href="https://www.hl7.org/fhir/http.html#cond-update">conditional update</a> pattern: <code class="language-plaintext highlighter-rouge">PUT [ResourceType]?identifier=[system]|[value]</code>. When the server receives the bundle:</p>
+
+<ol>
+  <li>It searches for an existing resource matching the identifier</li>
+  <li>If found — the resource is <strong>updated</strong> in-place</li>
+  <li>If not found — a <strong>new</strong> resource is created</li>
+</ol>
+
+<p>This makes repeated submissions <strong>idempotent</strong> — posting the same referral twice won't create duplicate Patient, Practitioner, Organization, or PractitionerRole records.</p>
+
+<h3 id="the-7-conditional-put-entries">The 7 Conditional PUT Entries</h3>
+
+<p>The full bundle contains 20 entries. The 7 master data entries below use conditional PUT. The remaining 13 clinical entries (ServiceRequest, Encounter, Conditions, Observations, Procedure, DiagnosticReport, Task, Provenance) use plain POST.</p>
+
+<h4 id="request">Request</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://cdr.fhirlab.net/fhir
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="request-body-master-data-entries-only">Request Body (Master Data Entries Only)</h4>
+
+<div class="language-jsonc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Target server: https://cdr.fhirlab.net/fhir</span><span class="w">
+</span><span class="c1">// Bundle type: transaction (atomic — all-or-nothing)</span><span class="w">
+</span><span class="c1">// Entry strategy: PUT + identifier → upsert master data</span><span class="w">
+</span><span class="c1">//                 POST          → always-create clinical data</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="c1">// ── Master Data: Conditional PUT entries (upsert via identifier) ──</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.doh.gov.ph/pheref/StructureDefinition/ERefPatient"</span><span class="p">]},</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w"> </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reyes"</span><span class="p">,</span><span class="w"> </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Ana"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Luisa"</span><span class="p">]}],</span><span class="w">
+        </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">"female"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"birthDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1988-03-12"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://philhealth.gov.ph/fhir/Identifier/philhealth-id"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"78-658064775-3"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://philsys.gov.ph/fhir/Identifier/philsys-id"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7731-0812-4491-0326"</span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+          </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"home"</span><span class="p">,</span><span class="w"> </span><span class="nl">"line"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Area 4, Barangay Mabuhay"</span><span class="p">],</span><span class="w"> </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5600"</span><span class="p">,</span><span class="w"> </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PH"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/region"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://psa.gov.ph/classification/psgc"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0600000000"</span><span class="p">}},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/province"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://psa.gov.ph/classification/psgc"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0600400000"</span><span class="p">}},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://psa.gov.ph/classification/psgc"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0600407000"</span><span class="p">}},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://psa.gov.ph/classification/psgc"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0600407013"</span><span class="p">}}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}],</span><span class="w">
+        </span><span class="nl">"contact"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+          </span><span class="nl">"relationship"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/v3-RoleCode"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HUSB"</span><span class="p">}]}],</span><span class="w">
+          </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w"> </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reyes"</span><span class="p">,</span><span class="w"> </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Roberto"</span><span class="p">]}</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="c1">// PUT by PhilSys ID → upsert Patient</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient?identifier=http://philsys.gov.ph/fhir/Identifier/philsys-id|7731-0812-4491-0326"</span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Practitioner"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"</span><span class="p">]},</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://prc.gov.ph/"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5466863"</span><span class="p">}],</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w"> </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Villanueva"</span><span class="p">,</span><span class="w"> </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Maria"</span><span class="p">],</span><span class="w"> </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Dr."</span><span class="p">]}]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="c1">// PUT by PRC license number → upsert Practitioner (referring: Dr. Villanueva)</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Practitioner?identifier=https://prc.gov.ph/|5466863"</span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Practitioner"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"</span><span class="p">]},</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://prc.gov.ph/"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7890123"</span><span class="p">}],</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"official"</span><span class="p">,</span><span class="w"> </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lim"</span><span class="p">,</span><span class="w"> </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Carlos"</span><span class="p">],</span><span class="w"> </span><span class="nl">"prefix"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Dr."</span><span class="p">]}]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="c1">// PUT by PRC license number → upsert Practitioner (receiving: Dr. Carlos Lim)</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Practitioner?identifier=https://prc.gov.ph/|7890123"</span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"</span><span class="p">]},</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kalibo Health Center"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3056"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aklan HCPN"</span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"telecom"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(043) 756-2233"</span><span class="p">,</span><span class="w"> </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"work"</span><span class="p">}],</span><span class="w">
+        </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+          </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"work"</span><span class="p">,</span><span class="w"> </span><span class="nl">"line"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Mabini Street"</span><span class="p">],</span><span class="w"> </span><span class="nl">"postalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5600"</span><span class="p">,</span><span class="w"> </span><span class="nl">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PH"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/region"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://psa.gov.ph/classification/psgc"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0600000000"</span><span class="p">}},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/province"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://psa.gov.ph/classification/psgc"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0600400000"</span><span class="p">}},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/city-municipality"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://psa.gov.ph/classification/psgc"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0600407000"</span><span class="p">}},</span><span class="w">
+            </span><span class="p">{</span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/barangay"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://psa.gov.ph/classification/psgc"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0600407013"</span><span class="p">}}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="c1">// PUT by NHFR code → upsert Organization (referring: KHC)</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization?identifier=https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code|3056"</span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:06924c91-7363-40ab-932b-6f64d0a102b9"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PractitionerRole"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.doh.gov.ph/pheref/StructureDefinition/ERefPractitionerRole"</span><span class="p">]},</span><span class="w">
+        </span><span class="nl">"practitioner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e"</span><span class="p">},</span><span class="w">
+        </span><span class="nl">"organization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b"</span><span class="p">},</span><span class="w">
+        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://snomed.info/sct"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"158965000"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medical practitioner"</span><span class="p">}]}]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="c1">// PUT by PRC ID → upsert PractitionerRole (referring: KHC, inherits Practitioner's PRC)</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PractitionerRole?identifier=https://prc.gov.ph/|5466863"</span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-organization"</span><span class="p">]},</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dr. Rafael S. Tumbokon Memorial Hospital"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"513"</span><span class="p">},</span><span class="w">
+          </span><span class="p">{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://fhir.doh.gov.ph/phcore/Identifier/hcpn-code"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Aklan HCPN"</span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"telecom"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(043) 756-3124"</span><span class="p">,</span><span class="w"> </span><span class="nl">"use"</span><span class="p">:</span><span class="w"> </span><span class="s2">"work"</span><span class="p">}]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="c1">// PUT by NHFR code → upsert Organization (receiving: DRSTMH)</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization?identifier=https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code|513"</span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"fullUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:6ce0a17b-7fb3-4075-a524-3afd390731de"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"resource"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PractitionerRole"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.doh.gov.ph/pheref/StructureDefinition/ERefPractitionerRole"</span><span class="p">]},</span><span class="w">
+        </span><span class="nl">"practitioner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e"</span><span class="p">},</span><span class="w">
+        </span><span class="nl">"organization"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126"</span><span class="p">},</span><span class="w">
+        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://snomed.info/sct"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"158965000"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Medical practitioner"</span><span class="p">}]}]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="c1">// PUT by PRC ID → upsert PractitionerRole (receiving: DRSTMH, inherits Dr. Carlos Lim's PRC)</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PUT"</span><span class="p">,</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PractitionerRole?identifier=https://prc.gov.ph/|7890123"</span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="c1">// ── Clinical / Business Data: POST entries (new resource per referral) ──</span><span class="w">
+    </span><span class="c1">// Entries 8–20 (ServiceRequest, Encounter, Conditions, Observations,</span><span class="w">
+    </span><span class="c1">// Procedure, DiagnosticReport, Task, Provenance) all use POST.</span><span class="w">
+    </span><span class="c1">// See the full Bundle JSON download for all 20 entries.</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>The remaining 14 clinical entries (ServiceRequest, Encounter, Conditions, Observations, Procedure, DiagnosticReport, Task, Provenance) all use <code class="language-plaintext highlighter-rouge">POST</code> — each referral generates new clinical records. Full bundle available below.</p>
+</blockquote>
+
+<h3 id="full-bundle-downloads">Full Bundle Downloads</h3>
+
+<ul>
+  <li><strong>JSON</strong>: <a href="Bundle-ExampleERefSubmissionBundle.json"><code class="language-plaintext highlighter-rouge">Bundle-ExampleERefSubmissionBundle.json</code></a> — Download and POST directly to any FHIR server</li>
+  <li><strong>Rendered</strong>: <a href="Bundle-ExampleERefSubmissionBundle.html"><code class="language-plaintext highlighter-rouge">Bundle-ExampleERefSubmissionBundle.html</code></a> — IG-rendered view with narrative</li>
+  <li><strong>FSH Source</strong>: <a href="https://github.com/ph-ereferral-organization/ph-ereferral/blob/main/input/fsh/examples/ERefInitiatingFacilityBundle.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/examples/ERefInitiatingFacilityBundle.fsh</code></a></li>
+</ul>
+
+<h3 id="bundle-entry-ordering-note">Bundle Entry Ordering Note</h3>
+
+<p>Entries are ordered so that referenced resources appear first. Master data (PUT entries) come before clinical data (POST entries). The ServiceRequest precedes the Task and Provenance that reference it.</p>
+
+<hr />
+
+<h2 id="reading-back-resources">Reading Back Resources</h2>
+
+<p>After posting the Bundle, retrieve individual resources by their server-assigned IDs.</p>
+
+<h3 id="read-a-patient">Read a Patient</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/Patient/{patient-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Patient/{patient-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="read-the-servicerequest">Read the ServiceRequest</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/ServiceRequest/{sr-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/ServiceRequest/{sr-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="read-all-observations-for-the-encounter">Read All Observations for the Encounter</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/Observation?encounter=Encounter/{enc-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Observation?encounter=Encounter/{enc-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="read-the-task">Read the Task</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/Task/{task-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="searching-for-referrals">Searching for Referrals</h2>
+
+<h3 id="search-for-referrals-by-patient">Search for Referrals by Patient</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/ServiceRequest?subject=Patient/{patient-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/ServiceRequest?subject=Patient/{patient-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="search-for-referrals-by-status">Search for Referrals by Status</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/ServiceRequest?status=active&amp;intent=order
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/ServiceRequest?status=active&amp;intent=order"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="search-for-tasks-by-status">Search for Tasks by Status</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/Task?status=requested
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Task?status=requested"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="search-for-tasks-by-focus-referral">Search for Tasks by Focus (Referral)</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/Task?focus=ServiceRequest/{sr-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Task?focus=ServiceRequest/{sr-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="search-for-conditions-by-patient">Search for Conditions by Patient</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/Condition?subject=Patient/{patient-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Condition?subject=Patient/{patient-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="nb">.</span>
+</code></pre></div></div>
+
+<h3 id="common-search-parameters">Common Search Parameters</h3>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Search Parameter</th>
+        <th>Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ServiceRequest</td>
+        <td><code class="language-plaintext highlighter-rouge">subject</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?subject=Patient/123</code></td>
+      </tr>
+      <tr>
+        <td>ServiceRequest</td>
+        <td><code class="language-plaintext highlighter-rouge">status</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?status=active</code></td>
+      </tr>
+      <tr>
+        <td>ServiceRequest</td>
+        <td><code class="language-plaintext highlighter-rouge">authored</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?authored=ge2026-06-18</code></td>
+      </tr>
+      <tr>
+        <td>Task</td>
+        <td><code class="language-plaintext highlighter-rouge">status</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?status=requested</code></td>
+      </tr>
+      <tr>
+        <td>Task</td>
+        <td><code class="language-plaintext highlighter-rouge">focus</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?focus=ServiceRequest/456</code></td>
+      </tr>
+      <tr>
+        <td>Task</td>
+        <td><code class="language-plaintext highlighter-rouge">owner</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?owner=PractitionerRole/789</code></td>
+      </tr>
+      <tr>
+        <td>Condition</td>
+        <td><code class="language-plaintext highlighter-rouge">subject</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?subject=Patient/123</code></td>
+      </tr>
+      <tr>
+        <td>Observation</td>
+        <td><code class="language-plaintext highlighter-rouge">subject</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?subject=Patient/123</code></td>
+      </tr>
+      <tr>
+        <td>Observation</td>
+        <td><code class="language-plaintext highlighter-rouge">encounter</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?encounter=Encounter/789</code></td>
+      </tr>
+      <tr>
+        <td>Observation</td>
+        <td><code class="language-plaintext highlighter-rouge">code</code></td>
+        <td><code class="language-plaintext highlighter-rouge">?code=http://loinc.org\|85354-9</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<hr />
+
+<h2 id="tracing-the-workflow--task-state-progression">Tracing the Workflow — Task State Progression</h2>
+
+<p>The referral workflow is tracked through the <strong>Task</strong> resource's <code class="language-plaintext highlighter-rouge">status</code> field. This section shows how to update the Task as the referral moves through its lifecycle.</p>
+
+<h3 id="workflow-states">Workflow States</h3>
+
+<p>The referral follows this state progression:</p>
+
+<ol>
+  <li><strong><code class="language-plaintext highlighter-rouge">requested</code></strong> — Referral sent (initiation Bundle)</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">received</code></strong> — Receiving facility acknowledges</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">accepted</code></strong> — Receiving facility accepts referral</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">completed</code></strong> — Referral encounter complete</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">rejected</code></strong> — Cannot accept referral</li>
+</ol>
+
+<h3 id="step-1-referral-created-requested">Step 1: Referral Created (<code class="language-plaintext highlighter-rouge">requested</code>)</h3>
+
+<p>This is the state after the transaction Bundle POST. The Task is created with <code class="language-plaintext highlighter-rouge">status = "requested"</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/Task/{task-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Read the Task to verify initial state</span>
+curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="s1">'.status'</span>
+<span class="c"># Expected: "requested"</span>
+</code></pre></div></div>
+
+<h3 id="step-2-receiving-facility-acknowledges-received">Step 2: Receiving Facility Acknowledges (<code class="language-plaintext highlighter-rouge">received</code>)</h3>
+
+<p>The receiving facility updates the Task to indicate receipt:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://cdr.fhirlab.net/fhir/Task/{task-id}
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-jsonc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Task update body — fields that change per state transition:</span><span class="w">
+</span><span class="c1">//   status:       "requested" → "received" → "accepted" → "completed"</span><span class="w">
+</span><span class="c1">//   lastModified: timestamp of state change</span><span class="w">
+</span><span class="c1">//   note:         free-text reason for transition</span><span class="w">
+</span><span class="c1">// All other fields must be kept from the original Task resource.</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Task"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{task-id}"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"profile"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"</span><span class="p">]},</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"received"</span><span class="p">,</span><span class="w">                                              </span><span class="c1">// ⬅ the target state</span><span class="w">
+  </span><span class="nl">"intent"</span><span class="p">:</span><span class="w"> </span><span class="s2">"order"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://snomed.info/sct"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3457005"</span><span class="p">,</span><span class="w"> </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient referral"</span><span class="p">}]},</span><span class="w">
+  </span><span class="nl">"focus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ServiceRequest/{sr-id}"</span><span class="p">},</span><span class="w">
+  </span><span class="nl">"for"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/{patient-id}"</span><span class="p">},</span><span class="w">
+  </span><span class="nl">"requester"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PractitionerRole/{pr-khc-id}"</span><span class="p">},</span><span class="w">
+  </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PractitionerRole/{pr-rstmh-id}"</span><span class="p">},</span><span class="w">
+  </span><span class="nl">"authoredOn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-18T08:30:00+08:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lastModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-18T09:00:00+08:00"</span><span class="p">,</span><span class="w">                     </span><span class="c1">// ⬅ set to now</span><span class="w">
+  </span><span class="nl">"note"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Referral received by DRSTMH. Pending triage review."</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">-X</span> PUT <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+    "resourceType": "Task",
+    "id": "{task-id}",
+    "meta": {"profile": ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"]},
+    "status": "received",
+    "intent": "order",
+    "code": {"coding": [{"system": "http://snomed.info/sct", "code": "3457005", "display": "Patient referral"}]},
+    "focus": {"reference": "ServiceRequest/{sr-id}"},
+    "for": {"reference": "Patient/{patient-id}"},
+    "requester": {"reference": "PractitionerRole/{pr-khc-id}"},
+    "owner": {"reference": "PractitionerRole/{pr-rstmh-id}"},
+    "authoredOn": "2026-06-18T08:30:00+08:00",
+    "lastModified": "2026-06-18T09:00:00+08:00",
+    "note": [{"text": "Referral received by DRSTMH. Pending triage review."}]
+  }'</span>
+</code></pre></div></div>
+
+<h3 id="step-3-receiving-facility-accepts-accepted">Step 3: Receiving Facility Accepts (<code class="language-plaintext highlighter-rouge">accepted</code>)</h3>
+
+<p>After triage review, the receiving facility accepts the referral:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://cdr.fhirlab.net/fhir/Task/{task-id}
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-jsonc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Same body structure as Step 2 — only status and note change:</span><span class="w">
+</span><span class="c1">//   status:       "accepted"</span><span class="w">
+</span><span class="c1">//   lastModified: updated timestamp</span><span class="w">
+</span><span class="c1">//   note:         acceptance rationale</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="c1">// ... all immutable fields from Step 2, then:</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lastModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-18T09:45:00+08:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"note"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Referral accepted. Patient will be admitted for severe pre-eclampsia management."</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">-X</span> PUT <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+    "resourceType": "Task",
+    "id": "{task-id}",
+    "meta": {"profile": ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"]},
+    "status": "accepted",
+    "intent": "order",
+    "code": {"coding": [{"system": "http://snomed.info/sct", "code": "3457005", "display": "Patient referral"}]},
+    "focus": {"reference": "ServiceRequest/{sr-id}"},
+    "for": {"reference": "Patient/{patient-id}"},
+    "requester": {"reference": "PractitionerRole/{pr-khc-id}"},
+    "owner": {"reference": "PractitionerRole/{pr-rstmh-id}"},
+    "authoredOn": "2026-06-18T08:30:00+08:00",
+    "lastModified": "2026-06-18T09:45:00+08:00",
+    "note": [{"text": "Referral accepted. Patient will be admitted for severe pre-eclampsia management."}]
+  }'</span>
+</code></pre></div></div>
+
+<h3 id="step-4-referral-completed-completed">Step 4: Referral Completed (<code class="language-plaintext highlighter-rouge">completed</code>)</h3>
+
+<p>After the referral encounter is complete:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT https://cdr.fhirlab.net/fhir/Task/{task-id}
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-jsonc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Same body structure as Step 2 — only status and note change:</span><span class="w">
+</span><span class="c1">//   status:       "completed"</span><span class="w">
+</span><span class="c1">//   lastModified: updated timestamp</span><span class="w">
+</span><span class="c1">//   note:         completion summary</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="c1">// ... all immutable fields from Step 2, then:</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"completed"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"lastModified"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-18T14:00:00+08:00"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"note"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nl">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Referral completed. Patient admitted and stabilized at DRSTMH."</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">-X</span> PUT <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'{
+    "resourceType": "Task",
+    "id": "{task-id}",
+    "meta": {"profile": ["https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-task"]},
+    "status": "completed",
+    "intent": "order",
+    "code": {"coding": [{"system": "http://snomed.info/sct", "code": "3457005", "display": "Patient referral"}]},
+    "focus": {"reference": "ServiceRequest/{sr-id}"},
+    "for": {"reference": "Patient/{patient-id}"},
+    "requester": {"reference": "PractitionerRole/{pr-khc-id}"},
+    "owner": {"reference": "PractitionerRole/{pr-rstmh-id}"},
+    "authoredOn": "2026-06-18T08:30:00+08:00",
+    "lastModified": "2026-06-18T14:00:00+08:00",
+    "note": [{"text": "Referral completed. Patient admitted and stabilized at DRSTMH."}]
+  }'</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p><strong>Important:</strong> When using PUT to update the Task, you must send the <strong>complete</strong> resource, including all existing fields. PUT replaces the entire resource. If you omit a required field, the server may reject the update. Read the current Task first with GET, modify the fields you want to change, then PUT the complete resource back.</p>
+</blockquote>
+
+<h3 id="using-patch-for-status-updates">Using PATCH for Status Updates</h3>
+
+<p>If your FHIR server supports PATCH, you can update only the <code class="language-plaintext highlighter-rouge">status</code> field:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PATCH https://cdr.fhirlab.net/fhir/Task/{task-id}
+Content-Type: application/json-patch+json
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-jsonc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// JSON Patch body: only the fields that change</span><span class="w">
+</span><span class="c1">// op:   "replace" — update an existing field's value</span><span class="w">
+</span><span class="c1">// path: JSON Pointer to the field being changed</span><span class="w">
+</span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="p">,</span><span class="w"> </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/status"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="p">,</span><span class="w"> </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/lastModified"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-18T09:45:00+08:00"</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">-X</span> PATCH <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json-patch+json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'[
+    {"op": "replace", "path": "/status", "value": "accepted"},
+    {"op": "replace", "path": "/lastModified", "value": "2026-06-18T09:45:00+08:00"}
+  ]'</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="complete-curl-commands">Complete cURL Commands</h2>
+
+<p>This section provides the full sequence of commands ready to copy-paste for a connectathon test run. Replace <code class="language-plaintext highlighter-rouge">{id}</code> placeholders with the actual server-assigned IDs from previous responses.</p>
+
+<h3 id="1-verify-server-is-available">1. Verify Server is Available</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/metadata
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/metadata"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="s1">'.software.name'</span>
+</code></pre></div></div>
+
+<h3 id="2-post-the-referral-initiation-bundle">2. Post the Referral Initiation Bundle</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST https://cdr.fhirlab.net/fhir
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-jsonc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Transaction Bundle — 20 entries, submit as a single file.</span><span class="w">
+  </span><span class="c1">// Master data (entries 1–7): PUT  + identifier → upsert</span><span class="w">
+</span><span class="c1">// Clinical data   (entries 7–20): POST             → new resource per referral</span><span class="w">
+</span><span class="c1">// Intra-bundle references use urn:uuid: matching each entry's fullUrl.</span><span class="w">
+</span><span class="c1">// See "The Transaction Bundle" section above for the complete annotated JSON.</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"transaction"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="c1">// entries 1–7: Patient, 2× Practitioner, 2× Organization, 2× PractitionerRole (PUT)</span><span class="w">
+    </span><span class="c1">// entries 8–20: ServiceRequest, Encounter, 2× Condition, 6× Observation,</span><span class="w">
+    </span><span class="c1">//              Procedure, DiagnosticReport, Task, Provenance (POST)</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="nt">-X</span> POST <span class="s2">"https://cdr.fhirlab.net/fhir"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> @ana-reyes-bundle.json | jq <span class="s1">'.entry[].response.location'</span>
+</code></pre></div></div>
+
+<p>Save the full bundle JSON from <a href="Bundle-ExampleERefSubmissionBundle.json">Bundle-ExampleERefSubmissionBundle.json</a> as <code class="language-plaintext highlighter-rouge">ana-reyes-bundle.json</code>, then run the command above.</p>
+
+<h3 id="3-read-back-key-resources">3. Read Back Key Resources</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Read Patient</span>
+curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Patient/{patient-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="s1">'{id, name: .name[0], gender, birthDate}'</span>
+
+<span class="c"># Read ServiceRequest</span>
+curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/ServiceRequest/{sr-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="s1">'{id, status, intent, reasonCode}'</span>
+
+<span class="c"># Read Task</span>
+curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="s1">'{id, status, code}'</span>
+</code></pre></div></div>
+
+<h3 id="4-search-for-all-referrals-for-this-patient">4. Search for All Referrals for This Patient</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/ServiceRequest?subject=Patient/{patient-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/ServiceRequest?subject=Patient/{patient-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="s1">'.total'</span>
+</code></pre></div></div>
+
+<h3 id="5-trace-the-workflow">5. Trace the Workflow</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/Task/{task-id}
+Accept: application/fhir+json
+
+PATCH https://cdr.fhirlab.net/fhir/Task/{task-id}
+Content-Type: application/json-patch+json
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-jsonc highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// JSON Patch body per state — change "status" to advance the workflow:</span><span class="w">
+</span><span class="c1">//   "requested" → "received" → "accepted" → "completed"</span><span class="w">
+</span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="p">,</span><span class="w"> </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/status"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"received"</span><span class="p">},</span><span class="w">        </span><span class="c1">// ⬅ the target state</span><span class="w">
+  </span><span class="p">{</span><span class="nl">"op"</span><span class="p">:</span><span class="w"> </span><span class="s2">"replace"</span><span class="p">,</span><span class="w"> </span><span class="nl">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/lastModified"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-06-18T09:00:00+08:00"</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Step 1: Check initial Task status</span>
+curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="s1">'.status'</span>
+<span class="c"># Expected: "requested"</span>
+
+<span class="c"># Step 2: Update Task to received</span>
+curl <span class="nt">-s</span> <span class="nt">-X</span> PATCH <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json-patch+json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'[{"op": "replace", "path": "/status", "value": "received"}]'</span>
+
+<span class="c"># Step 3: Update Task to accepted</span>
+curl <span class="nt">-s</span> <span class="nt">-X</span> PATCH <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json-patch+json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'[{"op": "replace", "path": "/status", "value": "accepted"}]'</span>
+
+<span class="c"># Step 4: Update Task to completed</span>
+curl <span class="nt">-s</span> <span class="nt">-X</span> PATCH <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Content-Type: application/json-patch+json"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'[{"op": "replace", "path": "/status", "value": "completed"}]'</span>
+</code></pre></div></div>
+
+<h3 id="6-verify-final-state">6. Verify Final State</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET https://cdr.fhirlab.net/fhir/Task/{task-id}
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Verify Task is completed</span>
+curl <span class="nt">-s</span> <span class="s2">"https://cdr.fhirlab.net/fhir/Task/{task-id}"</span> <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s2">"Accept: application/fhir+json"</span> | jq <span class="s1">'{id, status, lastModified}'</span>
+<span class="c"># Expected: status = "completed"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="key-takeaways">Key Takeaways</h2>
+
+<h3 id="bundle-structure">Bundle Structure</h3>
+
+<ul>
+  <li>The eReferral initiation Bundle is a <strong><code class="language-plaintext highlighter-rouge">transaction</code></strong> type Bundle — all entries succeed or fail atomically</li>
+  <li><strong>Master data</strong> (Patient, Practitioner ×2, Organization ×2, PractitionerRole ×2) uses conditional <strong>PUT</strong> — resubmitting the same identifiers updates existing records. PractitionerRole inherits identifiers from its linked Practitioner (PRC).</li>
+  <li><strong>Clinical data</strong> (ServiceRequest, Encounter, Condition, Observation, Procedure, DiagnosticReport, Task, Provenance) uses <strong>POST</strong> — each referral generates new clinical records</li>
+  <li>Intra-Bundle references use <strong><code class="language-plaintext highlighter-rouge">urn:uuid:</code></strong> identifiers matching entry <code class="language-plaintext highlighter-rouge">fullUrl</code> values</li>
+</ul>
+
+<h3 id="codes-and-terminology">Codes and Terminology</h3>
+
+<ul>
+  <li><strong>SNOMED CT</strong> codes are used for clinical findings, procedures, and referral categories — look them up at <code class="language-plaintext highlighter-rouge">https://tx.fhirlab.net/fhir</code></li>
+  <li><strong>LOINC</strong> codes are used for observations and lab panels — each observation profile requires a specific LOINC "magic code"</li>
+  <li><strong>PSGC</strong> codes are used for geographic addressing (region → province → city → barangay) via PH Core address extensions</li>
+  <li>Vital sign observations are <strong>co-coded</strong> with both LOINC (primary) and SNOMED (secondary) for SNOMED International Edition compatibility</li>
+</ul>
+
+<h3 id="psgc-address-pattern">PSGC Address Pattern</h3>
+
+<ul>
+  <li>Base FHIR address fields (<code class="language-plaintext highlighter-rouge">city</code>, <code class="language-plaintext highlighter-rouge">state</code>, <code class="language-plaintext highlighter-rouge">district</code>) are <strong>replaced</strong> by four named extension slices on the <code class="language-plaintext highlighter-rouge">Address</code> type</li>
+  <li>Always use <code class="language-plaintext highlighter-rouge">extension[region]</code>, <code class="language-plaintext highlighter-rouge">extension[province]</code>, <code class="language-plaintext highlighter-rouge">extension[city-municipality]</code>, <code class="language-plaintext highlighter-rouge">extension[barangay]</code> — not the flat fields</li>
+  <li>Only <code class="language-plaintext highlighter-rouge">address.line</code>, <code class="language-plaintext highlighter-rouge">address.postalCode</code>, <code class="language-plaintext highlighter-rouge">address.country</code>, <code class="language-plaintext highlighter-rouge">address.use</code>, <code class="language-plaintext highlighter-rouge">address.type</code>, and <code class="language-plaintext highlighter-rouge">address.text</code> are used directly</li>
+</ul>
+
+<h3 id="workflow-tracing">Workflow Tracing</h3>
+
+<ul>
+  <li>The <strong>Task</strong> resource tracks referral lifecycle: <code class="language-plaintext highlighter-rouge">requested</code> → <code class="language-plaintext highlighter-rouge">received</code> → <code class="language-plaintext highlighter-rouge">accepted</code> → <code class="language-plaintext highlighter-rouge">completed</code></li>
+  <li>Each state transition updates <code class="language-plaintext highlighter-rouge">Task.status</code> and <code class="language-plaintext highlighter-rouge">Task.lastModified</code></li>
+  <li>Use <strong>PUT</strong> (full resource replacement) or <strong>PATCH</strong> (partial update) to advance the workflow state</li>
+  <li>The <strong>Provenance</strong> resource captures signature attestation and audit trail</li>
+</ul>
+
+<h3 id="server-specific-notes">Server-Specific Notes</h3>
+
+<ul>
+  <li>Use <code class="language-plaintext highlighter-rouge">https://cdr.fhirlab.net/fhir</code> for REST API operations (CRUD, search, Bundles)</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">https://tx.fhirlab.net/fhir</code> for terminology operations (<code class="language-plaintext highlighter-rouge">$lookup</code>, <code class="language-plaintext highlighter-rouge">$validate-code</code>)</li>
+  <li>PH Core CodeSystems (<code class="language-plaintext highlighter-rouge">PHCW</code>, <code class="language-plaintext highlighter-rouge">PSOC</code>) use a <code class="language-plaintext highlighter-rouge">phcore</code> namespace (<code class="language-plaintext highlighter-rouge">https://fhir.doh.gov.ph/phcore/CodeSystem/...</code>) served from the ontoserver at <code class="language-plaintext highlighter-rouge">tx.fhirlab.net</code></li>
+</ul>
+
+<hr />
+
+<h2 id="links-to-rendered-artifacts">Links to Rendered Artifacts</h2>
+
+<p>The generated artifact pages in this IG provide the authoritative, rendered view of each profile and example instance referenced in this tutorial.</p>
+
+<h3 id="profiles-used">Profiles Used</h3>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Profile</th>
+        <th>Artifact Page</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ERefPatient</td>
+        <td><a href="StructureDefinition-ereferral-patient.html">StructureDefinition/ERefPatient</a></td>
+      </tr>
+      <tr>
+        <td>ERefEncounter</td>
+        <td><a href="StructureDefinition-ereferral-encounter.html">StructureDefinition/ereferral-encounter</a></td>
+      </tr>
+      <tr>
+        <td>ERefCondition</td>
+        <td><a href="StructureDefinition-ereferral-condition.html">StructureDefinition/ereferral-condition</a></td>
+      </tr>
+      <tr>
+        <td>ERefObservation</td>
+        <td><a href="StructureDefinition-ereferral-observation.html">StructureDefinition/ereferral-observation</a></td>
+      </tr>
+      <tr>
+        <td>ERefProcedure</td>
+        <td><a href="StructureDefinition-ereferral-procedure.html">StructureDefinition/ereferral-procedure</a></td>
+      </tr>
+      <tr>
+        <td>ERefServiceRequest</td>
+        <td><a href="StructureDefinition-ereferral-service-request.html">StructureDefinition/ereferral-service-request</a></td>
+      </tr>
+      <tr>
+        <td>ERefTask</td>
+        <td><a href="StructureDefinition-ereferral-task.html">StructureDefinition/ereferral-task</a></td>
+      </tr>
+      <tr>
+        <td>ERefProvenance</td>
+        <td><a href="StructureDefinition-ereferral-provenance.html">StructureDefinition/ereferral-provenance</a></td>
+      </tr>
+      <tr>
+        <td>ERefPractitionerRole</td>
+        <td><a href="StructureDefinition-ereferral-practitioner-role.html">StructureDefinition/ERefPractitionerRole</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="example-instances-used">Example Instances Used</h3>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Example Instance</th>
+        <th>Artifact Page</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Submission Bundle (full)</td>
+        <td><a href="Bundle-ExampleERefSubmissionBundle.html">Bundle/ExampleERefSubmissionBundle</a></td>
+      </tr>
+      <tr>
+        <td>Patient — Ana Reyes</td>
+        <td><a href="Patient-ExampleERefPatient.html">Patient/ExampleERefPatient</a></td>
+      </tr>
+      <tr>
+        <td>ServiceRequest</td>
+        <td><a href="ServiceRequest-ExampleERefServiceRequest.html">ServiceRequest/ExampleERefServiceRequest</a></td>
+      </tr>
+      <tr>
+        <td>Encounter</td>
+        <td><a href="Encounter-ExampleERefSubmissionEncounter.html">Encounter/ExampleERefSubmissionEncounter</a></td>
+      </tr>
+      <tr>
+        <td>Condition — Chief Complaint</td>
+        <td><a href="Condition-ExampleERefConditionChiefComplaint.html">Condition/ExampleERefConditionChiefComplaint</a></td>
+      </tr>
+      <tr>
+        <td>Condition — Pre-eclampsia</td>
+        <td><a href="Condition-ExampleERefCondition.html">Condition/ExampleERefCondition</a></td>
+      </tr>
+      <tr>
+        <td>Observation — Blood Pressure</td>
+        <td><a href="Observation-ExampleERefObservationBP.html">Observation/ExampleERefObservationBP</a></td>
+      </tr>
+      <tr>
+        <td>Observation — Heart Rate</td>
+        <td><a href="Observation-ExampleERefObservationHR.html">Observation/ExampleERefObservationHR</a></td>
+      </tr>
+      <tr>
+        <td>Observation — Respiratory Rate</td>
+        <td><a href="Observation-ExampleERefObservationRR.html">Observation/ExampleERefObservationRR</a></td>
+      </tr>
+      <tr>
+        <td>Observation — Oxygen Saturation</td>
+        <td><a href="Observation-ExampleERefObservationSpO2.html">Observation/ExampleERefObservationSpO2</a></td>
+      </tr>
+      <tr>
+        <td>Observation — Temperature</td>
+        <td><a href="Observation-ExampleERefObservationTemp.html">Observation/ExampleERefObservationTemp</a></td>
+      </tr>
+      <tr>
+        <td>Observation — Weight</td>
+        <td><a href="Observation-ExampleERefObservationWeight.html">Observation/ExampleERefObservationWeight</a></td>
+      </tr>
+      <tr>
+        <td>Procedure</td>
+        <td><a href="Procedure-ExampleERefProcedureTreatment.html">Procedure/ExampleERefProcedureTreatment</a></td>
+      </tr>
+      <tr>
+        <td>DiagnosticReport</td>
+        <td><a href="DiagnosticReport-ExampleERefDiagnosticReport.html">DiagnosticReport/ExampleERefDiagnosticReport</a></td>
+      </tr>
+      <tr>
+        <td>Task — Requested</td>
+        <td><a href="Task-ExampleERefTaskRequested.html">Task/ExampleERefTaskRequested</a></td>
+      </tr>
+      <tr>
+        <td>Provenance</td>
+        <td><a href="Provenance-ExampleERefProvenanceSubmission.html">Provenance/ExampleERefProvenanceSubmission</a></td>
+      </tr>
+      <tr>
+        <td>Practitioner — Dr. Villanueva</td>
+        <td><a href="Practitioner-ExampleERefPractitionerSubmission.html">Practitioner/ExampleERefPractitionerSubmission</a></td>
+      </tr>
+      <tr>
+        <td>Practitioner — Dr. Carlos Lim</td>
+        <td><a href="Practitioner-ExampleERefPractitionerReceiving.html">Practitioner/ExampleERefPractitionerReceiving</a></td>
+      </tr>
+      <tr>
+        <td>Organization — KHC</td>
+        <td><a href="Organization-ExampleERefOrganizationKaliboHC.html">Organization/ExampleERefOrganizationKaliboHC</a></td>
+      </tr>
+      <tr>
+        <td>Organization — DRSTMH</td>
+        <td><a href="Organization-ExampleERefOrganizationDRSTMH.html">Organization/ExampleERefOrganizationDRSTMH</a></td>
+      </tr>
+      <tr>
+        <td>PractitionerRole — KHC</td>
+        <td><a href="PractitionerRole-ExampleERefPractitionerRoleSubmission.html">PractitionerRole/ExampleERefPractitionerRoleSubmission</a></td>
+      </tr>
+      <tr>
+        <td>PractitionerRole — DRSTMH</td>
+        <td><a href="PractitionerRole-ExampleERefPractitionerRoleReceiving.html">PractitionerRole/ExampleERefPractitionerRoleReceiving</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h3 id="source-fsh">Source FSH</h3>
+
+<p>The FSH source for all examples in this tutorial is in <a href="https://github.com/ph-ereferral-organization/ph-ereferral/blob/main/input/fsh/examples/ERefInitiatingFacilityBundle.fsh"><code class="language-plaintext highlighter-rouge">input/fsh/examples/ERefInitiatingFacilityBundle.fsh</code></a>. This is the single source file containing all 20 instance definitions compiled by SUSHI into the FHIR JSON rendered by the IG Publisher.</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-09-09 03:53:00 +0000">
+    2026-09-09
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
