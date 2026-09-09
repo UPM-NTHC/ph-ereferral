@@ -7,8 +7,8 @@ Description: "Example laboratory DiagnosticReport with complete report attachmen
 * status = #final
 * code = $loinc#11502-2 "Laboratory report"
 * basedOn = Reference(ExampleERefServiceRequest)
-* subject = Reference(ERefPatientExample)
-* performer = Reference(ExampleERefReferringFacility)
+* subject = Reference(ExampleERefPatient)
+* performer = Reference(ExampleERefOrganizationKaliboHC)
 * presentedForm.contentType = #application/pdf
 * presentedForm.url = "https://example.org/fhir/reports/laboratory-report-2025-001.pdf"
 * presentedForm.title = "Laboratory Report 2025-001"
