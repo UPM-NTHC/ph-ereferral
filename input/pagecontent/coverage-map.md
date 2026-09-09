@@ -34,6 +34,8 @@ This page maps the v0.1 minimum referral workflow to the IG artifacts used by th
 
 </div>
 
+</div>
+
 ## Example Coverage
 
 <div class="ph-table" markdown="1">
