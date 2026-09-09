@@ -63,7 +63,10 @@ Description: "Profile for ServiceRequest resource in the Philippine eReferral co
   * ^definition = "The date/time or period when the service should be performed."
 * occurrence[x] insert ObligationOptional
 
-* supportingInfo only Reference(ERefCondition or ERefObservation or ERefProcedure or ERefMedicationAdministration or ERefImmunization)
+// TDG Row REF-15: "Time Called" and other supporting clinical information
+// Clinical Summary elements: Conditions, Observations, Procedures, Medications,
+// Immunizations, and DiagnosticReports
+* supportingInfo only Reference(ERefCondition or ERefObservation or ERefProcedure or ERefMedicationAdministration or ERefImmunization or ERefDiagnosticReport)
 
 // TDG Row REF-16: "Reason for Referral (service type)" - Clinical reason for the referral
 // TERMINOLOGY: for review
