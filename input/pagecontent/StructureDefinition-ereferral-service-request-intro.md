@@ -61,14 +61,14 @@ The profile uses value sets to standardize categorization:
 
 | Element | Value Set | Binding | Description |
 |---------|-----------|---------|-------------|
-| `category` | [EReferralServiceCategory](ValueSet-ereferral-service-category.html) | Extensible | Type of service (imaging, laboratory, surgical, etc.) |
-| `priority` | [EReferralPriority](ValueSet-ereferral-priority.html) | Required | Urgency level: routine, urgent, or stat |
+| `category` | [EReferralServiceCategory](ValueSet-vs-referral-category.html) | Required | Referral category: Emergency or Outpatient |
+| `priority` | Base FHIR `RequestPriority` (no eReferral value set) | N/A | Urgency level: routine, urgent, asap, or stat |
 | `intent` | Fixed value | N/A | Always `#order` for referrals |
 {:.ph-table}
 
 **Example:**
 ```fsh
-* category = $sct#363679005 "Imaging"
+* category = $sct#73770003 "Emergency"
 * priority = #urgent
 * intent = #order  // Fixed value
 ```
@@ -79,26 +79,23 @@ The profile supports both coded and free-text reasons:
 
 | TDG Row | Data Element | FHIR Path |
 |---------|--------------|-----------|
-| REF-16 | Reason for Referral (service type) | `code` |
-| REF-16 | Reason for Referral (clinical) | `reasonCode`, `reasonReference` |
+| REF-16 | Requested service | `code` |
+| REF-16 | Reason for Referral (service type) | `reasonCode` |
+| REF-16 | Clinical reason for referral | `reasonReference` |
 {:.ph-table}
 
-The `reasonCode` element is bound to the [EReferralReason](ValueSet-ereferral-reason.html) value set (example binding), which includes common SNOMED CT clinical findings such as:
+The `reasonCode` element is bound to the [EReferralReason](ValueSet-vs-reason-for-referral-service-type.html) value set (required binding), which gives the service type of the referral:
 
-- Dyspnea
-- Chest pain
-- Suspected lung cancer
-- Congestive heart failure
-- Atrial fibrillation
-- Essential hypertension
-- Diabetes mellitus
-- Anxiety disorder
+- Consultation
+- Diagnostics
+- Procedure
+- Others
 
 **Example:**
 ```fsh
 * code = $sct#183519001 "Referral to cardiology service"
-* reasonCode = $sct#29857009 "Chest pain"
-  * text = "Chest pain on exertion, suspected unstable angina"
+* reasonCode = $sct#11429006 "Consultation"
+  * text = "Cardiology consultation for chest pain on exertion"
 * reasonReference = Reference(Condition/789)
 ```
 
@@ -266,9 +263,8 @@ This profile uses the following value sets defined for eReferral:
 
 | Value Set | Description |
 |-----------|-------------|
-| [EReferralServiceCategory](ValueSet-ereferral-service-category.html) | Categories of referral services |
-| [EReferralPriority](ValueSet-ereferral-priority.html) | Priority levels for referrals |
-| [EReferralReason](ValueSet-ereferral-reason.html) | Clinical reasons for referral |
+| [EReferralServiceCategory](ValueSet-vs-referral-category.html) | Referral categories (Emergency, Outpatient) |
+| [EReferralReason](ValueSet-vs-reason-for-referral-service-type.html) | Service type of the referral (Consultation, Diagnostics, Procedure, Others) |
 {:.ph-table}
 
 ---

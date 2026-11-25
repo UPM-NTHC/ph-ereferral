@@ -22,7 +22,7 @@ v0.1 is a draft testing baseline. It is not a production deployment specificatio
 | Provenance | [EReferral Provenance](StructureDefinition-ereferral-provenance.html) |
 | Medication support | [EReferral MedicationAdministration](StructureDefinition-ereferral-medication-administration.html) |
 | Immunization support | [ERefImmunization](StructureDefinition-ereferral-immunization.html) |
-| Referral terminology | [eReferral Service Category](ValueSet-ereferral-service-category.html), [eReferral Priority](ValueSet-ereferral-priority.html), and [eReferral Reason](ValueSet-ereferral-reason.html) |
+| Referral terminology | [eReferral Service Category](ValueSet-vs-referral-category.html) and [eReferral Reason](ValueSet-vs-reason-for-referral-service-type.html); `priority` uses the base FHIR `RequestPriority` values |
 | Test fixtures | Required and optional examples listed in the [connectathon readiness guide](connectathon-readiness.html). |
 
 </div>
