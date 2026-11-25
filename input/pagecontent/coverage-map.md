@@ -56,6 +56,6 @@ This page maps the v0.1 minimum referral workflow to the IG artifacts used by th
 
 - No automated create/send/receive/respond/close scenario script is present.
 - No multi-server exchange harness is present.
-- Rejected, referred-onward, and explicit received response states are pending review.
+- The response terms were documented in issue [#47](https://github.com/UPM-NTHC/ph-ereferral/issues/47) and PR [#84](https://github.com/UPM-NTHC/ph-ereferral/pull/84); this checkout has no accepted-state fixture.
 - Non-response and SLA escalation are deferred.
 - Back-referral is not part of the v0.1 minimum connectathon path.

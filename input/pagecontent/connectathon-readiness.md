@@ -13,8 +13,8 @@ This page gives implementers and reviewers a minimum, repeatable path for testin
 | FHIR version | FHIR R4, version `4.0.1`. |
 | IG version | `0.1.0`, release label `ci-build`. |
 | Required dependency | PH Core package `fhir.ph.core` as configured in `sushi-config.yaml`. |
-| Current continuous build | [PH eReferral continuous build](https://build.fhir.org/ig/ph-ereferral-organization/ph-ereferral/). Treat this as a CI build, not a tagged release. |
-| Release tag | No versioned release tag is available yet. Use the [repository tags page](https://github.com/UPM-NTHC/ph-ereferral/tags) once issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73) is resolved. |
+| Current continuous build | [PH eReferral continuous build](https://build.fhir.org/ig/UPM-NTHC/ph-ereferral/). Treat this as a CI build, not a versioned IG publication. |
+| Source release tag | [Release `0.1.0`](https://github.com/UPM-NTHC/ph-ereferral/releases/tag/0.1.0). Issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73) tracks versioned IG deployment paths. |
 
 </div>
 
@@ -31,7 +31,7 @@ Minimum implementer setup:
 Clone the repository:
 
 ```bash
-git clone https://github.com/ph-ereferral-organization/ph-ereferral.git
+git clone https://github.com/UPM-NTHC/ph-ereferral.git
 cd ph-ereferral
 ```
 
@@ -73,7 +73,7 @@ Expected Publisher result:
 
 Known build limitations:
 
-- Issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73) tracks versioned release infrastructure. Until it is resolved, testers should cite commit hashes or branch build URLs, not a formal release URL.
+- Issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73) tracks versioned IG deployment paths. The source repository has a `0.1.0` release tag, but a versioned publication URL is not yet available; cite commit hashes or branch build URLs for CI builds.
 - Offline terminology mode can report terminology expansion limitations that must be distinguished from profile or example defects.
 - If the local build uses a cached PH Core package instead of `fhir.ph.core#dev`, record the actual package used in the evidence table.
 
@@ -85,7 +85,7 @@ Use this as the connectathon smoke test from a clean checkout with the listed fi
 
 | Step | Action | Fixture or artifact | Expected result |
 |------|--------|---------------------|-----------------|
-| 1 | Create referral | [Example eReferral ServiceRequest](ServiceRequest-ExampleERefServiceRequest.html) | A referral request exists with `status = active`, `intent = order`, a patient subject, a requester, a receiving facility, clinical reason, and supporting observations. |
+| 1 | Create referral | [Example eReferral ServiceRequest](ServiceRequest-ExampleERefServiceRequest.html) | A referral request exists with `status = active`, `intent = order`, a patient subject, a requester, a receiving facility, and a clinical reason. |
 | 2 | Send referral | [Example eReferral Task - Requested State](Task-ExampleERefTaskRequested.html) | A workflow Task exists with `status = requested`, focused on the ServiceRequest. The requester is populated and the receiving owner is not yet assigned. |
 | 3 | Receive referral | [Example eReferral Task - Received State](Task-ExampleERefTaskReceived.html) | The receiving facility has acknowledged the referral Task and `owner` is populated. |
 | 4 | Respond with receiving-facility outcome | [Example eReferral Task - Rejected State](Task-ExampleERefTaskRejected.html) and [Example eReferral Task - Referred Onward](Task-ExampleERefTaskReferredOnward.html) | The receiving facility closes the Task with a response: `status = rejected` with `statusReason` for a declined referral, or `status = rejected` plus `businessStatus = referred-onward` when the case is redirected. The positive `accepted` response was defined in issue [#47](https://github.com/UPM-NTHC/ph-ereferral/issues/47) and PR [#84](https://github.com/UPM-NTHC/ph-ereferral/pull/84), but no accepted-state fixture is present in this checkout. |
@@ -96,7 +96,7 @@ Use this as the connectathon smoke test from a clean checkout with the listed fi
 Pass criteria for the by-hand test:
 
 - Required examples render in the IG.
-- The ServiceRequest references the patient, requester, receiving facility, reason, and supporting clinical information needed for the scenario.
+- The ServiceRequest references the patient, requester, receiving facility, and clinical reason needed for the scenario.
 - The Task examples preserve a coherent state progression from requested to received to closed.
 - Closure requires the receiving facility to record `Task.status = completed` and completion output in `Task.output`. No completed-state Task fixture or receiving-side Encounter fixture is available yet.
 
@@ -190,7 +190,7 @@ Current v0.1 readiness status:
 - Attachment exchange, consent, authentication, authorization, transport security, and data-protection controls are outside the current by-hand test.
 - Back-referral is part of the broader policy basis, but it is not included in the minimum v0.1 connectathon path.
 - Multi-server testing has not yet been completed.
-- Versioned release deployment is pending issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73).
+- Versioned IG deployment paths are pending issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73); source release tag `0.1.0` is available.
 
 ## Release Readiness Documentation
 
