@@ -14,7 +14,7 @@ This page gives implementers and reviewers a minimum, repeatable path for testin
 | IG version | `0.1.0`, release label `ci-build`. |
 | Required dependency | PH Core package `fhir.ph.core` as configured in `sushi-config.yaml`. |
 | Current continuous build | [PH eReferral continuous build](https://build.fhir.org/ig/ph-ereferral-organization/ph-ereferral/). Treat this as a CI build, not a tagged release. |
-| Release tag | No versioned release tag is available yet. Use the [repository tags page](https://github.com/ph-ereferral-organization/ph-ereferral/tags) once issue [#73](https://github.com/ph-ereferral-organization/ph-ereferral/issues/73) is resolved. |
+| Release tag | No versioned release tag is available yet. Use the [repository tags page](https://github.com/UPM-NTHC/ph-ereferral/tags) once issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73) is resolved. |
 
 </div>
 
@@ -73,7 +73,7 @@ Expected Publisher result:
 
 Known build limitations:
 
-- Issue [#73](https://github.com/ph-ereferral-organization/ph-ereferral/issues/73) tracks versioned release infrastructure. Until it is resolved, testers should cite commit hashes or branch build URLs, not a formal release URL.
+- Issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73) tracks versioned release infrastructure. Until it is resolved, testers should cite commit hashes or branch build URLs, not a formal release URL.
 - Offline terminology mode can report terminology expansion limitations that must be distinguished from profile or example defects.
 - If the local build uses a cached PH Core package instead of `fhir.ph.core#dev`, record the actual package used in the evidence table.
 
@@ -85,11 +85,11 @@ Use this as the connectathon smoke test from a clean checkout with the listed fi
 
 | Step | Action | Fixture or artifact | Expected result |
 |------|--------|---------------------|-----------------|
-| 1 | Create referral | [Example eReferral ServiceRequest](ServiceRequest-ExampleERefServiceRequest.html) | A referral request exists with `status = active`, `intent = order`, an urgent priority, a patient subject, a requester, a receiving facility, clinical reason, and supporting observations. |
+| 1 | Create referral | [Example eReferral ServiceRequest](ServiceRequest-ExampleERefServiceRequest.html) | A referral request exists with `status = active`, `intent = order`, a patient subject, a requester, a receiving facility, clinical reason, and supporting observations. |
 | 2 | Send referral | [Example eReferral Task - Requested State](Task-ExampleERefTaskRequested.html) | A workflow Task exists with `status = requested`, focused on the ServiceRequest. The requester is populated and the receiving owner is not yet assigned. |
-| 3 | Receive referral | [Example eReferral Task - Accepted State](Task-ExampleERefTaskAccepted.html) | The receiving facility has accepted ownership of the referral Task and `owner` is populated. |
-| 4 | Respond with receiving-facility outcome | [Example eReferral Task - Accepted State](Task-ExampleERefTaskAccepted.html) | For the current v0.1 minimum fixture, the positive receiving response is represented by `Task.status = accepted`. Richer response-state semantics are pending review in issue [#47](https://github.com/ph-ereferral-organization/ph-ereferral/issues/47) and PR [#84](https://github.com/ph-ereferral-organization/ph-ereferral/pull/84). |
-| 5 | Close referral | [Example eReferral Task - Completed State](Task-ExampleERefTaskCompleted.html) and [Example eReferral Encounter](Encounter-ExampleERefEncounter.html) | The Task is completed, completion output is present, and the receiving encounter documents the completed referral encounter. |
+| 3 | Receive referral | [Example eReferral Task - Received State](Task-ExampleERefTaskReceived.html) | The receiving facility has acknowledged the referral Task and `owner` is populated. |
+| 4 | Respond with receiving-facility outcome | [Example eReferral Task - Rejected State](Task-ExampleERefTaskRejected.html) and [Example eReferral Task - Referred Onward](Task-ExampleERefTaskReferredOnward.html) | The receiving facility closes the Task with a response: `status = rejected` with `statusReason` for a declined referral, or `status = rejected` plus `businessStatus = referred-onward` when the case is redirected. The positive `accepted` response was defined in issue [#47](https://github.com/UPM-NTHC/ph-ereferral/issues/47) and PR [#84](https://github.com/UPM-NTHC/ph-ereferral/pull/84), but no accepted-state fixture is present in this checkout. |
+| 5 | Close referral | No completed-state fixture exists yet | The Task is closed with `status = completed` and completion output present in `Task.output`; a receiving-side Encounter fixture is not yet available. |
 
 </div>
 
@@ -97,8 +97,8 @@ Pass criteria for the by-hand test:
 
 - Required examples render in the IG.
 - The ServiceRequest references the patient, requester, receiving facility, reason, and supporting clinical information needed for the scenario.
-- The Task examples preserve a coherent state progression from requested to accepted to completed.
-- The close step records a completion output and a receiving encounter.
+- The Task examples preserve a coherent state progression from requested to received to closed.
+- Closure requires the receiving facility to record `Task.status = completed` and completion output in `Task.output`. No completed-state Task fixture or receiving-side Encounter fixture is available yet.
 
 Fail criteria:
 
@@ -117,17 +117,15 @@ Required fixtures for the minimum test:
 |---------|------|-----------|
 | Referral request | [Example eReferral ServiceRequest](ServiceRequest-ExampleERefServiceRequest.html) | Primary referral order under test. |
 | Patient | [Example eReferral Patient](Patient-ExampleERefPatient.html) | Referral subject. |
-| Referring practitioner | [Example Referring Practitioner](Practitioner-ExampleERefPractitioner.html) | Clinician creating the referral. |
-| Referring practitioner role | [Example Referring Practitioner Role](PractitionerRole-ExampleERefPractitionerRole.html) | Links practitioner to referring facility. |
-| Referring facility | [Example Referring Facility](Organization-ExampleERefReferringFacility.html) | Initiating facility. |
-| Receiving facility | [Example Receiving Hospital](Organization-ExampleERefReceivingHospital.html) | Intended receiving facility. |
-| Clinical condition | [Example Condition - Chest Pain](Condition-ExampleERefConditionChestPain.html) | Referral reason evidence. |
+| Referring practitioner | [Example Referring Practitioner](Practitioner-ExampleERefPractitionerSubmission.html) | Clinician creating the referral. |
+| Referring practitioner role | [Example Referring Practitioner Role](PractitionerRole-ExampleERefPractitionerRoleSubmission.html) | Links practitioner to referring facility. |
+| Referring facility | [Example Referring Facility](Organization-ExampleERefOrganizationKaliboHC.html) | Initiating facility. |
+| Receiving facility | [Example Receiving Hospital](Organization-ExampleERefOrganizationDRSTMH.html) | Intended receiving facility. |
+| Clinical condition | [Example Condition - Severe Pre-eclampsia](Condition-ExampleERefCondition.html) | Referral reason evidence. |
 | Blood pressure observation | [Example Blood Pressure Observation](Observation-ExampleERefObservationBP.html) | Supporting clinical information. |
-| ECG observation | [Example ECG Observation](Observation-ExampleERefObservationECG.html) | Supporting clinical information. |
 | Requested Task | [Example eReferral Task - Requested State](Task-ExampleERefTaskRequested.html) | Sent referral workflow state. |
-| Accepted Task | [Example eReferral Task - Accepted State](Task-ExampleERefTaskAccepted.html) | Receiving-facility response state currently available in v0.1 fixtures. |
-| Completed Task | [Example eReferral Task - Completed State](Task-ExampleERefTaskCompleted.html) | Closed referral state. |
-| Receiving encounter | [Example eReferral Encounter](Encounter-ExampleERefEncounter.html) | Completed referral encounter context. |
+| Received Task | [Example eReferral Task - Received State](Task-ExampleERefTaskReceived.html) | Receiving-facility acknowledgement state. |
+| Encounter context | [Example eReferral Encounter - Initiated Facility Visit](Encounter-ExampleERefSubmissionEncounter.html) | Encounter context for the referral episode (initiating facility visit). |
 
 </div>
 
@@ -137,8 +135,7 @@ Optional fixtures:
 
 | Fixture | Link | Optional use |
 |---------|------|--------------|
-| Provenance signature | [Example eReferral Provenance with Signature](Provenance-ExampleERefProvenanceSignature.html) | Demonstrates signature attestation. |
-| Provenance update | [Example eReferral Provenance for Status Update](Provenance-ExampleERefProvenanceUpdate.html) | Demonstrates status update audit trail. |
+| Provenance signature | [Example eReferral Provenance with Signature](Provenance-ExampleERefProvenanceSubmission.html) | Demonstrates signature attestation. |
 | Medication administration | [Example Chronic Medication Administration](MedicationAdministration-ExampleERefMedicationAdministrationChronic.html) | Clinical summary support. |
 | Antibiotic administration | [Example Antibiotic Administration](MedicationAdministration-ExampleERefMedicationAdministrationAntibiotic.html) | Treatment-given support. |
 | Immunization | [ERefImmunization Example - Routine Immunization](Immunization-ExampleERefImmunizationRoutine.html) | Immunization support. |
@@ -187,13 +184,13 @@ Current v0.1 readiness status:
 
 ## Known Limitations for v0.1
 
-- Receiving-facility response semantics are still pending review in issue [#47](https://github.com/ph-ereferral-organization/ph-ereferral/issues/47) and PR [#84](https://github.com/ph-ereferral-organization/ph-ereferral/pull/84). The currently published minimum fixture supports requested, accepted, and completed Task states.
+- Receiving-facility response terms were documented in issue [#47](https://github.com/UPM-NTHC/ph-ereferral/issues/47) and PR [#84](https://github.com/UPM-NTHC/ph-ereferral/pull/84). The current fixture set covers requested, received, rejected, and referred-onward Task states; accepted-state and completed-state Task fixtures are not available in this checkout.
 - Non-response and SLA handling are deferred until timing and escalation rules are formally defined.
 - Facility and network identification examples use facility identifiers for testing, but operational registry lookup, HCPN membership, and routing rules are not fully specified in this v0.1 test pack.
 - Attachment exchange, consent, authentication, authorization, transport security, and data-protection controls are outside the current by-hand test.
 - Back-referral is part of the broader policy basis, but it is not included in the minimum v0.1 connectathon path.
 - Multi-server testing has not yet been completed.
-- Versioned release deployment is pending issue [#73](https://github.com/ph-ereferral-organization/ph-ereferral/issues/73).
+- Versioned release deployment is pending issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73).
 
 ## Release Readiness Documentation
 

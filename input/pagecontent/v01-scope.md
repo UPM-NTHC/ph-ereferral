@@ -33,8 +33,8 @@ v0.1 is a draft testing baseline. It is not a production deployment specificatio
 
 | Deferred item | Current v0.1 handling |
 |---------------|-----------------------|
-| Versioned release publication | Pending issue [#73](https://github.com/ph-ereferral-organization/ph-ereferral/issues/73). |
-| Rich receiving-facility response states | Pending review in issue [#47](https://github.com/ph-ereferral-organization/ph-ereferral/issues/47) and PR [#84](https://github.com/ph-ereferral-organization/ph-ereferral/pull/84). |
+| Versioned release publication | Pending issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73). |
+| Rich receiving-facility response states | Pending review in issue [#47](https://github.com/UPM-NTHC/ph-ereferral/issues/47) and PR [#84](https://github.com/UPM-NTHC/ph-ereferral/pull/84). |
 | Non-response and SLA escalation | Deferred until timing and escalation rules are formally defined. |
 | Back-referral | Not included in the v0.1 minimum test path. |
 | Multi-server connectathon harness | Not yet available. |
