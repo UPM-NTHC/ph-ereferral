@@ -138,12 +138,11 @@ The following elements are marked as **Must Support** and must be implemented by
 | `replaces` | 0..* | Prior referral request replaced by an onward referral |
 | `authoredOn` | 0..1 | When the referral was created |
 | `category` | 0..* | Type of referral service |
-| `priority` | 0..1 | Urgency level |
 | `intent` | 0..1 | Always "order" for referrals |
 | `occurrence[x]` | 0..1 | When the service is needed |
 | `supportingInfo` | 0..* | Clinical information |
 | `code` | 0..1 | Service type being requested |
-| `reasonCode` | 0..* | Clinical reason for referral |
+| `reasonCode` | 0..* | Service type of the referral |
 | `reasonReference` | 0..* | Conditions/Observations justifying referral |
 | `subject` | 0..1 | Patient being referred |
 | `status` | 0..1 | Referral status |
@@ -193,13 +192,14 @@ InstanceOf: ERefServiceRequest
 * status = #active
 * intent = #order
 * priority = #urgent
-* category = $sct#409063005 "Counselling"
+* category = $sct#73770003 "Emergency"
 * code = $sct#183519001 "Referral to cardiology service"
 * subject = Reference(Patient/001)
 * authoredOn = "2025-03-23T10:00:00+08:00"
 * requester = Reference(PractitionerRole/DrSantos)
 * performer = Reference(Organization/PhilHeartCenter)
-* reasonCode = $sct#29857009 "Chest pain"
+* reasonCode = $sct#11429006 "Consultation"
+* reasonCode.text = "Chest pain requiring cardiology consultation"
 * occurrenceDateTime = "2025-03-24T08:00:00+08:00"
 ```
 
@@ -213,13 +213,14 @@ InstanceOf: ERefServiceRequest
 * status = #active
 * intent = #order
 * priority = #routine
-* category = $sct#363679005 "Imaging"
+* category = $sct#440655000 "Outpatient"
 * code = $sct#168537006 "Plain X-ray of chest"
 * subject = Reference(Patient/002)
 * authoredOn = "2025-03-23T14:30:00+08:00"
 * requester = Reference(PractitionerRole/DrReyes)
 * performer = Reference(Organization/DiagnosticCenter)
-* reasonCode = $sct#267036007 "Dyspnea"
+* reasonCode = $sct#165197003 "Diagnostics"
+* reasonCode.text = "Chest X-ray to evaluate dyspnea"
 * note.text = "Please evaluate for pulmonary infiltrates. Patient has history of pneumonia."
 ```
 
