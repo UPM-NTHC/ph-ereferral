@@ -192,7 +192,7 @@ InstanceOf: ERefServiceRequest
 * status = #active
 * intent = #order
 * priority = #urgent
-* category = $sct#73770003 "Emergency"
+* category = $sct#440655000 "Outpatient"
 * code = $sct#183519001 "Referral to cardiology service"
 * subject = Reference(Patient/001)
 * authoredOn = "2025-03-23T10:00:00+08:00"
