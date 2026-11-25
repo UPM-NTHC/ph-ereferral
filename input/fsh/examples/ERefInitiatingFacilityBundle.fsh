@@ -437,7 +437,8 @@ Description: "Medications administered at Kalibo Health Center prior to referral
 * status = #completed
 * code = $sct#416608005 "Drug therapy"
 * subject.reference = "urn:uuid:d7e33c3b-e90b-464e-a5eb-a92f60c71542"
-
+// PH Core invariant ph-pro-001 requires performed[x] for completed procedures.
+* performedDateTime = "2026-06-18T08:15:00+08:00"
 // Linked By: Procedure.encounter Reference(PHeRefEncounter)
 * encounter.reference = "urn:uuid:a86d5b74-f8b5-42c2-b27a-5faff8d84cce"
 
