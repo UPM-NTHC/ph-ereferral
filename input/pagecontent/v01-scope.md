@@ -22,7 +22,7 @@ v0.1 is a draft testing baseline. It is not a production deployment specificatio
 | Provenance | [EReferral Provenance](StructureDefinition-ereferral-provenance.html) |
 | Medication support | [EReferral MedicationAdministration](StructureDefinition-ereferral-medication-administration.html) |
 | Immunization support | [ERefImmunization](StructureDefinition-ereferral-immunization.html) |
-| Referral terminology | [eReferral Service Category](ValueSet-ereferral-service-category.html), [eReferral Priority](ValueSet-ereferral-priority.html), and [eReferral Reason](ValueSet-ereferral-reason.html) |
+| Referral terminology | [eReferral Service Category](ValueSet-vs-referral-category.html) and [eReferral Reason](ValueSet-vs-reason-for-referral-service-type.html); `priority` uses the base FHIR `RequestPriority` values |
 | Test fixtures | Required and optional examples listed in the [connectathon readiness guide](connectathon-readiness.html). |
 
 </div>
@@ -33,8 +33,8 @@ v0.1 is a draft testing baseline. It is not a production deployment specificatio
 
 | Deferred item | Current v0.1 handling |
 |---------------|-----------------------|
-| Versioned release publication | Pending issue [#73](https://github.com/ph-ereferral-organization/ph-ereferral/issues/73). |
-| Rich receiving-facility response states | Pending review in issue [#47](https://github.com/ph-ereferral-organization/ph-ereferral/issues/47) and PR [#84](https://github.com/ph-ereferral-organization/ph-ereferral/pull/84). |
+| Versioned IG publication | Pending issue [#73](https://github.com/UPM-NTHC/ph-ereferral/issues/73); source release tag `0.1.0` is available. |
+| Accepted-state fixture | The response terms were documented in issue [#47](https://github.com/UPM-NTHC/ph-ereferral/issues/47) and PR [#84](https://github.com/UPM-NTHC/ph-ereferral/pull/84), but no accepted-state fixture is present in this checkout. |
 | Non-response and SLA escalation | Deferred until timing and escalation rules are formally defined. |
 | Back-referral | Not included in the v0.1 minimum test path. |
 | Multi-server connectathon harness | Not yet available. |

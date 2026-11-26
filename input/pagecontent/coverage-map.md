@@ -9,10 +9,10 @@ This page maps the v0.1 minimum referral workflow to the IG artifacts used by th
 | Workflow step | Primary artifact | Supporting artifacts | Coverage status |
 |---------------|------------------|----------------------|-----------------|
 | Create referral | [Example eReferral ServiceRequest](ServiceRequest-ExampleERefServiceRequest.html) | [EReferral ServiceRequest](StructureDefinition-ereferral-service-request.html), patient, practitioner role, organizations, condition, and observations | Covered for the minimum test path. |
-| Send referral | [Example eReferral Task - Requested State](Task-ExampleERefTaskRequested.html) | [EReferral Task](StructureDefinition-ereferral-task.html) and [Example ServiceRequest for Task](ServiceRequest-ExampleERefServiceRequestTask.html) | Covered for a requested referral workflow state. |
-| Receive referral | [Example eReferral Task - Accepted State](Task-ExampleERefTaskAccepted.html) | Receiving organization fixture and Task owner assignment | Covered through the accepted Task fixture. A separate received state is pending review. |
-| Respond with receiving outcome | [Example eReferral Task - Accepted State](Task-ExampleERefTaskAccepted.html) | Issue [#47](https://github.com/ph-ereferral-organization/ph-ereferral/issues/47) and PR [#84](https://github.com/ph-ereferral-organization/ph-ereferral/pull/84) | Partially covered. Positive response is represented by accepted in the current fixture set. Rejected and referred-onward responses are pending review. |
-| Close referral | [Example eReferral Task - Completed State](Task-ExampleERefTaskCompleted.html) | [Example eReferral Encounter](Encounter-ExampleERefEncounter.html) and Task output | Covered for completion of the minimum test path. |
+| Send referral | [Example eReferral Task - Requested State](Task-ExampleERefTaskRequested.html) | [EReferral Task](StructureDefinition-ereferral-task.html) and [Example eReferral ServiceRequest](ServiceRequest-ExampleERefServiceRequest.html) | Covered for a requested referral workflow state. |
+| Receive referral | [Example eReferral Task - Received State](Task-ExampleERefTaskReceived.html) | Receiving organization fixture and Task owner assignment | Covered through the received Task fixture. |
+| Respond with receiving outcome | [Example eReferral Task - Rejected State](Task-ExampleERefTaskRejected.html) | [Example eReferral Task - Referred Onward](Task-ExampleERefTaskReferredOnward.html), issue [#47](https://github.com/UPM-NTHC/ph-ereferral/issues/47), and PR [#84](https://github.com/UPM-NTHC/ph-ereferral/pull/84) | Covered for declined and referred-onward responses. The response terms were documented in #47/#84, but this checkout has no accepted-state fixture. |
+| Close referral | No completed-state fixture yet | [Example eReferral Encounter - Initiated Facility Visit](Encounter-ExampleERefSubmissionEncounter.html) and Task `output` | Closure is defined as `Task.status = completed` with `Task.output` populated; no completed fixture exists yet. |
 
 </div>
 
@@ -56,6 +56,6 @@ This page maps the v0.1 minimum referral workflow to the IG artifacts used by th
 
 - No automated create/send/receive/respond/close scenario script is present.
 - No multi-server exchange harness is present.
-- Rejected, referred-onward, and explicit received response states are pending review.
+- The response terms were documented in issue [#47](https://github.com/UPM-NTHC/ph-ereferral/issues/47) and PR [#84](https://github.com/UPM-NTHC/ph-ereferral/pull/84); this checkout has no accepted-state fixture.
 - Non-response and SLA escalation are deferred.
 - Back-referral is not part of the v0.1 minimum connectathon path.
