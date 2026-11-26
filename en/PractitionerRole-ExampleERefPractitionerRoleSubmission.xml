@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefPractitionerRoleSubmission"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRoleSubmission</b></p><a name="ExampleERefPractitionerRoleSubmission"> </a><a name="hcExampleERefPractitionerRoleSubmission"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-practitioner-role.html">PH eReferral PractitionerRole</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Maria Villanueva (official) (https://prc.gov.ph/#5466863): Medical practitioner at Kalibo Health Center (https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code#3056) (https://prc.gov.ph/#5466863)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="The practitioner who is able to provide the services in this role">Practitioner:</td><td colspan="3"><a href="Bundle-ExampleERefSubmissionBundle.html#urn-uuid-309021d0-7abe-4b54-b2e9-23a056851d0e">Maria Villanueva (official) (https://prc.gov.ph/#5466863)</a></td></tr><tr><td style="background-color: #f3f5da" title="The organization where the practitioner performs the roles">Organization:</td><td colspan="3"><a href="Bundle-ExampleERefSubmissionBundle.html#urn-uuid-a038f451-6557-4b01-b05c-aa4ff967545b">Kalibo Health Center (https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code#3056)</a></td></tr><tr><td style="background-color: #f3f5da" title="Roles which this practitioner is authorized to perform for the organization">Role:</td><td colspan="3"><span title="Codes:{http://snomed.info/sct 158965000}">Medical practitioner</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://prc.gov.ph/"/>
+    <value value="5466863"/>
+  </identifier>
+  <practitioner>
+    <reference value="urn:uuid:309021d0-7abe-4b54-b2e9-23a056851d0e"/>
+  </practitioner>
+  <organization>
+    <reference value="urn:uuid:a038f451-6557-4b01-b05c-aa4ff967545b"/>
+  </organization>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="158965000"/>
+      <display value="Medical practitioner"/>
+    </coding>
+  </code>
+</PractitionerRole>

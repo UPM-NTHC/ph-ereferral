@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Connectathon Readiness - PH eReferral Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<style>
+.ph-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.ph-table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,1);
+}
+
+.ph-table table {
+  width: 100%;
+  }
+
+.ph-table thead {
+  display: table-header-group;
+}
+
+.ph-table th {
+  background-color: #555555;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 14px;
+  text-align: left;
+  border: 1px solid #444444;
+}
+
+.ph-table td {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.ph-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.ph-table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.ph-table tbody tr:hover {
+  background-color: #ebf8ff;
+  transition: background-color 0.2s ease;
+}
+
+.ph-table td code {
+  background-color: #edf2f7;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+</style>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">PH eReferral Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="Philippines flag" src="../assets/images/phl.svg" height="16" title="Philippines"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Guidance
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="who-smart-l1.html">WHO SMART L1 Basis</a>
+      </li>
+      <li>
+        <a href="referral-workflow.html">Referral Workflow</a>
+      </li>
+      <li>
+        <a href="logical-information-model.html">Logical Information Model</a>
+      </li>
+      <li>
+        <a href="connectathon-readiness.html">Connectathon Readiness</a>
+      </li>
+      <li>
+        <a href="v01-scope.html">Scope and Release Notes</a>
+      </li>
+      <li>
+        <a href="coverage-map.html">Coverage Map</a>
+      </li>
+      <li>
+        <a href="decision-log.html">Decision Log</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Sample Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="sample-case-ana-reyes.html">Ana Reyes Referral</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">References
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="references.html">Documents</a>
+      </li>
+      <li>
+        <a href="data-dictionary.html">Data Dictionary</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Connectathon Readiness</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">PH eReferral Implementation Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='https://fhir.doh.gov.ph/pheref/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Connectathon Readiness</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="v01-connectathon-quick-start-test-pack-and-release-readiness">v0.1 Connectathon Quick-Start, Test Pack, and Release Readiness</h3>
+
+<p>This page gives implementers and reviewers a minimum, repeatable path for testing the draft PH eReferral IG v0.1 content from a clean checkout. It separates the testable minimum path from background reference material so connectathon participants can tell the difference between an IG defect, a fixture defect, and a missing instruction.</p>
+
+<h4 id="v01-quick-start">v0.1 Quick-Start</h4>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>v0.1 expectation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Purpose</td>
+        <td>Validate the minimum PH eReferral workflow using the IG profiles and examples.</td>
+      </tr>
+      <tr>
+        <td>Intended users</td>
+        <td>IG authors, implementers, vendors, validators, and connectathon testers.</td>
+      </tr>
+      <tr>
+        <td>FHIR version</td>
+        <td>FHIR R4, version <code class="language-plaintext highlighter-rouge">4.0.1</code>.</td>
+      </tr>
+      <tr>
+        <td>IG version</td>
+        <td><code class="language-plaintext highlighter-rouge">0.1.0</code>, release label <code class="language-plaintext highlighter-rouge">ci-build</code>.</td>
+      </tr>
+      <tr>
+        <td>Required dependency</td>
+        <td>PH Core package <code class="language-plaintext highlighter-rouge">fhir.ph.core</code> as configured in <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>.</td>
+      </tr>
+      <tr>
+        <td>Current continuous build</td>
+        <td><a href="https://build.fhir.org/ig/UPM-NTHC/ph-ereferral/">PH eReferral continuous build</a>. Treat this as a CI build, not a versioned IG publication.</td>
+      </tr>
+      <tr>
+        <td>Source release tag</td>
+        <td><a href="https://github.com/UPM-NTHC/ph-ereferral/releases/tag/0.1.0">Release <code class="language-plaintext highlighter-rouge">0.1.0</code></a>. Issue <a href="https://github.com/UPM-NTHC/ph-ereferral/issues/73">#73</a> tracks versioned IG deployment paths.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<p>Minimum implementer setup:</p>
+
+<ol>
+  <li>Git client for cloning the repository.</li>
+  <li>Node.js and SUSHI for compiling FSH.</li>
+  <li>Java runtime compatible with the IG Publisher used by this repository.</li>
+  <li>Ruby/Jekyll where required by the local or CI publisher template.</li>
+  <li>Network access for first-time package and publisher downloads unless the needed packages are already cached.</li>
+</ol>
+
+<h4 id="build-and-validate-the-ig">Build and Validate the IG</h4>
+
+<p>Clone the repository:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/UPM-NTHC/ph-ereferral.git
+<span class="nb">cd </span>ph-ereferral
+</code></pre></div></div>
+
+<p>Compile FSH only:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sushi <span class="nb">.</span>
+</code></pre></div></div>
+
+<p>Expected SUSHI result:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fsh-generated/resources/ImplementationGuide-fhir.ph.ereferral.json</code> is generated.</li>
+  <li>The summary reports <code class="language-plaintext highlighter-rouge">0 Errors</code>.</li>
+  <li>If <code class="language-plaintext highlighter-rouge">fhir.ph.core#dev</code> is not cached locally, SUSHI may fall back to the locally available PH Core package. Record that package state in test evidence.</li>
+</ul>
+
+<p>Run the full IG build on Windows:</p>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_genonce.bat
+</code></pre></div></div>
+
+<p>Run the full IG build on macOS or Linux:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./_genonce.sh
+</code></pre></div></div>
+
+<p>Run the Publisher directly in offline terminology mode:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java <span class="nt">-jar</span> input-cache/publisher.jar <span class="nt">-ig</span> <span class="nb">.</span> <span class="nt">-tx</span> n/a
+</code></pre></div></div>
+
+<p>Expected Publisher result:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">output/index.html</code> and <code class="language-plaintext highlighter-rouge">output/qa.html</code> are produced.</li>
+  <li>The command exits successfully.</li>
+  <li><code class="language-plaintext highlighter-rouge">output/qa.html</code> is reviewed for errors, warnings, broken links, and terminology limitations before claiming release readiness.</li>
+</ul>
+
+<p>Known build limitations:</p>
+
+<ul>
+  <li>Issue <a href="https://github.com/UPM-NTHC/ph-ereferral/issues/73">#73</a> tracks versioned IG deployment paths. The source repository has a <code class="language-plaintext highlighter-rouge">0.1.0</code> release tag, but a versioned publication URL is not yet available; cite commit hashes or branch build URLs for CI builds.</li>
+  <li>Offline terminology mode can report terminology expansion limitations that must be distinguished from profile or example defects.</li>
+  <li>If the local build uses a cached PH Core package instead of <code class="language-plaintext highlighter-rouge">fhir.ph.core#dev</code>, record the actual package used in the evidence table.</li>
+</ul>
+
+<h4 id="minimum-by-hand-test">Minimum By-Hand Test</h4>
+
+<p>Use this as the connectathon smoke test from a clean checkout with the listed fixtures. The expected result is a traceable referral request that moves from creation, to receiving-facility response, to closure.</p>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>Action</th>
+        <th>Fixture or artifact</th>
+        <th>Expected result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Create referral</td>
+        <td><a href="ServiceRequest-ExampleERefServiceRequest.html">Example eReferral ServiceRequest</a></td>
+        <td>A referral request exists with <code class="language-plaintext highlighter-rouge">status = active</code>, <code class="language-plaintext highlighter-rouge">intent = order</code>, a patient subject, a requester, a receiving facility, and a clinical reason.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Send referral</td>
+        <td><a href="Task-ExampleERefTaskRequested.html">Example eReferral Task - Requested State</a></td>
+        <td>A workflow Task exists with <code class="language-plaintext highlighter-rouge">status = requested</code>, focused on the ServiceRequest. The requester is populated and the receiving owner is not yet assigned.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Receive referral</td>
+        <td><a href="Task-ExampleERefTaskReceived.html">Example eReferral Task - Received State</a></td>
+        <td>The receiving facility has acknowledged the referral Task and <code class="language-plaintext highlighter-rouge">owner</code> is populated.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Respond with receiving-facility outcome</td>
+        <td><a href="Task-ExampleERefTaskRejected.html">Example eReferral Task - Rejected State</a> and <a href="Task-ExampleERefTaskReferredOnward.html">Example eReferral Task - Referred Onward</a></td>
+        <td>The receiving facility closes the Task with a response: <code class="language-plaintext highlighter-rouge">status = rejected</code> with <code class="language-plaintext highlighter-rouge">statusReason</code> for a declined referral, or <code class="language-plaintext highlighter-rouge">status = rejected</code> plus <code class="language-plaintext highlighter-rouge">businessStatus = referred-onward</code> when the case is redirected. The positive <code class="language-plaintext highlighter-rouge">accepted</code> response was defined in issue <a href="https://github.com/UPM-NTHC/ph-ereferral/issues/47">#47</a> and PR <a href="https://github.com/UPM-NTHC/ph-ereferral/pull/84">#84</a>, but no accepted-state fixture is present in this checkout.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Close referral</td>
+        <td>No completed-state fixture exists yet</td>
+        <td>The Task is closed with <code class="language-plaintext highlighter-rouge">status = completed</code> and completion output present in <code class="language-plaintext highlighter-rouge">Task.output</code>; a receiving-side Encounter fixture is not yet available.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<p>Pass criteria for the by-hand test:</p>
+
+<ul>
+  <li>Required examples render in the IG.</li>
+  <li>The ServiceRequest references the patient, requester, receiving facility, and clinical reason needed for the scenario.</li>
+  <li>The Task examples preserve a coherent state progression from requested to received to closed.</li>
+  <li>Closure requires the receiving facility to record <code class="language-plaintext highlighter-rouge">Task.status = completed</code> and completion output in <code class="language-plaintext highlighter-rouge">Task.output</code>. No completed-state Task fixture or receiving-side Encounter fixture is available yet.</li>
+</ul>
+
+<p>Fail criteria:</p>
+
+<ul>
+  <li>A required fixture is missing from the rendered IG.</li>
+  <li>A required reference cannot be followed.</li>
+  <li>The state progression cannot be explained using the current v0.1 artifacts.</li>
+  <li>QA reports a broken link for a required profile, example, or page used in this test.</li>
+</ul>
+
+<h4 id="test-data-pack">Test Data Pack</h4>
+
+<p>Required fixtures for the minimum test:</p>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fixture</th>
+        <th>Link</th>
+        <th>Test role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Referral request</td>
+        <td><a href="ServiceRequest-ExampleERefServiceRequest.html">Example eReferral ServiceRequest</a></td>
+        <td>Primary referral order under test.</td>
+      </tr>
+      <tr>
+        <td>Patient</td>
+        <td><a href="Patient-ExampleERefPatient.html">Example eReferral Patient</a></td>
+        <td>Referral subject.</td>
+      </tr>
+      <tr>
+        <td>Referring practitioner</td>
+        <td><a href="Practitioner-ExampleERefPractitionerSubmission.html">Example Referring Practitioner</a></td>
+        <td>Clinician creating the referral.</td>
+      </tr>
+      <tr>
+        <td>Referring practitioner role</td>
+        <td><a href="PractitionerRole-ExampleERefPractitionerRoleSubmission.html">Example Referring Practitioner Role</a></td>
+        <td>Links practitioner to referring facility.</td>
+      </tr>
+      <tr>
+        <td>Referring facility</td>
+        <td><a href="Organization-ExampleERefOrganizationKaliboHC.html">Example Referring Facility</a></td>
+        <td>Initiating facility.</td>
+      </tr>
+      <tr>
+        <td>Receiving facility</td>
+        <td><a href="Organization-ExampleERefOrganizationDRSTMH.html">Example Receiving Hospital</a></td>
+        <td>Intended receiving facility.</td>
+      </tr>
+      <tr>
+        <td>Clinical condition</td>
+        <td><a href="Condition-ExampleERefCondition.html">Example Condition - Severe Pre-eclampsia</a></td>
+        <td>Referral reason evidence.</td>
+      </tr>
+      <tr>
+        <td>Blood pressure observation</td>
+        <td><a href="Observation-ExampleERefObservationBP.html">Example Blood Pressure Observation</a></td>
+        <td>Supporting clinical information.</td>
+      </tr>
+      <tr>
+        <td>Requested Task</td>
+        <td><a href="Task-ExampleERefTaskRequested.html">Example eReferral Task - Requested State</a></td>
+        <td>Sent referral workflow state.</td>
+      </tr>
+      <tr>
+        <td>Received Task</td>
+        <td><a href="Task-ExampleERefTaskReceived.html">Example eReferral Task - Received State</a></td>
+        <td>Receiving-facility acknowledgement state.</td>
+      </tr>
+      <tr>
+        <td>Encounter context</td>
+        <td><a href="Encounter-ExampleERefSubmissionEncounter.html">Example eReferral Encounter - Initiated Facility Visit</a></td>
+        <td>Encounter context for the referral episode (initiating facility visit).</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<p>Optional fixtures:</p>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fixture</th>
+        <th>Link</th>
+        <th>Optional use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Provenance signature</td>
+        <td><a href="Provenance-ExampleERefProvenanceSubmission.html">Example eReferral Provenance with Signature</a></td>
+        <td>Demonstrates signature attestation.</td>
+      </tr>
+      <tr>
+        <td>Medication administration</td>
+        <td><a href="MedicationAdministration-ExampleERefMedicationAdministrationChronic.html">Example Chronic Medication Administration</a></td>
+        <td>Clinical summary support.</td>
+      </tr>
+      <tr>
+        <td>Antibiotic administration</td>
+        <td><a href="MedicationAdministration-ExampleERefMedicationAdministrationAntibiotic.html">Example Antibiotic Administration</a></td>
+        <td>Treatment-given support.</td>
+      </tr>
+      <tr>
+        <td>Immunization</td>
+        <td><a href="Immunization-ExampleERefImmunizationRoutine.html">ERefImmunization Example - Routine Immunization</a></td>
+        <td>Immunization support.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<h4 id="automated-or-semi-automated-testing">Automated or Semi-Automated Testing</h4>
+
+<p>Available checks:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sushi .</code> checks FSH syntax, generates JSON resources, and catches duplicate instance names.</li>
+  <li><code class="language-plaintext highlighter-rouge">_genonce.bat</code> or <code class="language-plaintext highlighter-rouge">./_genonce.sh</code> runs the project build path.</li>
+  <li><code class="language-plaintext highlighter-rouge">java -jar input-cache/publisher.jar -ig . -tx n/a</code> runs an offline Publisher build that can be used when terminology server access is slow or unavailable.</li>
+  <li>GitHub Actions runs repository validation on pull requests according to <code class="language-plaintext highlighter-rouge">.github/workflows/validate-docs.yml</code>.</li>
+</ul>
+
+<p>Not yet available:</p>
+
+<ul>
+  <li>There is no executable connectathon workflow test script that automatically performs create/send/receive/respond/close assertions.</li>
+  <li>There is no multi-server exchange test harness in this repository.</li>
+</ul>
+
+<p>For v0.1, passing the automated build does not replace the by-hand test. It only proves that the IG artifacts can be generated and validated by the available build tooling.</p>
+
+<h4 id="test-evidence-summary">Test Evidence Summary</h4>
+
+<p>Record one row per connectathon run, release candidate, or reviewer verification.</p>
+
+<div class="ph-table">
+
+  <table>
+    <thead>
+      <tr>
+        <th>Evidence field</th>
+        <th>Value to record</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>What was tested</td>
+        <td>Minimum create, send, receive, respond, and close referral path using the fixtures listed above.</td>
+      </tr>
+      <tr>
+        <td>Who tested it</td>
+        <td>Tester name, organization, and role.</td>
+      </tr>
+      <tr>
+        <td>Date tested</td>
+        <td>Calendar date in <code class="language-plaintext highlighter-rouge">YYYY-MM-DD</code> format.</td>
+      </tr>
+      <tr>
+        <td>Build or commit tested</td>
+        <td>Release tag, branch build URL, or commit SHA.</td>
+      </tr>
+      <tr>
+        <td>Build result</td>
+        <td>SUSHI result, Publisher result, and QA summary.</td>
+      </tr>
+      <tr>
+        <td>By-hand test result</td>
+        <td>Pass, fail, or pass with limitations.</td>
+      </tr>
+      <tr>
+        <td>Known unresolved issues</td>
+        <td>Links to unresolved issues that affect interpretation of the result.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<p>Current v0.1 readiness status:</p>
+
+<ul>
+  <li>The minimum test path is documented.</li>
+  <li>The fixture set is identified.</li>
+  <li>Formal connectathon execution evidence has not yet been recorded in this repository.</li>
+</ul>
+
+<h4 id="known-limitations-for-v01">Known Limitations for v0.1</h4>
+
+<ul>
+  <li>Receiving-facility response terms were documented in issue <a href="https://github.com/UPM-NTHC/ph-ereferral/issues/47">#47</a> and PR <a href="https://github.com/UPM-NTHC/ph-ereferral/pull/84">#84</a>. The current fixture set covers requested, received, rejected, and referred-onward Task states; accepted-state and completed-state Task fixtures are not available in this checkout.</li>
+  <li>Non-response and SLA handling are deferred until timing and escalation rules are formally defined.</li>
+  <li>Facility and network identification examples use facility identifiers for testing, but operational registry lookup, HCPN membership, and routing rules are not fully specified in this v0.1 test pack.</li>
+  <li>Attachment exchange, consent, authentication, authorization, transport security, and data-protection controls are outside the current by-hand test.</li>
+  <li>Back-referral is part of the broader policy basis, but it is not included in the minimum v0.1 connectathon path.</li>
+  <li>Multi-server testing has not yet been completed.</li>
+  <li>Versioned IG deployment paths are pending issue <a href="https://github.com/UPM-NTHC/ph-ereferral/issues/73">#73</a>; source release tag <code class="language-plaintext highlighter-rouge">0.1.0</code> is available.</li>
+</ul>
+
+<h4 id="release-readiness-documentation">Release Readiness Documentation</h4>
+
+<p>Use these linked pages when preparing or reviewing a v0.1 release candidate:</p>
+
+<ul>
+  <li><a href="v01-scope.html">v0.1 Scope and Release Notes</a></li>
+  <li><a href="coverage-map.html">v0.1 Coverage Map</a></li>
+  <li><a href="decision-log.html">v0.1 Decision Log and ADR Status</a></li>
+</ul>
+
+<p>Release-readiness checklist for v0.1:</p>
+
+<ul>
+  <li>SUSHI completes with <code class="language-plaintext highlighter-rouge">0 Errors</code>.</li>
+  <li>The IG Publisher completes and <code class="language-plaintext highlighter-rouge">output/qa.html</code> is reviewed.</li>
+  <li>Required fixtures in the test data pack render and links are valid.</li>
+  <li>The by-hand test is executed and evidence is recorded.</li>
+  <li>Known limitations are accepted or converted into release blockers.</li>
+  <li>TDG technical review confirms the workflow and terminology interpretation.</li>
+  <li>Product owner review confirms the v0.1 release scope.</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://github.com/UP-Manila-SILab">SILab CoP IG Accelerator (eReferral)</a>.  
+          Package fhir.ph.ereferral#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Generated 
+  <span title="2026-11-26 02:50:00 +0000">
+    2026-11-26
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

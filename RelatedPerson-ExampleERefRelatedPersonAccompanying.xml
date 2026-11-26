@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelatedPerson xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefRelatedPersonAccompanying"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-related-person"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: RelatedPerson ExampleERefRelatedPersonAccompanying</b></p><a name="ExampleERefRelatedPersonAccompanying"> </a><a name="hcExampleERefRelatedPersonAccompanying"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-related-person.html">EReferral RelatedPerson</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Maria Reyes (official) - emergency contact, mother</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="The patient this person is related to">Patient:</td><td colspan="3"><a href="Patient-ExampleERefPatient.html">Ana Luisa Reyes (official) Female, DoB: 1988-03-12 ( http://philhealth.gov.ph/fhir/Identifier/philhealth-id#PhilHealthID#78-658064775-3)</a></td></tr><tr><td style="background-color: #f3f5da" title="The nature of the relationship between the patient and the related person">Relationship:</td><td colspan="3"><ul><li><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode ECON}">emergency contact</span></li><li><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode MTH}">mother</span></li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Related Person">Contact Detail</td><td colspan="3"><a href="tel:+639171112222">+639171112222</a></td></tr></table></div>
+  </text>
+  <active value="true"/>
+  <patient>
+    <reference value="Patient/ExampleERefPatient"/>
+  </patient>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="ECON"/>
+      <display value="emergency contact"/>
+    </coding>
+  </relationship>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+      <code value="MTH"/>
+      <display value="mother"/>
+    </coding>
+  </relationship>
+  <name>
+    <use value="official"/>
+    <family value="Reyes"/>
+    <given value="Maria"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+639171112222"/>
+    <use value="mobile"/>
+  </telecom>
+</RelatedPerson>

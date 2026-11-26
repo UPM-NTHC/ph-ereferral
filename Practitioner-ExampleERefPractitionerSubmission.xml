@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefPractitionerSubmission"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/phcore/StructureDefinition/ph-core-practitioner"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner ExampleERefPractitionerSubmission</b></p><a name="ExampleERefPractitionerSubmission"> </a><a name="hcExampleERefPractitionerSubmission"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="https://build.fhir.org/ig/UPM-NTHC/ph-core/StructureDefinition-ph-core-practitioner.html">PH Core Practitioner</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Maria Villanueva (official) (https://prc.gov.ph/#5466863)</p><hr/></div>
+  </text>
+  <identifier>
+    <system value="https://prc.gov.ph/"/>
+    <value value="5466863"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <family value="Villanueva"/>
+    <given value="Maria"/>
+    <prefix value="Dr."/>
+  </name>
+</Practitioner>

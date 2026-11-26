@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="ExampleERefPractitionerRoleReceiving"/>
+  <meta>
+    <profile value="https://fhir.doh.gov.ph/pheref/StructureDefinition/ereferral-practitioner-role"/>
+  </meta>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole ExampleERefPractitionerRoleReceiving</b></p><a name="ExampleERefPractitionerRoleReceiving"> </a><a name="hcExampleERefPractitionerRoleReceiving"> </a><div style="display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-ereferral-practitioner-role.html">PH eReferral PractitionerRole</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Carlos Lim (official) (https://prc.gov.ph/#7890123): Medical practitioner at Dr. Rafael S. Tumbokon Memorial Hospital (https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code#513) (https://prc.gov.ph/#7890123)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="The practitioner who is able to provide the services in this role">Practitioner:</td><td colspan="3"><a href="Bundle-ExampleERefSubmissionBundle.html#urn-uuid-4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e">Carlos Lim (official) (https://prc.gov.ph/#7890123)</a></td></tr><tr><td style="background-color: #f3f5da" title="The organization where the practitioner performs the roles">Organization:</td><td colspan="3"><a href="Bundle-ExampleERefSubmissionBundle.html#urn-uuid-8c97c63e-4dbf-45d5-894e-f671e385a126">Dr. Rafael S. Tumbokon Memorial Hospital (https://fhir.doh.gov.ph/phcore/Identifier/doh-nhfr-code#513)</a></td></tr><tr><td style="background-color: #f3f5da" title="Roles which this practitioner is authorized to perform for the organization">Role:</td><td colspan="3"><span title="Codes:{http://snomed.info/sct 158965000}">Medical practitioner</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <system value="https://prc.gov.ph/"/>
+    <value value="7890123"/>
+  </identifier>
+  <practitioner>
+    <reference value="urn:uuid:4f8b2c1d-9a3e-4b7c-8d1f-2e6a5b3c0d9e"/>
+  </practitioner>
+  <organization>
+    <reference value="urn:uuid:8c97c63e-4dbf-45d5-894e-f671e385a126"/>
+  </organization>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="158965000"/>
+      <display value="Medical practitioner"/>
+    </coding>
+  </code>
+</PractitionerRole>

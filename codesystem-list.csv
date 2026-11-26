@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+https://fhir.doh.gov.ph/phcore/CodeSystem/PHCW,0.1.0,active,,PHCorePHCW,PHCW,"Philippines Healthcare Workers Code System",
+https://fhir.doh.gov.ph/phcore/CodeSystem/PSOC,0.1.0,active,,PHCorePSOC,PSOC,"Philippine Standard Occupational Classification (fragment — healthcare-relevant codes)",
+https://fhir.doh.gov.ph/pheref/CodeSystem/ereferral-workflow,0.1.0,draft,,EReferralWorkflowCS,eReferral Workflow Code System,"Local workflow codes for Philippine eReferral receiving-facility responses and related referral coordination events.",
+https://fhir.doh.gov.ph/pheref/CodeSystem/pwd-disability-type-cs,0.1.0,draft,,PWDDisabilityTypeCS,PWD Disability Type Code System,"Code system for types of disability as defined by the Philippine government for PWD registration.",

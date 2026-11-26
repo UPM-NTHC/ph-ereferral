@@ -1,0 +1,20 @@
+{
+  "url" : "https://fhir.doh.gov.ph/pheref/ImplementationGuide/fhir.ph.ereferral",
+  "name" : "PHeReferralImplementationGuide",
+  "title" : "PH eReferral Implementation Guide",
+  "description" : "This implementation guide is provided to support the use of FHIR®© in an Philippines context, and defines the minimum set of constraints on the FHIR resources to create the PH eReferral profiles. This implementation guide forms the foundation to build future PH Realm FHIR implementation guides and its content will continue to grow to meet the needs of PH implementers.",
+  "status" : "draft",
+  "package-id" : "fhir.ph.ereferral",
+  "ig-ver" : "0.1.0",
+  "date" : "Thu, 26 Nov, 2026 02:50:38 +0000",
+  "dateISO8601" : "2026-11-26T02:50:38+00:00",
+  "errs" : 1,
+  "warnings" : 406,
+  "hints" : 400,
+  "broken-links" : 0,
+  "suppressed-hints" : 24,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "6.0.0-snapshot1 (3)",
+  "maxMemory" : 5990451840
+}
